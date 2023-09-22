@@ -21,20 +21,16 @@ struct ScreenModel: Codable {
 // MARK: - Body
 struct Body: Codable {
     var identifier: String?
-    var subviews: [BodyField]?
-}
-
-// MARK: - BodyField
-struct BodyField: Codable {
-    var type, identifier: String?
-    var subviews: [ChildField]?
+    var subviews: [SubView]?
 }
 
 // MARK: - FieldField
-struct ChildField: Codable {
+struct SubView: Codable {
     var type: ComponentsType
     var identifier: String?
     var properties: Properties?
+    var subviews: [SubView]?
+
 }
 enum ComponentsType: String, Codable {
     case scrollView

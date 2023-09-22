@@ -10,15 +10,15 @@ import SwiftUI
 
 protocol UIComponentBuilder {
     associatedtype ComponentType
-    func build(element: ChildField) -> ComponentType
+    func build(element: SubView) -> ComponentType
 }
 
 class ScreenBuilder {
     
     @ViewBuilder
-    func buildView(for component: BodyField) -> some View {
+    func buildView(for component: SubView) -> some View {
         switch component.type {
-        case "scrollView":
+        case .scrollView:
             PSScrollView(configuration: PSScrollViewConfig(content: {
                 ForEach(component.subviews ?? [], id: \.identifier) { field in
                     self.createChildView(field)
@@ -30,7 +30,7 @@ class ScreenBuilder {
     }
     
     @ViewBuilder
-    func createChildView(_ childElement:ChildField) -> some View {
+    func createChildView(_ childElement: SubView) -> some View {
         switch childElement.type {
 
         case .textField:

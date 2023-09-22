@@ -28,8 +28,10 @@ struct PSScrollView : View {
     let configuration: PSScrollViewConfig
     
     var body: some View {
-        ScrollView {
-            configuration.content
+        ScrollView(.vertical) {
+            VStack(alignment: .leading) {
+                configuration.content
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.white)

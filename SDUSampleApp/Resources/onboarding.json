@@ -71,7 +71,7 @@
                             "color": "#555",
                             "padding": {
                                 "top": 10.0,
-                                "bottom": 10.0
+                                "bottom": 50.0
                             },
                             "size": {
                                 "height":40

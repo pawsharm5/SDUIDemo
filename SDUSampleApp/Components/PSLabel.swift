@@ -24,6 +24,7 @@ struct PSLabel: View {
         Text(configuration.text)
             .foregroundColor(Color(hex: configuration.textColor))
             .font(configuration.font)
+            .frame(alignment: .leading)
     }
 }
 
