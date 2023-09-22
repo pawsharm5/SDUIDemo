@@ -10,22 +10,25 @@ import SwiftUI
 protocol PSTextFieldConfiguration {
     var text: Binding<String> { get }
     var keyboardType: UIKeyboardType { get }
-    var properties: Properties { get }
+    var placeHolder: String { get }
+    var height: Int { get }
+    var backgroundColor: String { get }
+    var padding: Padding? { get }
     // Add more configuration options as needed
 }
 
-struct PSTextField<Configuration: PSTextFieldConfiguration>: View {
-    let configuration: Configuration
+struct PSTextField : View {
+    let configuration: PSTextFieldConfiguration
     
     var body: some View {
-        TextField(configuration.properties.placeHolder ?? "", text: configuration.text)
+        TextField(configuration.placeHolder, text: configuration.text)
             .keyboardType(configuration.keyboardType)
             .textFieldStyle(PlainTextFieldStyle())
-            .frame(height: CGFloat(configuration.properties.size?.height ?? 40))
+            .frame(height: CGFloat(configuration.height))
             .padding([.horizontal], 8)
             .cornerRadius(3)
-            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color(hex: configuration.properties.backgroundColor ?? "")))
-            .padding(EdgeInsets(top: CGFloat(configuration.properties.padding?.top ?? 0), leading: CGFloat(configuration.properties.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.properties.padding?.bottom ?? 0), trailing: CGFloat(configuration.properties.padding?.paddingRight ?? 0)))
+            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color(hex: configuration.backgroundColor)))
+            .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
         // Customize the TextField further as needed
     }
 }
@@ -33,5 +36,8 @@ struct PSTextField<Configuration: PSTextFieldConfiguration>: View {
 struct PSTextFieldConfig: PSTextFieldConfiguration {
     var text: Binding<String>
     var keyboardType: UIKeyboardType
-    var properties: Properties
+    var placeHolder: String
+    var height: Int
+    var backgroundColor: String
+    var padding: Padding?
 }

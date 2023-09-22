@@ -10,7 +10,7 @@ import SwiftUI
 
 protocol UIComponentBuilder {
     associatedtype ComponentType
-    func build(element: Body) -> ComponentType
+    func build(element: ChildField) -> ComponentType
 }
 
 class ScreenBuilder {
@@ -34,17 +34,11 @@ class ScreenBuilder {
         switch childElement.type {
             
         case "textField":
-            if let properties = childElement.properties {
-                PSTextField(configuration: PSTextFieldConfig(text: .constant(""), keyboardType: .asciiCapable, properties: properties))
-            }
-            
+            PSTextFieldBuilder().build(element: childElement)
         case "button":
-            if let properties = childElement.properties {
-                PSButton(configuration: PSButtonConfig(buttonTitle: properties.title ?? "", buttonColor: properties.backgroundColor ?? "", properties: properties), buttonAction: {
-                    print("Login Tapped")
-                })
-            }
-            
+            PSButtonBuilder().build(element: childElement)
+        case "label":
+            PSLabelBuilder().build(element: childElement)
         default:
             EmptyView()
         }

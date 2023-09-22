@@ -37,7 +37,7 @@ struct PSScrollView<Configuration: PSScrollViewConfiguration>: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.white)
-        .cornerRadius(10)
+        .cornerRadius(0)
         .padding()
         .overlay(
             ScrollViewReader { proxy in

@@ -11,11 +11,12 @@ import SwiftUI
 protocol PSButtonConfiguration {
     var buttonTitle: String { get }
     var buttonColor: String { get }
-    var properties: Properties { get }
+    var padding: Padding? { get }
+    var height: Int { get }
 }
 
-struct PSButton<Configuration: PSButtonConfiguration>: View {
-    let configuration: Configuration
+struct PSButton: View {
+    let configuration: PSButtonConfiguration
     typealias ButtonAction = () -> Void
     
     let buttonAction: ButtonAction
@@ -26,11 +27,11 @@ struct PSButton<Configuration: PSButtonConfiguration>: View {
         }) {
             Text(configuration.buttonTitle)
                 .frame(maxWidth: .infinity)
-                .frame(height: CGFloat(configuration.properties.size?.height ?? 30))
+                .frame(height: CGFloat(configuration.height))
                 .background(Color(hex: configuration.buttonColor))
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .padding(EdgeInsets(top: CGFloat(configuration.properties.padding?.top ?? 0), leading: CGFloat(configuration.properties.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.properties.padding?.bottom ?? 0), trailing: CGFloat(configuration.properties.padding?.paddingRight ?? 0)))
+                .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
         }
     }
 }
@@ -38,5 +39,6 @@ struct PSButton<Configuration: PSButtonConfiguration>: View {
 struct PSButtonConfig: PSButtonConfiguration {
     var buttonTitle: String
     var buttonColor: String
-    var properties: Properties
+    var padding: Padding?
+    var height:Int
 }

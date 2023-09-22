@@ -11,35 +11,25 @@ import SwiftUI
 protocol PSLabelConfigurable {
     var identifier: String { get }
     var text: String { get }
-    var textColor: Color { get }
+    var textColor: String { get }
     var font: Font { get }
     // Add more configuration options as needed
 }
 
 struct PSLabel: View {
         
-    var identifier: String
-    var text: String = ""
-    var textColor: Color = .black
-    var font: Font = .body
-    
-    mutating func configure(with configuration: PSLabelConfigration) {
-        self.identifier = configuration.identifier
-        self.text = configuration.text
-        self.textColor = configuration.textColor
-        self.font = configuration.font
-    }
+    let configuration: PSLabelConfigurable
     
     var body: some View {
-        Text(text)
-            .foregroundColor(textColor)
-            .font(font)
+        Text(configuration.text)
+            .foregroundColor(Color(hex: configuration.textColor))
+            .font(configuration.font)
     }
 }
 
-struct PSLabelConfigration: PSLabelConfigurable {
+struct PSLabelConfig: PSLabelConfigurable {
     var identifier: String
     var text: String
-    var textColor: Color
+    var textColor: String
     var font: Font
 }
