@@ -14,28 +14,39 @@ protocol UIComponentBuilder {
 }
 
 class ScreenBuilder {
-
+    
     @ViewBuilder
-    func createUIElement(_ element: Body) -> some View {
-        ForEach(element.fields ?? [], id: \.identifier) { bodyElement in
-            switch bodyElement.type {
-            case "scrollView":
-                Spacer()
-            case .none:
-                Spacer()
-            case .some(_):
-                Spacer()
+    func buildView(for component: BodyField) -> some View {
+        switch component.type {
+        case "scrollView":
+            PSScrollView(configuration: PSScrollViewConfig(content: {
+                ForEach(component.fields ?? [], id: \.identifier) { field in
+                    self.createChildView(field)
+                }
+            }))
+        default:
+            EmptyView()
+        }
+    }
+    
+    @ViewBuilder
+    func createChildView(_ childElement:ChildField) -> some View {
+        switch childElement.type {
+            
+        case "textField":
+            if let properties = childElement.properties {
+                PSTextField(configuration: PSTextFieldConfig(text: .constant(""), keyboardType: .asciiCapable, properties: properties))
             }
             
+        case "button":
+            if let properties = childElement.properties {
+                PSButton(configuration: PSButtonConfig(buttonTitle: properties.title ?? "", buttonColor: properties.backgroundColor ?? "", properties: properties), buttonAction: {
+                    print("Login Tapped")
+                })
+            }
+            
+        default:
+            EmptyView()
         }
-//        switch element.type {
-//        case .textField:
-//            CustomTextField(configuration: CustomTextFieldConfig(text: .constant(""), keyboardType: .asciiCapable, properties: element.properties ?? Properties()))
-//        case .button:
-//            CustomButton(configuration: CustomButtonConfig(buttonTitle: element.properties?.title ?? "", buttonColor: element.properties?.backgroundColor ?? "", properties: element.properties ?? Properties()))
-//        case .none:
-//            Spacer()
-//        case .some(.label):
-//            Spacer()
     }
 }

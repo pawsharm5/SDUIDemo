@@ -27,11 +27,11 @@ struct Body: Codable {
 // MARK: - BodyField
 struct BodyField: Codable {
     var type, identifier: String?
-    var fields: [FieldField]?
+    var fields: [ChildField]?
 }
 
 // MARK: - FieldField
-struct FieldField: Codable {
+struct ChildField: Codable {
     var type, identifier: String?
     var properties: Properties?
 }
