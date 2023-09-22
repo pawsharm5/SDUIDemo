@@ -21,7 +21,7 @@
                             "color": "#555",
                             "padding": {
                                 "top": 10.0,
-                                "bottom": 50.0
+                                "bottom": 20.0
                             }
                         }
                     },
@@ -33,7 +33,7 @@
                             "color": "#555",
                             "padding": {
                                 "top": 10.0,
-                                "bottom": 20.0
+                                "bottom": 50.0
                             },
                         }
                     },
@@ -74,6 +74,10 @@
                         "properties": {
                             "label": "Title",
                             "color": "#555",
+                            "padding": {
+                                "top": 30.0,
+                                "bottom": 5.0
+                            },
                         }
                     },
                     {
@@ -98,6 +102,10 @@
                         "properties": {
                             "label": "First Name",
                             "color": "#555",
+                            "padding": {
+                                "top": 20.0,
+                                "bottom": 5.0
+                            },
                         }
                     },
                     {
@@ -122,6 +130,10 @@
                         "properties": {
                             "label": "Middle names",
                             "color": "#555",
+                            "padding": {
+                                "top": 20.0,
+                                "bottom": 5.0
+                            },
                         }
                     },
                     {
@@ -146,6 +158,10 @@
                         "properties": {
                             "label": "Last Name",
                             "color": "#555",
+                            "padding": {
+                                "top": 20.0,
+                                "bottom": 5.0
+                            },
                         }
                     },
                     {
@@ -170,6 +186,10 @@
                         "properties": {
                             "label": "Have you been known by any other names",
                             "color": "#555",
+                            "padding": {
+                                "top": 30.0,
+                                "bottom": 10.0
+                            },
                         }
                     },
                     {
@@ -232,7 +252,7 @@
                             "backgroundColor": "#0074cc",
                             "color": "#ffffff",
                             "padding": {
-                                "top": 20.0,
+                                "top": 60.0,
                                 "left": 20.0,
                                 "right": 20.0,
                                 "bottom": 10.0
