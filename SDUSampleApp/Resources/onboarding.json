@@ -34,7 +34,7 @@
                             "color": "#555",
                             "padding": {
                                 "top": 10.0,
-                                "bottom": 50.0
+                                "bottom": 20.0
                             },
                             "fontSize":40
                         }
@@ -53,6 +53,10 @@
                                 "identifier": "info_image",
                                 "properties": {
                                     "name": "info",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "left": 10.0,
+                                    }
                                 }
                             },
                             {
@@ -64,8 +68,7 @@
                                     "padding": {
                                         "left" : 8,
                                         "right": 8,
-                                        "top": 16.0,
-                                        "bottom": 16.0
+                                        "bottom": 8
                                     },
                                 }
                             }
@@ -267,7 +270,6 @@
                             "size": {
                                 "height":50,
                             },
-                            "cornorRadius":10
                         }
                     },
                     {
@@ -275,7 +277,7 @@
                         "type": "button",
                         "properties": {
                             "title": "Previous",
-                            "color": "#ffffff",
+                            "color": "#000000",
                             "padding": {
                                 "top": 5.0,
                                 "bottom": 10.0
@@ -283,7 +285,6 @@
                             "size": {
                                 "height":40,
                             },
-                            "cornorRadius":10
                         }
                     }
                     

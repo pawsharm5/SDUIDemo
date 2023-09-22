@@ -26,6 +26,7 @@ struct PSImageView: View {
             .aspectRatio(contentMode: configuration.contentMode)
             .frame(width: configuration.size.width, height: configuration.size.height)
             .cornerRadius(configuration.cornerRadius)
+            .padding()
     }
 }
 

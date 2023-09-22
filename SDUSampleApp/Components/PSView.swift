@@ -27,7 +27,7 @@ struct PSView : View {
     let configuration: PSViewConfiguration
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .leading) {
             configuration.content
         }.background(configuration.backgroundColor)
             .cornerRadius(10)
