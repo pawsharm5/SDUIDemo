@@ -58,6 +58,12 @@
                                 "properties": {
                                     "label": "Please enter your name exactly as it appears on your passport or driving license",
                                     "color": "#555",
+                                    "padding": {
+                                        "left" : 20,
+                                        "right": 20,
+                                        "top": 20.0,
+                                        "bottom": 20.0
+                                    },
                                 }
                             }
                         ]

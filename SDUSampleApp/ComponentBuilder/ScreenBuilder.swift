@@ -29,6 +29,7 @@ class ScreenBuilder {
         }
     }
     
+    
     @ViewBuilder
     func createChildView(_ childElement: SubView) -> some View {
         switch childElement.type {
@@ -39,6 +40,8 @@ class ScreenBuilder {
             PSButtonBuilder().build(element: childElement)
         case .label:
             PSLabelBuilder().build(element: childElement)
+        case .view:
+            PSViewBuilder().build(element: childElement)
         default:
             EmptyView()
         }

@@ -27,7 +27,7 @@ struct PSLabel: View {
             .foregroundColor(Color(hex: configuration.textColor))
             .font(configuration.font)
             .frame(alignment: .leading)
-            .padding(.bottom, CGFloat(configuration.padding?.bottom ?? 0))
+            .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
     }
 }
 
