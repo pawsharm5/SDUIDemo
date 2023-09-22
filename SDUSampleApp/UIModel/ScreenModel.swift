@@ -42,7 +42,7 @@ enum ComponentsType: String, Codable {
     case label
     case view
     case image
-    case HStack
+    case Segment
 }
 // MARK: - Properties
 struct Properties: Codable {
@@ -55,6 +55,7 @@ struct Properties: Codable {
     var title, url: String?
     var action: Action?
     var backgroundColor: String?
+    var cornorRadius:Int?
 }
 
 // MARK: - Accessibility

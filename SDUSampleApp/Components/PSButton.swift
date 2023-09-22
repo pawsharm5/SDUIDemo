@@ -14,6 +14,7 @@ protocol PSButtonConfiguration {
     var buttonTitleColor: String { get }
     var padding: Padding? { get }
     var height: Int { get }
+    var cornorRadius: Int { get }
 }
 
 struct PSButton: View {
@@ -31,7 +32,7 @@ struct PSButton: View {
                 .frame(height: CGFloat(configuration.height))
                 .background(Color(hex: configuration.buttonColor))
                 .foregroundColor(Color(hex: configuration.buttonTitleColor))
-                .cornerRadius(10)
+                .cornerRadius(CGFloat(configuration.cornorRadius))
                 .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
         }
     }
@@ -44,4 +45,5 @@ struct PSButtonConfig: PSButtonConfiguration {
     var buttonTitleColor: String
     var padding: Padding?
     var height:Int
+    var cornorRadius:Int
 }

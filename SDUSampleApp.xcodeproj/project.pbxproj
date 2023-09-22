@@ -14,6 +14,7 @@
 		109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */; };
 		109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */; };
 		109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8612ABDC098005295F2 /* PSSegmentControl.swift */; };
+		109EC8642ABDC5A3005295F2 /* PSSegmentControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8632ABDC5A3005295F2 /* PSSegmentControlBuilder.swift */; };
 		CA06C0692ABD7EDB00C63E59 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA06C0682ABD7EDB00C63E59 /* onboarding.json */; };
 		CAEC1AFC2ABDBAC80091951C /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFB2ABDBAC80091951C /* PSView.swift */; };
 		CAEC1AFE2ABDBCE00091951C /* PSViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */; };
@@ -64,6 +65,7 @@
 		109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLabelBuilder.swift; sourceTree = "<group>"; };
 		109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollViewBuilder.swift; sourceTree = "<group>"; };
 		109EC8612ABDC098005295F2 /* PSSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSegmentControl.swift; sourceTree = "<group>"; };
+		109EC8632ABDC5A3005295F2 /* PSSegmentControlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSegmentControlBuilder.swift; sourceTree = "<group>"; };
 		CA06C0682ABD7EDB00C63E59 /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
 		CAEC1AFB2ABDBAC80091951C /* PSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
 		CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSViewBuilder.swift; sourceTree = "<group>"; };
@@ -197,8 +199,8 @@
 				109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */,
 				109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */,
 				109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */,
-				109EC8612ABDC098005295F2 /* PSSegmentControl.swift */,
 				CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */,
+				109EC8632ABDC5A3005295F2 /* PSSegmentControlBuilder.swift */,
 			);
 			path = ComponentBuilder;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 				109EC8572ABD71D2005295F2 /* PSScrollView.swift */,
 				CAEC1AFB2ABDBAC80091951C /* PSView.swift */,
 				CAEC1AFF2ABDC43F0091951C /* PSImageView.swift */,
+				109EC8612ABDC098005295F2 /* PSSegmentControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				F2FF1F1F2ABC465C00681957 /* SDUSampleAppApp.swift in Sources */,
 				F2FF1F602ABC4A0300681957 /* NetworkServiceProtocol.swift in Sources */,
 				F2FF1F522ABC474900681957 /* PSTextField.swift in Sources */,
+				109EC8642ABDC5A3005295F2 /* PSSegmentControlBuilder.swift in Sources */,
 				F2FF1F4E2ABC46FB00681957 /* StringExtension.swift in Sources */,
 				F2FF1F582ABC48BF00681957 /* ScreenModel.swift in Sources */,
 				109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */,
