@@ -13,7 +13,7 @@ struct PSLabelBuilder: UIComponentBuilder {
     typealias ComponentType = PSLabel
     
     func build(element: ChildField) -> PSLabel {
-        let configuration = PSLabelConfig(identifier: element.identifier ?? "", text: element.properties?.title ?? "", textColor: element.properties?.color ?? "", font: .body)
+        let configuration = PSLabelConfig(identifier: element.identifier ?? "", text: element.properties?.label ?? "", textColor: element.properties?.color ?? "", font: .body)
         let customLabel = PSLabel(configuration: configuration)
         return customLabel
     }
