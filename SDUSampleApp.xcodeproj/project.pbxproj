@@ -17,6 +17,7 @@
 		CA06C0692ABD7EDB00C63E59 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA06C0682ABD7EDB00C63E59 /* onboarding.json */; };
 		CAEC1AFC2ABDBAC80091951C /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFB2ABDBAC80091951C /* PSView.swift */; };
 		CAEC1AFE2ABDBCE00091951C /* PSViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */; };
+		CAEC1B002ABDC43F0091951C /* PSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFF2ABDC43F0091951C /* PSImageView.swift */; };
 		F2FF1F1F2ABC465C00681957 /* SDUSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */; };
 		F2FF1F212ABC465C00681957 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F202ABC465C00681957 /* OnBoardingView.swift */; };
 		F2FF1F232ABC465D00681957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2FF1F222ABC465D00681957 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		CA06C0682ABD7EDB00C63E59 /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
 		CAEC1AFB2ABDBAC80091951C /* PSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
 		CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSViewBuilder.swift; sourceTree = "<group>"; };
+		CAEC1AFF2ABDC43F0091951C /* PSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSImageView.swift; sourceTree = "<group>"; };
 		F2FF1F1B2ABC465C00681957 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppApp.swift; sourceTree = "<group>"; };
 		F2FF1F202ABC465C00681957 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				F2FF1F682ABC525E00681957 /* PSLabel.swift */,
 				109EC8572ABD71D2005295F2 /* PSScrollView.swift */,
 				CAEC1AFB2ABDBAC80091951C /* PSView.swift */,
+				CAEC1AFF2ABDC43F0091951C /* PSImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */,
 				109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */,
 				109EC85C2ABD94AE005295F2 /* PSButtonBuilder.swift in Sources */,
+				CAEC1B002ABDC43F0091951C /* PSImageView.swift in Sources */,
 				109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */,
 				109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */,
 				F2FF1F622ABC4AB400681957 /* PSViewModel.swift in Sources */,

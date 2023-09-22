@@ -51,6 +51,8 @@ class ScreenBuilder {
                 .background(Color(hex: childElement.properties?.color ?? ""))
         case .view:
             PSViewBuilder().build(element: childElement)
+        case .image:
+            PSViewBuilder().build(element: childElement)
         default:
             EmptyView()
         }
