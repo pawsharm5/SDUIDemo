@@ -11,7 +11,7 @@ import SwiftUI
 struct SDUSampleAppApp: App {
     var body: some Scene {
         WindowGroup {
-            OnBoardingView()
+            LaunchView()
         }
     }
 }
