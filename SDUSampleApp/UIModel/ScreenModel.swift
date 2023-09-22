@@ -56,6 +56,7 @@ struct Properties: Codable {
     var action: Action?
     var backgroundColor: String?
     var cornorRadius:Int?
+    var fontSize:Int?
 }
 
 // MARK: - Accessibility
