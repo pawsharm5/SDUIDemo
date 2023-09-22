@@ -32,12 +32,12 @@ class ScreenBuilder {
     @ViewBuilder
     func createChildView(_ childElement:ChildField) -> some View {
         switch childElement.type {
-            
-        case "textField":
+
+        case .textField:
             PSTextFieldBuilder().build(element: childElement)
-        case "button":
+        case .button:
             PSButtonBuilder().build(element: childElement)
-        case "label":
+        case .label:
             PSLabelBuilder().build(element: childElement)
         default:
             EmptyView()
