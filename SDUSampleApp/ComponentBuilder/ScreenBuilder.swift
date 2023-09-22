@@ -31,6 +31,7 @@ class ScreenBuilder {
         }
     }
     
+    
     @ViewBuilder
     func createChildView(_ childElement: SubView) -> some View {
         switch childElement.type {
@@ -48,6 +49,8 @@ class ScreenBuilder {
                 }
             }.frame(width: 240)
                 .background(Color(hex: childElement.properties?.color ?? ""))
+        case .view:
+            PSViewBuilder().build(element: childElement)
         default:
             EmptyView()
         }

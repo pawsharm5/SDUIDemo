@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PSView: View {
+struct OnBoardingView: View {
     @StateObject private var vm: PSViewModel
     @State private var username: String = ""
     @State private var password: String = ""
@@ -27,8 +27,8 @@ struct PSView: View {
     }
 }
 
-struct PSView_Previews: PreviewProvider {
+struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        PSView()
+        OnBoardingView()
     }
 }
