@@ -9,10 +9,7 @@ import SwiftUI
 
 struct PSView: View {
     @StateObject private var vm: PSViewModel
-    @State private var username: String = ""
-    @State private var password: String = ""
-    
-    init() {
+     init() {
         _vm = StateObject(wrappedValue: PSViewModel(service: LocalService()))
     }
     
