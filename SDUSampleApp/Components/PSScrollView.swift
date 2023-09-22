@@ -24,12 +24,8 @@ struct PSScrollViewConfig: PSScrollViewConfiguration {
     }
 }
 
-struct PSScrollView<Configuration: PSScrollViewConfiguration>: View {
-    let configuration: Configuration
-    
-    init(configuration: Configuration) {
-        self.configuration = configuration
-    }
+struct PSScrollView : View {
+    let configuration: PSScrollViewConfig
     
     var body: some View {
         ScrollView {
