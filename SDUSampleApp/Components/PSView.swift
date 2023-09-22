@@ -18,7 +18,7 @@ struct PSViewConfiguration: PSViewConfigurable {
     let content: AnyView
     let backgroundColor: Color
 
-    init<Content: View>(@ViewBuilder content: () -> Content, backgroundColor: Color = .gray) {
+    init<Content: View>(@ViewBuilder content: () -> Content, backgroundColor: Color = .secondary) {
         self.content = AnyView(content())
         self.backgroundColor = backgroundColor
     }
@@ -27,9 +27,10 @@ struct PSView : View {
     let configuration: PSViewConfiguration
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             configuration.content
         }.background(configuration.backgroundColor)
             .cornerRadius(10)
+            .frame(maxWidth: .infinity)
     }
 }

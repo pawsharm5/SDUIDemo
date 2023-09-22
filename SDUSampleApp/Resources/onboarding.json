@@ -59,10 +59,10 @@
                                     "label": "Please enter your name exactly as it appears on your passport or driving license",
                                     "color": "#555",
                                     "padding": {
-                                        "left" : 20,
-                                        "right": 20,
-                                        "top": 20.0,
-                                        "bottom": 20.0
+                                        "left" : 8,
+                                        "right": 8,
+                                        "top": 8.0,
+                                        "bottom": 8.0
                                     },
                                 }
                             }
@@ -253,8 +253,6 @@
                             "color": "#ffffff",
                             "padding": {
                                 "top": 60.0,
-                                "left": 20.0,
-                                "right": 20.0,
                                 "bottom": 10.0
                             },
                             "size": {
@@ -268,7 +266,6 @@
                         "type": "button",
                         "properties": {
                             "title": "Previous",
-                            "backgroundColor": "#000000",
                             "color": "#ffffff",
                             "padding": {
                                 "top": 5.0,

@@ -33,7 +33,7 @@ struct PSScrollView : View {
                 configuration.content
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background(Color.white)
         .cornerRadius(0)
         .padding()
