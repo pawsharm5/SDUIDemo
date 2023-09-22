@@ -13,6 +13,7 @@
 		109EC85C2ABD94AE005295F2 /* PSButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */; };
 		109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */; };
 		109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */; };
+		109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8612ABDC098005295F2 /* PSSegmentControl.swift */; };
 		CA06C0692ABD7EDB00C63E59 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA06C0682ABD7EDB00C63E59 /* onboarding.json */; };
 		F2FF1F1F2ABC465C00681957 /* SDUSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */; };
 		F2FF1F212ABC465C00681957 /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F202ABC465C00681957 /* PSView.swift */; };
@@ -59,6 +60,7 @@
 		109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSButtonBuilder.swift; sourceTree = "<group>"; };
 		109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLabelBuilder.swift; sourceTree = "<group>"; };
 		109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollViewBuilder.swift; sourceTree = "<group>"; };
+		109EC8612ABDC098005295F2 /* PSSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSegmentControl.swift; sourceTree = "<group>"; };
 		CA06C0682ABD7EDB00C63E59 /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
 		F2FF1F1B2ABC465C00681957 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppApp.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */,
 				109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */,
 				109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */,
+				109EC8612ABDC098005295F2 /* PSSegmentControl.swift */,
 			);
 			path = ComponentBuilder;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */,
 				109EC85C2ABD94AE005295F2 /* PSButtonBuilder.swift in Sources */,
 				109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */,
+				109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */,
 				F2FF1F622ABC4AB400681957 /* PSViewModel.swift in Sources */,
 				109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */,
 				F2FF1F5F2ABC4A0300681957 /* LocalService.swift in Sources */,

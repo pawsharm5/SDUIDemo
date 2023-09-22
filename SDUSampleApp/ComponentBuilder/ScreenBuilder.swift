@@ -24,6 +24,8 @@ class ScreenBuilder {
                     self.createChildView(field)
                 }
             }))
+        case .button:
+            PSButtonBuilder().build(element: component)
         default:
             EmptyView()
         }
@@ -39,6 +41,13 @@ class ScreenBuilder {
             PSButtonBuilder().build(element: childElement)
         case .label:
             PSLabelBuilder().build(element: childElement)
+        case .HStack:
+            HStack(spacing: 1) {
+                ForEach(childElement.subviews ?? []) { field in
+                    self.buildView(for: field)
+                }
+            }.frame(width: 240)
+                .background(Color(hex: childElement.properties?.color ?? ""))
         default:
             EmptyView()
         }

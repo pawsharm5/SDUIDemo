@@ -11,6 +11,7 @@ import SwiftUI
 protocol PSButtonConfiguration {
     var buttonTitle: String { get }
     var buttonColor: String { get }
+    var buttonTitleColor: String { get }
     var padding: Padding? { get }
     var height: Int { get }
 }
@@ -29,7 +30,7 @@ struct PSButton: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: CGFloat(configuration.height))
                 .background(Color(hex: configuration.buttonColor))
-                .foregroundColor(.white)
+                .foregroundColor(Color(hex: configuration.buttonTitleColor))
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
         }
@@ -40,6 +41,7 @@ struct PSButton: View {
 struct PSButtonConfig: PSButtonConfiguration {
     var buttonTitle: String
     var buttonColor: String
+    var buttonTitleColor: String
     var padding: Padding?
     var height:Int
 }

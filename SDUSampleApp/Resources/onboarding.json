@@ -160,11 +160,60 @@
                     },
                     {
                         "type": "label",
-                        "identifier": "question_label",
+                        "identifier": "question_label_1",
                         "properties": {
                             "label": "Have you been known by any other names",
                             "color": "#555",
                         }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "question_label_2",
+                        "properties": {
+                            "label": "What is ?",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "HStack",
+                        "identifier": "segment_control",
+                        "properties": {
+                            "color": "#555",
+                        },
+                        "subviews": [
+                            {
+                                "type": "button",
+                                "identifier": "button_first",
+                                "properties": {
+                                    "title": "YES",
+                                    "color": "#000000",
+                                    "backgroundColor": "#FFFFFF",
+                                },
+                                "padding": {
+                                    "top": 10.0,
+                                    "bottom": 10.0
+                                },
+                                "size": {
+                                    "height":40
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "identifier": "button_second",
+                                "properties": {
+                                    "title": "NO",
+                                    "color": "#000000",
+                                    "backgroundColor": "#FFFFFF",
+                                },
+                                "padding": {
+                                    "top": 0.0,
+                                    "bottom": 0.0,
+                                },
+                                "size": {
+                                    "height":40
+                                }
+                            }
+                        ]
                     },
                     {
                         "identifier": "continue_button",

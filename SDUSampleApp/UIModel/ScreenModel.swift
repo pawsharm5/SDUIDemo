@@ -25,9 +25,12 @@ struct Body: Codable {
 }
 
 // MARK: - FieldField
-struct SubView: Codable {
+struct SubView: Codable, Identifiable {
+    var id: String {
+        self.identifier
+    }
     var type: ComponentsType
-    var identifier: String?
+    var identifier: String
     var properties: Properties?
     var subviews: [SubView]?
 
@@ -39,6 +42,7 @@ enum ComponentsType: String, Codable {
     case label
     case view
     case image
+    case HStack
 }
 // MARK: - Properties
 struct Properties: Codable {

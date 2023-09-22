@@ -13,7 +13,7 @@ struct PSButtonBuilder: UIComponentBuilder {
     typealias ComponentType = PSButton
     
     func build(element: SubView) -> PSButton {
-        let configuration = PSButtonConfig(buttonTitle: element.properties?.title ?? "", buttonColor: element.properties?.backgroundColor ?? "", padding: element.properties?.padding, height: element.properties?.size?.height ?? 30)
+        let configuration = PSButtonConfig(buttonTitle: element.properties?.title ?? "", buttonColor: element.properties?.backgroundColor ?? "", buttonTitleColor: element.properties?.color ?? "#FFFFFF", padding: element.properties?.padding, height: element.properties?.size?.height ?? 30)
         let customButton = PSButton(configuration: configuration, buttonAction: nil)
         return customButton
     }
