@@ -19,11 +19,11 @@ struct PSButton: View {
     let configuration: PSButtonConfiguration
     typealias ButtonAction = () -> Void
     
-    let buttonAction: ButtonAction
+    let buttonAction: ButtonAction?
     
     var body: some View {
         Button(action: {
-        buttonAction()
+        buttonAction?()
         }) {
             Text(configuration.buttonTitle)
                 .frame(maxWidth: .infinity)
@@ -34,6 +34,7 @@ struct PSButton: View {
                 .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
         }
     }
+    
 }
 
 struct PSButtonConfig: PSButtonConfiguration {

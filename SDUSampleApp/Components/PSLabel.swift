@@ -13,6 +13,8 @@ protocol PSLabelConfigurable {
     var text: String { get }
     var textColor: String { get }
     var font: Font { get }
+    var padding: Padding? { get }
+
     // Add more configuration options as needed
 }
 
@@ -25,6 +27,7 @@ struct PSLabel: View {
             .foregroundColor(Color(hex: configuration.textColor))
             .font(configuration.font)
             .frame(alignment: .leading)
+            .padding(.bottom, CGFloat(configuration.padding?.bottom ?? 0))
     }
 }
 
@@ -33,4 +36,5 @@ struct PSLabelConfig: PSLabelConfigurable {
     var text: String
     var textColor: String
     var font: Font
+    var padding: Padding?
 }

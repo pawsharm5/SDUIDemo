@@ -19,6 +19,10 @@
                         "properties": {
                             "label": "Business Current Account Application",
                             "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 50.0
+                            }
                         }
                     },
                     {
@@ -27,6 +31,10 @@
                         "properties": {
                             "label": "Your Name",
                             "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 20.0
+                            },
                         }
                     },
                     {

@@ -8,7 +8,6 @@
 import SwiftUI
 
 protocol PSTextFieldConfiguration {
-    var text: Binding<String> { get }
     var keyboardType: UIKeyboardType { get }
     var placeHolder: String { get }
     var height: Int { get }
@@ -19,9 +18,10 @@ protocol PSTextFieldConfiguration {
 
 struct PSTextField : View {
     let configuration: PSTextFieldConfiguration
-    
+    @ObservedObject var observer = TextFieldObjerver()
+
     var body: some View {
-        TextField(configuration.placeHolder, text: configuration.text)
+        TextField(configuration.placeHolder, text: $observer.username)
             .keyboardType(configuration.keyboardType)
             .textFieldStyle(PlainTextFieldStyle())
             .frame(height: CGFloat(configuration.height))
