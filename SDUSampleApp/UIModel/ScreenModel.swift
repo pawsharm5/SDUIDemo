@@ -32,10 +32,18 @@ struct BodyField: Codable {
 
 // MARK: - FieldField
 struct ChildField: Codable {
-    var type, identifier: String?
+    var type: ComponentsType
+    var identifier: String?
     var properties: Properties?
 }
-
+enum ComponentsType: String, Codable {
+    case scrollView
+    case textField
+    case button
+    case label
+    case view
+    case image
+}
 // MARK: - Properties
 struct Properties: Codable {
     var label, placeHolder: String?

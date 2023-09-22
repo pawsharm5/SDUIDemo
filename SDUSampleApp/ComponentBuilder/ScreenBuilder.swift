@@ -33,12 +33,12 @@ class ScreenBuilder {
     func createChildView(_ childElement:ChildField) -> some View {
         switch childElement.type {
             
-        case "textField":
+        case .textField:
             if let properties = childElement.properties {
                 PSTextField(configuration: PSTextFieldConfig(text: .constant(""), keyboardType: .asciiCapable, properties: properties))
             }
             
-        case "button":
+        case .button:
             if let properties = childElement.properties {
                 PSButton(configuration: PSButtonConfig(buttonTitle: properties.title ?? "", buttonColor: properties.backgroundColor ?? "", properties: properties), buttonAction: {
                     print("Login Tapped")
