@@ -47,7 +47,7 @@ class ScreenBuilder {
         case .view:
             PSViewBuilder().build(element: childElement)
         case .image:
-            PSViewBuilder().build(element: childElement)
+            PSImageViewBuilder().build(element: childElement)
         default:
             EmptyView()
         }
