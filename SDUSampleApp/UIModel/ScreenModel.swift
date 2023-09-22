@@ -7,10 +7,10 @@
 
 import Foundation
 // MARK: - ScreenModel
-struct ScreenModel: Decodable {
+struct ScreenModel: Codable {
     var screenIdentifier: String?
     var padding: Padding?
-    var body: Body?
+    var body: Body
 
     enum CodingKeys: String, CodingKey {
         case screenIdentifier = "screen_identifier"
@@ -19,83 +19,59 @@ struct ScreenModel: Decodable {
 }
 
 // MARK: - Body
-struct Body: Decodable {
+struct Body: Codable {
+    var identifier: String?
+    var fields: [BodyField]?
+}
+
+// MARK: - BodyField
+struct BodyField: Codable {
     var type, identifier: String?
-    var fields: [Field]?
+    var fields: [FieldField]?
 }
 
-struct Padding: Decodable {
-    var left, right, top, bottom: Int?
-}
-
-// MARK: - Field
-struct Field: Decodable {
-    var type: ComponentsType?
-    var identifierV: ComponentIdentifier
+// MARK: - FieldField
+struct FieldField: Codable {
+    var type, identifier: String?
     var properties: Properties?
-    
-    enum CodingKeys: String, CodingKey {
-        case type
-        case identifierV = "identifier"
-        case properties
-    }
-}
-
-enum ComponentsType: String, Decodable {
-    case textField
-    case button
-    case label
 }
 
 // MARK: - Properties
-struct Properties: Decodable {
+struct Properties: Codable {
     var label, placeHolder: String?
     var mandatory: Bool?
     var accessibility: Accessibility?
-    var allowedRegex, textFieldType: String?
-    var validation: Validation?
-    var title, url: String?
-    var action: Action?
-    var color: String?
-    var backgroundColor: String?
+    var textFieldType, color: String?
     var padding: Padding?
     var size: Size?
-    
-    enum CodingKeys: String, CodingKey {
-        case label, placeHolder, mandatory, accessibility
-        case allowedRegex = "allowed_regex"
-        case textFieldType, validation, title, url, action
-        case color
-        case backgroundColor
-        case padding
-        case size
-    }
+    var title, url: String?
+    var action: Action?
+    var backgroundColor: String?
 }
 
 // MARK: - Accessibility
-struct Accessibility: Decodable {
+struct Accessibility: Codable {
     var label, identifier: String?
 }
 
 // MARK: - Action
-struct Action: Decodable {
+struct Action: Codable {
     var type, destination, navigationType: String?
 }
 
-// MARK: - Validation
-struct Validation: Decodable {
-    var max, min: Max?
-    var regex: String?
-}
+// MARK: - Padding
+struct Padding: Codable {
+    var top, paddingLeft, paddingRight, bottom: Int?
 
-// MARK: - Max
-struct Max: Decodable {
-    var value: Int?
-    var message: String?
+    enum CodingKeys: String, CodingKey {
+        case top
+        case paddingLeft = "left"
+        case paddingRight = "right"
+        case bottom
+    }
 }
 
 // MARK: - Size
-struct Size: Decodable {
-    var height: Int?
-    var witdh: Int?
+struct Size: Codable {
+    var height, width: Int?
 }

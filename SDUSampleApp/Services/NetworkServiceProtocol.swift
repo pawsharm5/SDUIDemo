@@ -7,5 +7,5 @@
 
 import Foundation
 protocol NetworkServiceProtocol {
-    func load(_ resourceName: String) async throws -> ScreenModel 
+    func load<T:Decodable>(_ resourceName: String) async throws -> T
 }

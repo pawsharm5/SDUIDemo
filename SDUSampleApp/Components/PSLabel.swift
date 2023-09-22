@@ -8,22 +8,22 @@
 import Foundation
 import SwiftUI
 
-protocol LabelConfigurable {
-    var identifier: ComponentIdentifier { get }
+protocol PSLabelConfigurable {
+    var identifier: String { get }
     var text: String { get }
     var textColor: Color { get }
     var font: Font { get }
     // Add more configuration options as needed
 }
 
-struct CustomLabel: View {
+struct PSLabel: View {
         
-    var identifier: ComponentIdentifier
+    var identifier: String
     var text: String = ""
     var textColor: Color = .black
     var font: Font = .body
     
-    mutating func configure(with configuration: LabelConfigration) {
+    mutating func configure(with configuration: PSLabelConfigration) {
         self.identifier = configuration.identifier
         self.text = configuration.text
         self.textColor = configuration.textColor
@@ -37,8 +37,8 @@ struct CustomLabel: View {
     }
 }
 
-struct LabelConfigration: LabelConfigurable {
-    var identifier: ComponentIdentifier
+struct PSLabelConfigration: PSLabelConfigurable {
+    var identifier: String
     var text: String
     var textColor: Color
     var font: Font

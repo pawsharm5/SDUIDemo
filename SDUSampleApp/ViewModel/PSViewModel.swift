@@ -8,17 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct Components {
-    let viewData: [Field]
-    let view: [AnyView]
-}
-
-
 @MainActor
-class LoginViewModel: ObservableObject {
+class PSViewModel: ObservableObject {
     private var service: NetworkServiceProtocol
     
-    @Published var components: [Components] =  []
     @Published var currentScreenData: ScreenModel?
     
     init(service: NetworkServiceProtocol) {
@@ -28,7 +21,7 @@ class LoginViewModel: ObservableObject {
     func load() async {
         do {
             
-            let screenModel = try await service.load("login")
+            let screenModel = try await service.load("login") as ScreenModel
             self.currentScreenData = screenModel
         } catch {
             print(error)

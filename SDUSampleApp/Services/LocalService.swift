@@ -9,13 +9,13 @@ import Foundation
 
 class LocalService: NetworkServiceProtocol {
     
-    func load(_ resourceName: String) async throws -> ScreenModel {
+    func load<T:Decodable>(_ resourceName: String) async throws -> T {
         guard let path = Bundle.main.path(forResource: resourceName, ofType: "json") else {
             fatalError("Resource file \(resourceName) not found!")
         }
         
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
-        let screenModel = try JSONDecoder().decode(ScreenModel.self, from: data)
+        let screenModel = try JSONDecoder().decode(T.self, from: data)
         return screenModel
     }
 

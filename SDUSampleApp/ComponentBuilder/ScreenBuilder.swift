@@ -1,22 +1,33 @@
-////
-////  ScreenBuilder.swift
-////  SDUSampleApp
-////
-////  Created by Pratibha Gupta on 19/09/23.
-////
 //
-//import Foundation
-//import SwiftUI
+//  ScreenBuilder.swift
+//  SDUSampleApp
 //
-//protocol UIComponentBuilder {
-//    associatedtype ComponentType
-//    func build(element: Field) -> ComponentType
-//}
+//  Created by Pratibha Gupta on 19/09/23.
 //
-//class ScreenBuilder {
-//
-//    @ViewBuilder
-//    func createUIElement(_ element: Field) -> some View {
+
+import Foundation
+import SwiftUI
+
+protocol UIComponentBuilder {
+    associatedtype ComponentType
+    func build(element: Body) -> ComponentType
+}
+
+class ScreenBuilder {
+
+    @ViewBuilder
+    func createUIElement(_ element: Body) -> some View {
+        ForEach(element.fields ?? [], id: \.identifier) { bodyElement in
+            switch bodyElement.type {
+            case "scrollView":
+                Spacer()
+            case .none:
+                Spacer()
+            case .some(_):
+                Spacer()
+            }
+            
+        }
 //        switch element.type {
 //        case .textField:
 //            CustomTextField(configuration: CustomTextFieldConfig(text: .constant(""), keyboardType: .asciiCapable, properties: element.properties ?? Properties()))
@@ -26,6 +37,5 @@
 //            Spacer()
 //        case .some(.label):
 //            Spacer()
-//        }
-//    }
-//}
+    }
+}

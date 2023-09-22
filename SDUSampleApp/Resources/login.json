@@ -7,111 +7,115 @@
         "bottom": 20.0
     },
     "body": {
-        "type": "scrollView",
         "identifier": "login_body",
         "fields": [
             {
-                "type": "textField",
-                "identifier": "username_text_field",
-                "properties": {
-                    "label": "Username",
-                    "placeHolder": "Username",
-                    "mandatory": true,
-                    "accessibility": {
-                        "label": "Enter username",
-                        "identifier": "username_text_field"
+                "type": "scrollView",
+                "identifier": "content_scroll_view",
+                "fields": [
+                    {
+                        "type": "textField",
+                        "identifier": "username_text_field",
+                        "properties": {
+                            "label": "Username",
+                            "placeHolder": "Username",
+                            "mandatory": true,
+                            "accessibility": {
+                                "label": "Enter username",
+                                "identifier": "username_text_field"
+                            },
+                            "textFieldType": "plain_text",
+                            "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "left": 20.0,
+                                "right": 20.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40,
+                                "width":0
+                            }
+                        }
                     },
-                    "textFieldType": "plain_text",
-                    "backgroundColor": "#f0f0f0",
-                    "color": "#555",
-                    "padding": {
-                        "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
-                        "bottom": 10.0
+                    {
+                        "type": "textField",
+                        "identifier": "password_text_field",
+                        "properties": {
+                            "label": "Password",
+                            "placeHolder": "Password",
+                            "mandatory": true,
+                            "accessibility": {
+                                "label": "Enter password",
+                                "identifier": "password_text_field"
+                            },
+                            "textFieldType": "secure_text",
+                            "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "left": 20.0,
+                                "right": 20.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40,
+                                "width":0
+                            }
+                        }
                     },
-                    "size": {
-                        "height":50,
-                        "width":0
+                    {
+                        "identifier": "login_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Log In",
+                            "url": "",
+                            "action": {
+                                "type": "login",
+                                "destination": "",
+                                "navigationType": "PUSH"
+                            },
+                            "backgroundColor": "#0074cc",
+                            "color": "#ffffff",
+                            "padding": {
+                                "top": 20.0,
+                                "left": 20.0,
+                                "right": 20.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40,
+                                "width":0
+                            }
+                        }
+                    },
+                    {
+                        "identifier": "forgot_password_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Forgot Password?",
+                            "url": "",
+                            "action": {
+                                "type": "forgotPassword",
+                                "destination": "",
+                                "navigationType": "PUSH"
+                            },
+                            "backgroundColor": "",
+                            "color": "#ffffff",
+                            "padding": {
+                                "top": 10.0,
+                                "left": 20.0,
+                                "right": 20.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40,
+                                "width":0
+                            }
+                        }
                     }
-                }
-            },
-            {
-                "type": "textField",
-                "identifier": "password_text_field",
-                "properties": {
-                    "label": "Password",
-                    "placeHolder": "Password",
-                    "mandatory": true,
-                    "accessibility": {
-                        "label": "Enter password",
-                        "identifier": "password_text_field"
-                    },
-                    "textFieldType": "secure_text",
-                    "backgroundColor": "#f0f0f0",
-                    "color": "#555",
-                    "padding": {
-                        "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
-                        "bottom": 10.0
-                    },
-                    "size": {
-                        "height":50,
-                        "width":0
-                    }
-                }
-            },
-            {
-                "identifier": "login_button",
-                "type": "button",
-                "properties": {
-                    "title": "Log In",
-                    "url": "",
-                    "action": {
-                        "type": "login",
-                        "destination": "",
-                        "navigationType": "PUSH"
-                    },
-                    "backgroundColor": "#0074cc",
-                    "color": "#ffffff",
-                    "padding": {
-                        "top": 20.0,
-                        "left": 20.0,
-                        "right": 20.0,
-                        "bottom": 10.0
-                    },
-                    "size": {
-                        "height":50,
-                        "width":0
-                    }
-                }
-            },
-            {
-                "identifier": "forgot_password_button",
-                "type": "button",
-                "properties": {
-                    "title": "Forgot Password?",
-                    "url": "",
-                    "action": {
-                        "type": "forgotPassword",
-                        "destination": "",
-                        "navigationType": "PUSH"
-                    },
-                    "backgroundColor": "",
-                    "color": "#ffffff",
-                    "padding": {
-                        "top": 10.0,
-                        "left": 20.0,
-                        "right": 20.0,
-                        "bottom": 10.0
-                    },
-                    "size": {
-                        "height":30,
-                        "width":0
-                    }
-                }
+                ]
             }
+            
         ]
     }
 }

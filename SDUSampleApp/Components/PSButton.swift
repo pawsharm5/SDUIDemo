@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-protocol CustomButtonConfiguration {
+protocol PSButtonConfiguration {
     var buttonTitle: String { get }
     var buttonColor: String { get }
     var properties: Properties { get }
 }
 
-struct CustomButton<Configuration: CustomButtonConfiguration>: View {
+struct PSButton<Configuration: PSButtonConfiguration>: View {
     let configuration: Configuration
     typealias ButtonAction = () -> Void
     
@@ -30,12 +30,12 @@ struct CustomButton<Configuration: CustomButtonConfiguration>: View {
                 .background(Color(hex: configuration.buttonColor))
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .padding(EdgeInsets(top: CGFloat(configuration.properties.padding?.top ?? 0), leading: CGFloat(configuration.properties.padding?.left ?? 0), bottom: CGFloat(configuration.properties.padding?.bottom ?? 0), trailing: CGFloat(configuration.properties.padding?.right ?? 0)))
+                .padding(EdgeInsets(top: CGFloat(configuration.properties.padding?.top ?? 0), leading: CGFloat(configuration.properties.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.properties.padding?.bottom ?? 0), trailing: CGFloat(configuration.properties.padding?.paddingRight ?? 0)))
         }
     }
 }
 
-struct CustomButtonConfig: CustomButtonConfiguration {
+struct PSButtonConfig: PSButtonConfiguration {
     var buttonTitle: String
     var buttonColor: String
     var properties: Properties
