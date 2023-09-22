@@ -42,13 +42,8 @@ class ScreenBuilder {
             PSButtonBuilder().build(element: childElement)
         case .label:
             PSLabelBuilder().build(element: childElement)
-        case .HStack:
-            HStack(spacing: 1) {
-                ForEach(childElement.subviews ?? []) { field in
-                    self.buildView(for: field)
-                }
-            }.frame(width: 240)
-                .background(Color(hex: childElement.properties?.color ?? ""))
+        case .Segment:
+            PSSegmentControlBuilder().build(element: childElement)
         case .view:
             PSViewBuilder().build(element: childElement)
         default:

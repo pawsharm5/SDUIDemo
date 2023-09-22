@@ -181,7 +181,7 @@
                         }
                     },
                     {
-                        "type": "HStack",
+                        "type": "Segment",
                         "identifier": "segment_control",
                         "properties": {
                             "color": "#555",
@@ -201,7 +201,9 @@
                                 },
                                 "size": {
                                     "height":40
-                                }
+                                },
+                                "cornorRadius":10
+                                
                             },
                             {
                                 "type": "button",
@@ -217,7 +219,8 @@
                                 },
                                 "size": {
                                     "height":40
-                                }
+                                },
+                                "cornorRadius":0
                             }
                         ]
                     },
@@ -236,7 +239,8 @@
                             },
                             "size": {
                                 "height":50,
-                            }
+                            },
+                            "cornorRadius":10
                         }
                     },
                     {
@@ -244,14 +248,16 @@
                         "type": "button",
                         "properties": {
                             "title": "Previous",
-                            "color": "#000000",
+                            "backgroundColor": "#000000",
+                            "color": "#ffffff",
                             "padding": {
                                 "top": 5.0,
                                 "bottom": 10.0
                             },
                             "size": {
                                 "height":40,
-                            }
+                            },
+                            "cornorRadius":10
                         }
                     }
                     
