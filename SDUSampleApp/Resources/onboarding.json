@@ -1,0 +1,176 @@
+{
+    "screen_identifier": "login",
+    "padding": {
+        "top": 100.0,
+        "left": 20.0,
+        "right": 20.0,
+        "bottom": 20.0
+    },
+    "body": {
+        "identifier": "onboarding_body",
+        "subviews": [
+            {
+                "type": "scrollView",
+                "identifier": "content_scroll_view",
+                "subviews": [
+                    {
+                        "type": "label",
+                        "identifier": "cuurrent_account_label",
+                        "properties": {
+                            "label": "Business Current Account Application",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "name_label",
+                        "properties": {
+                            "label": "Your Name",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "title_label",
+                        "properties": {
+                            "label": "Title",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "textField",
+                        "identifier": "title_text_field",
+                        "properties": {
+                            "placeHolder": "Mr.",
+                            "mandatory": true,
+                            "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40
+                            }
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "first_name_label",
+                        "properties": {
+                            "label": "First Name",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "textField",
+                        "identifier": "first_name_text_field",
+                        "properties": {
+                            "placeHolder": "First Name",
+                            "mandatory": true,
+                            "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40
+                            }
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "middle_name_label",
+                        "properties": {
+                            "label": "Middle names",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "textField",
+                        "identifier": "middle_name_text_field",
+                        "properties": {
+                            "placeHolder": "Middle Name",
+                            "mandatory": true,
+                            "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40
+                            }
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "last_name_label",
+                        "properties": {
+                            "label": "Last Name",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "type": "textField",
+                        "identifier": "last_name_text_field",
+                        "properties": {
+                            "placeHolder": "Last Name",
+                            "mandatory": true,
+                            "color": "#555",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40
+                            }
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "question_label",
+                        "properties": {
+                            "label": "Have you been known by any other names",
+                            "color": "#555",
+                        }
+                    },
+                    {
+                        "identifier": "continue_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Continue",
+                            "backgroundColor": "#0074cc",
+                            "color": "#ffffff",
+                            "padding": {
+                                "top": 20.0,
+                                "left": 20.0,
+                                "right": 20.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":50,
+                            }
+                        }
+                    },
+                    {
+                        "identifier": "continue_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Previous",
+                            "color": "#000000",
+                            "padding": {
+                                "top": 5.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40,
+                            }
+                        }
+                    }
+                    
+                ]
+            }
+            
+        ]
+    }
+}
+

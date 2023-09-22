@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */; };
 		109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8572ABD71D2005295F2 /* PSScrollView.swift */; };
+		CA06C0692ABD7EDB00C63E59 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA06C0682ABD7EDB00C63E59 /* onboarding.json */; };
 		F2FF1F1F2ABC465C00681957 /* SDUSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */; };
 		F2FF1F212ABC465C00681957 /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F202ABC465C00681957 /* PSView.swift */; };
 		F2FF1F232ABC465D00681957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2FF1F222ABC465D00681957 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDropdownTextField.swift; sourceTree = "<group>"; };
 		109EC8572ABD71D2005295F2 /* PSScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollView.swift; sourceTree = "<group>"; };
+		CA06C0682ABD7EDB00C63E59 /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
 		F2FF1F1B2ABC465C00681957 /* SDUSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUSampleAppApp.swift; sourceTree = "<group>"; };
 		F2FF1F202ABC465C00681957 /* PSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		F2FF1F592ABC48C500681957 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA06C0682ABD7EDB00C63E59 /* onboarding.json */,
 				F2FF1F5A2ABC49F400681957 /* login.json */,
 			);
 			path = Resources;
@@ -331,6 +334,7 @@
 			files = (
 				F2FF1F262ABC465D00681957 /* Preview Assets.xcassets in Resources */,
 				F2FF1F232ABC465D00681957 /* Assets.xcassets in Resources */,
+				CA06C0692ABD7EDB00C63E59 /* onboarding.json in Resources */,
 				F2FF1F5B2ABC49F400681957 /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
