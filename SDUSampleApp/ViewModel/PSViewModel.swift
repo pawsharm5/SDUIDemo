@@ -21,7 +21,7 @@ class PSViewModel: ObservableObject {
     func load() async {
         do {
             
-            let screenModel = try await service.load("login") as ScreenModel
+            let screenModel = try await service.load("onboarding") as ScreenModel
             self.currentScreenData = screenModel
         } catch {
             print(error)

@@ -30,6 +30,31 @@
                         }
                     },
                     {
+                        "type": "view",
+                        "identifier": "info_view",
+                        "properties": {
+                            "label": "Your Name",
+                            "backgroundColor": "#0074cc",
+                        },
+                        "subviews": [
+                            {
+                                "type": "image",
+                                "identifier": "info_image",
+                                "properties": {
+                                    "name": "info",
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "identifier": "title_label",
+                                "properties": {
+                                    "label": "Please enter your name exactly as it appears on your passport or driving license",
+                                    "color": "#555",
+                                }
+                            }
+                        ]
+                    },
+                    {
                         "type": "label",
                         "identifier": "title_label",
                         "properties": {
@@ -152,7 +177,7 @@
                         }
                     },
                     {
-                        "identifier": "continue_button",
+                        "identifier": "previous_button",
                         "type": "button",
                         "properties": {
                             "title": "Previous",

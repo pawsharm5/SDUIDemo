@@ -20,7 +20,7 @@ class ScreenBuilder {
         switch component.type {
         case "scrollView":
             PSScrollView(configuration: PSScrollViewConfig(content: {
-                ForEach(component.fields ?? [], id: \.identifier) { field in
+                ForEach(component.subviews ?? [], id: \.identifier) { field in
                     self.createChildView(field)
                 }
             }))

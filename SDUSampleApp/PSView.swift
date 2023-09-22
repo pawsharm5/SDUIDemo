@@ -18,7 +18,7 @@ struct PSView: View {
     
     var body: some View {
         NavigationView {
-            if let bodyD = vm.currentScreenData?.body.fields?.first {
+            if let bodyD = vm.currentScreenData?.body.subviews?.first {
                 ScreenBuilder().buildView(for: bodyD)
             }
         }.navigationTitle("Login").task {

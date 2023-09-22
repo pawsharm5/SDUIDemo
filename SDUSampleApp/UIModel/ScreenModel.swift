@@ -21,13 +21,13 @@ struct ScreenModel: Codable {
 // MARK: - Body
 struct Body: Codable {
     var identifier: String?
-    var fields: [BodyField]?
+    var subviews: [BodyField]?
 }
 
 // MARK: - BodyField
 struct BodyField: Codable {
     var type, identifier: String?
-    var fields: [ChildField]?
+    var subviews: [ChildField]?
 }
 
 // MARK: - FieldField
