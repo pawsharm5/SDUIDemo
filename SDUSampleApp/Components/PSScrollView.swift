@@ -27,7 +27,7 @@ struct PSScrollViewConfig: PSScrollViewConfiguration {
 struct PSScrollView<Configuration: PSScrollViewConfiguration>: View {
     let configuration: Configuration
     
-    init(_ configuration: Configuration) {
+    init(configuration: Configuration) {
         self.configuration = configuration
     }
     
@@ -36,7 +36,7 @@ struct PSScrollView<Configuration: PSScrollViewConfiguration>: View {
             configuration.content
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.gray.opacity(0.2))
+        .background(Color.white)
         .cornerRadius(10)
         .padding()
         .overlay(
