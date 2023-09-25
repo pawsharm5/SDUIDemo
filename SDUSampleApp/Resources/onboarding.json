@@ -31,7 +31,7 @@
                         "identifier": "name_label",
                         "properties": {
                             "label": "Your Name",
-                            "color": "#00A36C",
+                            "color": "#17321F",
                             "padding": {
                                 "top": 10.0,
                                 "bottom": 20.0
@@ -207,8 +207,8 @@
                         "type": "label",
                         "identifier": "question_label_2",
                         "properties": {
-                            "label": "What is ?",
-                            "color": "#000000",
+                            "label": "What does this mean?",
+                            "color": "#17321F",
                             "fontSize":16
                         }
                     },
@@ -224,7 +224,7 @@
                                 "identifier": "button_first",
                                 "properties": {
                                     "title": "YES",
-                                    "color": "#000000",
+                                    "color": "#17321F",
                                     "backgroundColor": "#FFFFFF",
                                 },
                                 "padding": {
@@ -242,7 +242,7 @@
                                 "identifier": "button_second",
                                 "properties": {
                                     "title": "NO",
-                                    "color": "#000000",
+                                    "color": "#17321F",
                                     "backgroundColor": "#FFFFFF",
                                 },
                                 "padding": {
@@ -261,7 +261,7 @@
                         "type": "button",
                         "properties": {
                             "title": "Continue",
-                            "backgroundColor": "#0074cc",
+                            "backgroundColor": "#17321F",
                             "color": "#ffffff",
                             "padding": {
                                 "top": 60.0,
