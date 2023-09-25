@@ -21,6 +21,6 @@ struct PSViewBuilder: UIComponentBuilder {
             ForEach(element.subviews ?? [], id: \.identifier) { field in
                 ScreenBuilder(viewModel: viewModel).createComponentView(field)
             }
-        }))
+        }, backgroundColor: element.properties?.backgroundColor ?? "#FFFFFF"))
     }
 }
