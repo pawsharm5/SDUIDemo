@@ -8,19 +8,23 @@
 import Foundation
 import SwiftUI
 
-class TextFieldObjerver: ObservableObject{
-    @Published var username = ""
-}
+
 
 struct PSTextFieldBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSTextField
+    let viewModel: PSViewModel
     
-
-   // @Published private var textValue: String = ""
-
-    func build(element: SubView) -> PSTextField {
-        let configuration = PSTextFieldConfig(text: .constant(""), keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "")
+    init(viewModel: PSViewModel) {
+        self.viewModel = viewModel
+    }
+    @MainActor
+     func build(element: SubView) -> PSTextField {
+        let binding = Binding(
+                   get: { viewModel.getTextFieldValue(for: element.identifier) },
+                   set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue) }
+               )
+        let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "")
         let customTextField = PSTextField(configuration: configuration)
         return customTextField
     }

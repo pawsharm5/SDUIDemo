@@ -13,43 +13,31 @@ protocol UIComponentBuilder {
     func build(element: SubView) -> ComponentType
 }
 
+@MainActor
 class ScreenBuilder {
+    let viewModel: PSViewModel
     
-    @ViewBuilder
-    func buildView(for component: SubView) -> some View {
-        switch component.type {
-        case .scrollView:
-            PSScrollView(configuration: PSScrollViewConfig(content: {
-                ForEach(component.subviews ?? [], id: \.identifier) { field in
-                    self.createChildView(field)
-                }
-            }))
-        case .button:
-            PSButtonBuilder().build(element: component)
-        default:
-            EmptyView()
-        }
+    init(viewModel: PSViewModel) {
+        self.viewModel = viewModel
     }
     
-    
     @ViewBuilder
-    func createChildView(_ childElement: SubView) -> some View {
-        switch childElement.type {
-
+    func createComponentView(_ component: SubView) -> some View {
+        switch component.type {
+        case .scrollView:
+            PSScrollViewViewBuilder(viewModel: viewModel).build(element: component)
         case .textField:
-            PSTextFieldBuilder().build(element: childElement)
+            PSTextFieldBuilder(viewModel: viewModel).build(element: component)
         case .button:
-            PSButtonBuilder().build(element: childElement)
+            PSButtonBuilder(viewModel: viewModel).build(element: component)
         case .label:
-            PSLabelBuilder().build(element: childElement)
+            PSLabelBuilder().build(element: component)
         case .Segment:
-            PSSegmentControlBuilder().build(element: childElement)
+            PSSegmentControlBuilder(viewModel: viewModel).build(element: component)
         case .view:
-            PSViewBuilder().build(element: childElement)
+            PSViewBuilder(viewModel: viewModel).build(element: component)
         case .image:
-            PSImageViewBuilder().build(element: childElement)
-        default:
-            EmptyView()
+            PSImageViewBuilder().build(element: component)
         }
     }
 }

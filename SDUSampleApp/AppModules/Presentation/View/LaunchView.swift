@@ -19,7 +19,7 @@ struct LaunchView: View {
         if #available(iOS 15.0, *) {
             NavigationView {
                 if let bodyD = psViewModel.currentScreenData?.body.subviews?.first {
-                    ScreenBuilder().buildView(for: bodyD)
+                    ScreenBuilder(viewModel: psViewModel).createComponentView(bodyD)
                 }
             }.navigationTitle("").task {
                 await psViewModel.getScreenData()
