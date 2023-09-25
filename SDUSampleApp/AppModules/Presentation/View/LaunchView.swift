@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @ObservedObject private var psViewModel: PSViewModel
+    @ObservedObject private var psViewModel: BaseViewModel
     
-    init(viewModel: PSViewModel) {
+    init(viewModel: BaseViewModel) {
         self.psViewModel = viewModel
     }
 
@@ -19,7 +19,7 @@ struct LaunchView: View {
         if #available(iOS 15.0, *) {
             NavigationView {
                 if let bodyD = psViewModel.currentScreenData?.body.subviews?.first {
-                    ScreenBuilder(viewModel: psViewModel).createComponentView(bodyD)
+                    PSScreenBuilder(viewModel: psViewModel).createComponentView(bodyD)
                 }
             }.navigationTitle("").task {
                 await psViewModel.getScreenData()
@@ -32,6 +32,6 @@ struct LaunchView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(viewModel: PSViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
+        LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
     }
 }

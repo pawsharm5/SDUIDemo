@@ -11,16 +11,16 @@ import SwiftUI
 struct PSSegmentControlBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSSegmentedControl
-    let viewModel: PSViewModel
+    let viewModel: BaseViewModel
     
-    init(viewModel: PSViewModel) {
+    init(viewModel: BaseViewModel) {
         self.viewModel = viewModel
     }
     @MainActor
     func build(element: SubView) -> PSSegmentedControl {
         PSSegmentedControl(configuration: PSSegmentConfig(content: {
             ForEach(element.subviews ?? [], id: \.identifier) { field in
-                ScreenBuilder(viewModel: viewModel).createComponentView(field)
+                PSScreenBuilder(viewModel: viewModel).createComponentView(field)
             }
         }))
     }

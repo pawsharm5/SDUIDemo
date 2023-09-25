@@ -11,9 +11,9 @@ import SwiftUI
 struct PSButtonBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSButton
-    let viewModel: PSViewModel
+    let viewModel: BaseViewModel
     
-    init(viewModel: PSViewModel) {
+    init(viewModel: BaseViewModel) {
         self.viewModel = viewModel
     }
     @MainActor

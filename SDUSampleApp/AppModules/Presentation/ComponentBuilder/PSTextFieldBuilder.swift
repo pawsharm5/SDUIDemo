@@ -13,9 +13,9 @@ import SwiftUI
 struct PSTextFieldBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSTextField
-    let viewModel: PSViewModel
+    let viewModel: BaseViewModel
     
-    init(viewModel: PSViewModel) {
+    init(viewModel: BaseViewModel) {
         self.viewModel = viewModel
     }
     @MainActor

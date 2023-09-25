@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol PSViewModelProtocol {
+protocol BaseViewModelProtocol {
     var currentScreenData: ScreenModel? { get set }
     func getScreenData() async
 }

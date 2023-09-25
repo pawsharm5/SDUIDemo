@@ -14,10 +14,10 @@ protocol UIComponentBuilder {
 }
 
 @MainActor
-class ScreenBuilder {
-    let viewModel: PSViewModel
+class PSScreenBuilder {
+    let viewModel: BaseViewModel
     
-    init(viewModel: PSViewModel) {
+    init(viewModel: BaseViewModel) {
         self.viewModel = viewModel
     }
     

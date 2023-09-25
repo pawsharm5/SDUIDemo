@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-final class PSViewModel:ObservableObject, PSViewModelProtocol {
+final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     private var useCase: LaunchUseCaseProtocol
     private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?
