@@ -7,10 +7,11 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 final class PSViewModel:ObservableObject, PSViewModelProtocol {
     private var useCase: LaunchUseCaseProtocol
-    
+    private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?
     @Published var errorMessage: String? = nil
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
@@ -23,15 +24,14 @@ final class PSViewModel:ObservableObject, PSViewModelProtocol {
     
     func getScreenData() async {
         Task {
-            let screenData = await self.useCase.getScreenData()
-            self.currentScreenData = screenData
+            cancellable =  await self.useCase.getScreenData().publisher
+                .receive(on: DispatchQueue.main)
+                .sink(receiveValue: { value in
+                    self.currentScreenData = value
+                    })
+                
+            
         }
-    }
-    
-    ///To set friends list domain model data to view model
-    private func setData(DomainModel: [ScreenModel]) {
-        
-        //self.currentScreenData = DomainModel.screenIdentifier
     }
     
     private func setupButtonActions() {
