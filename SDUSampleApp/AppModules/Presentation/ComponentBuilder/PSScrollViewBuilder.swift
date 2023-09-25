@@ -4,19 +4,25 @@
 ////
 ////  Created by Pawan Sharma on 22/09/23.
 ////
-//
-//import Foundation
-//import SwiftUI
-//
-//struct PSScrollViewBuilder: UIComponentBuilder {
-//    
-//    typealias ComponentType = PSScrollView
-//    
-//    func build(element: [ChildField]) -> PSScrollView {
-//        let configuration = PSScrollViewConfig(content: {
-//            
-//        })
-//        let customScrollView = PSScrollView(configuration: configuration)
-//        return customScrollView
-//    }
-//}
+
+import Foundation
+import SwiftUI
+
+struct PSScrollViewViewBuilder: UIComponentBuilder {
+    
+    typealias ComponentType = PSScrollView
+    let viewModel: PSViewModel
+    
+    init(viewModel: PSViewModel) {
+        self.viewModel = viewModel
+    }
+    @MainActor
+    func build(element: SubView) -> PSScrollView {
+        PSScrollView(configuration: PSScrollViewConfig(content: {
+            ForEach(element.subviews ?? [], id: \.identifier) { field in
+                ScreenBuilder(viewModel: viewModel).createComponentView(field)
+            }
+        }))
+        
+    }
+}
