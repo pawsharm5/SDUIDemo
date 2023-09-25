@@ -17,6 +17,15 @@ protocol PSLabelConfigurable {
     // Add more configuration options as needed
 }
 
+struct PSLabelConfig: PSLabelConfigurable {
+    var identifier: String
+    var text: String
+    var textColor: String
+    var font: Font
+    var padding: Padding?
+    var fontSize: Int
+}
+
 struct PSLabel: View {
         
     let configuration: PSLabelConfigurable
@@ -28,13 +37,4 @@ struct PSLabel: View {
             .frame(alignment: .leading)
             .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
     }
-}
-
-struct PSLabelConfig: PSLabelConfigurable {
-    var identifier: String
-    var text: String
-    var textColor: String
-    var font: Font
-    var padding: Padding?
-    var fontSize: Int
 }

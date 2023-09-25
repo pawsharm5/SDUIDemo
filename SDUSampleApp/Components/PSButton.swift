@@ -17,6 +17,15 @@ protocol PSButtonConfiguration {
     var cornorRadius: Int { get }
 }
 
+struct PSButtonConfig: PSButtonConfiguration {
+    var buttonTitle: String
+    var buttonColor: String
+    var buttonTitleColor: String
+    var padding: Padding?
+    var height:Int
+    var cornorRadius:Int
+}
+
 struct PSButton: View {
     let configuration: PSButtonConfiguration
     typealias ButtonAction = () -> Void
@@ -37,13 +46,4 @@ struct PSButton: View {
         }
     }
     
-}
-
-struct PSButtonConfig: PSButtonConfiguration {
-    var buttonTitle: String
-    var buttonColor: String
-    var buttonTitleColor: String
-    var padding: Padding?
-    var height:Int
-    var cornorRadius:Int
 }

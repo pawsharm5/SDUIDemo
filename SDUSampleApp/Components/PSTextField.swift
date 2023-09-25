@@ -16,6 +16,15 @@ protocol PSTextFieldConfiguration {
     // Add more configuration options as needed
 }
 
+struct PSTextFieldConfig: PSTextFieldConfiguration {
+    var text: Binding<String>
+    var keyboardType: UIKeyboardType
+    var placeHolder: String
+    var height: Int
+    var backgroundColor: String
+    var padding: Padding?
+}
+
 struct PSTextField : View {
     let configuration: PSTextFieldConfiguration
     @ObservedObject var observer = TextFieldObjerver()
@@ -31,13 +40,4 @@ struct PSTextField : View {
             .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
         // Customize the TextField further as needed
     }
-}
-
-struct PSTextFieldConfig: PSTextFieldConfiguration {
-    var text: Binding<String>
-    var keyboardType: UIKeyboardType
-    var placeHolder: String
-    var height: Int
-    var backgroundColor: String
-    var padding: Padding?
 }
