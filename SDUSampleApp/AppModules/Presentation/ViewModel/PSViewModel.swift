@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-@MainActor
-class PSViewModel: PSViewModelProtocol {
+final class PSViewModel:ObservableObject, PSViewModelProtocol {
     private var useCase: LaunchUseCaseProtocol
     
     @Published var currentScreenData: ScreenModel?
@@ -20,8 +19,10 @@ class PSViewModel: PSViewModelProtocol {
     }
     
     func getScreenData() async {
-        let screenData = await self.useCase.getScreenData()
-        self.currentScreenData = screenData
+        Task {
+            let screenData = await self.useCase.getScreenData()
+            self.currentScreenData = screenData
+        }
     }
     
     ///To set friends list domain model data to view model

@@ -9,7 +9,11 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @StateObject var psViewModel = PSViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())))
+    @ObservedObject private var psViewModel: PSViewModel
+    
+    init(viewModel: PSViewModel) {
+        self.psViewModel = viewModel
+    }
 
     var body: some View {
         if #available(iOS 15.0, *) {
@@ -28,6 +32,6 @@ struct LaunchView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView()
+        LaunchView(viewModel: PSViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
     }
 }

@@ -6,7 +6,9 @@
 //
 
 import Foundation
-protocol PSViewModelProtocol: ObservableObject {
+import SwiftUI
+
+protocol PSViewModelProtocol {
     var currentScreenData: ScreenModel? { get set }
     func getScreenData() async
 }
