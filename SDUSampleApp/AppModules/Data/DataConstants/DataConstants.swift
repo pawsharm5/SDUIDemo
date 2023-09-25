@@ -9,5 +9,7 @@ import Foundation
 enum DataConstants {
     enum ApiEndpoints {
          static let LaunchView = "onboarding"
+         static let homeAddress = "homeAddress"
+         static let nationality = "nationality"
     }
 }

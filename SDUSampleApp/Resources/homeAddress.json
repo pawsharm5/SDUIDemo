@@ -1,0 +1,185 @@
+{
+    "screen_identifier": "home_address_1",
+    "padding": {
+        "top": 100.0,
+        "left": 20.0,
+        "right": 20.0,
+        "bottom": 20.0
+    },
+    "body": {
+        "identifier": "onboarding_body",
+        "subviews": [
+            {
+                "type": "scrollView",
+                "identifier": "content_scroll_view",
+                "subviews": [
+                    {
+                        "type": "label",
+                        "identifier": "cuurrent_account_label",
+                        "properties": {
+                            "label": "Business Current Account Application",
+                            "color": "#000000",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 20.0
+                            },
+                            "fontSize":16
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "name_label",
+                        "properties": {
+                            "label": "What's your home address?",
+                            "color": "#17321F",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 20.0
+                            },
+                            "fontSize":40
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "cuurrent_account_label_1",
+                        "properties": {
+                            "label": "We need to know where you have lived for the last 3 years",
+                            "color": "#000000",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 20.0
+                            },
+                            "fontSize":16
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "cuurrent_account_label_2",
+                        "properties": {
+                            "label": "Property Name or Number",
+                            "color": "#000000",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 20.0
+                            },
+                            "fontSize":16
+                        }
+                    },
+                    {
+                        "type": "textField",
+                        "identifier": "title_text_field",
+                        "properties": {
+                            "placeHolder": "Property Name or Number",
+                            "mandatory": true,
+                            "color": "#000000",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 50.0
+                            },
+                            "size": {
+                                "height":40
+                            }
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "identifier": "first_name_label",
+                        "properties": {
+                            "label": "UK Passcode",
+                            "color": "#000000",
+                            "padding": {
+                                "top": 20.0,
+                                "bottom": 5.0
+                            },
+                            "fontSize":16
+                        }
+                    },
+                    {
+                        "type": "textField",
+                        "identifier": "first_name_text_field",
+                        "properties": {
+                            "placeHolder": "UK Passcode",
+                            "mandatory": true,
+                            "color": "#000000",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40
+                            }
+                        }
+                    },
+                    {
+                        "identifier": "find_address_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Find Address",
+                            "backgroundColor": "#FFFFFF",
+                            "color": "#17321F",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":50,
+                                "width":200
+                            },
+                        }
+                    },
+                    {
+                        "identifier": "find_address_manually_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Enter Address Manually",
+                            "backgroundColor": "#FFFFFF",
+                            "color": "#17321F",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":50,
+                                "width":200
+                            },
+                        }
+                    },
+                    {
+                        "identifier": "continue_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Continue",
+                            "backgroundColor": "#17321F",
+                            "color": "#ffffff",
+                            "padding": {
+                                "top": 10.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":50,
+                            },
+                        }
+                    },
+                    {
+                        "identifier": "previous_button",
+                        "type": "button",
+                        "properties": {
+                            "title": "Previous",
+                            "color": "#000000",
+                            "padding": {
+                                "top": 5.0,
+                                "bottom": 10.0
+                            },
+                            "size": {
+                                "height":40,
+                            },
+                        }
+                    }
+                    
+                ]
+            }
+            
+        ]
+    }
+}
+
