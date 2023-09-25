@@ -11,16 +11,16 @@ import SwiftUI
 struct PSScrollViewViewBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSScrollView
-    let viewModel: PSViewModel
+    let viewModel: BaseViewModel
     
-    init(viewModel: PSViewModel) {
+    init(viewModel: BaseViewModel) {
         self.viewModel = viewModel
     }
     @MainActor
     func build(element: SubView) -> PSScrollView {
         PSScrollView(configuration: PSScrollViewConfig(content: {
             ForEach(element.subviews ?? [], id: \.identifier) { field in
-                ScreenBuilder(viewModel: viewModel).createComponentView(field)
+                PSScreenBuilder(viewModel: viewModel).createComponentView(field)
             }
         }))
         
