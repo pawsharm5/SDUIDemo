@@ -12,7 +12,6 @@
 		108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */; };
 		108EB4122AC18194008AC77B /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4112AC18194008AC77B /* DataConstants.swift */; };
 		108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4172AC18300008AC77B /* LaunchViewRepository.swift */; };
-		108EB41B2AC184BB008AC77B /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 108EB41A2AC184BB008AC77B /* PromiseKit */; };
 		108EB41F2AC18BF1008AC77B /* PSViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41E2AC18BF1008AC77B /* PSViewModelProtocol.swift */; };
 		109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */; };
 		109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8572ABD71D2005295F2 /* PSScrollView.swift */; };
@@ -114,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				108EB41B2AC184BB008AC77B /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +365,6 @@
 			);
 			name = SDUSampleApp;
 			packageProductDependencies = (
-				108EB41A2AC184BB008AC77B /* PromiseKit */,
 			);
 			productName = SDUSampleApp;
 			productReference = F2FF1F1B2ABC465C00681957 /* SDUSampleApp.app */;
@@ -442,7 +439,6 @@
 			);
 			mainGroup = F2FF1F122ABC465C00681957;
 			packageReferences = (
-				108EB4192AC184BA008AC77B /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = F2FF1F1C2ABC465C00681957 /* Products */;
 			projectDirPath = "";
@@ -839,25 +835,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		108EB4192AC184BA008AC77B /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		108EB41A2AC184BB008AC77B /* PromiseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 108EB4192AC184BA008AC77B /* XCRemoteSwiftPackageReference "PromiseKit" */;
-			productName = PromiseKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2FF1F132ABC465C00681957 /* Project object */;
 }

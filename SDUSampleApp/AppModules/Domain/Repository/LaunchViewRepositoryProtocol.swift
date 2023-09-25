@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import PromiseKit
 
 typealias ScreenDomainResponse = ScreenModel
 

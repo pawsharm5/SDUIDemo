@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import PromiseKit
 
 @MainActor
 class PSViewModel: PSViewModelProtocol {
