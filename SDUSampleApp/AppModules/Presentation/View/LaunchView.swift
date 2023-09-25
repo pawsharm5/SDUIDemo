@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @StateObject var psViewModel = PSViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService(), mapper: LaunchViewDataToDomainMapper())))
+    @StateObject var psViewModel = PSViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())))
 
     var body: some View {
         if #available(iOS 15.0, *) {

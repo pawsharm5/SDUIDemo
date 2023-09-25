@@ -11,11 +11,8 @@
 		108EB4062AC18091008AC77B /* LaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4052AC18091008AC77B /* LaunchUseCase.swift */; };
 		108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */; };
 		108EB4122AC18194008AC77B /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4112AC18194008AC77B /* DataConstants.swift */; };
-		108EB4142AC1827A008AC77B /* DataToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4132AC1827A008AC77B /* DataToDomainMapperProtocol.swift */; };
-		108EB4162AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4152AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift */; };
 		108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4172AC18300008AC77B /* LaunchViewRepository.swift */; };
 		108EB41B2AC184BB008AC77B /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 108EB41A2AC184BB008AC77B /* PromiseKit */; };
-		108EB41D2AC18B08008AC77B /* LaunchViewDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41C2AC18B08008AC77B /* LaunchViewDomainModel.swift */; };
 		108EB41F2AC18BF1008AC77B /* PSViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41E2AC18BF1008AC77B /* PSViewModelProtocol.swift */; };
 		109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */; };
 		109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8572ABD71D2005295F2 /* PSScrollView.swift */; };
@@ -73,10 +70,7 @@
 		108EB4052AC18091008AC77B /* LaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUseCase.swift; sourceTree = "<group>"; };
 		108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepositoryProtocol.swift; sourceTree = "<group>"; };
 		108EB4112AC18194008AC77B /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
-		108EB4132AC1827A008AC77B /* DataToDomainMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToDomainMapperProtocol.swift; sourceTree = "<group>"; };
-		108EB4152AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewDataToDomainMapper.swift; sourceTree = "<group>"; };
 		108EB4172AC18300008AC77B /* LaunchViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepository.swift; sourceTree = "<group>"; };
-		108EB41C2AC18B08008AC77B /* LaunchViewDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewDomainModel.swift; sourceTree = "<group>"; };
 		108EB41E2AC18BF1008AC77B /* PSViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSViewModelProtocol.swift; sourceTree = "<group>"; };
 		109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDropdownTextField.swift; sourceTree = "<group>"; };
 		109EC8572ABD71D2005295F2 /* PSScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollView.swift; sourceTree = "<group>"; };
@@ -146,7 +140,6 @@
 			children = (
 				108EB4102AC1817F008AC77B /* DataConstants */,
 				108EB40F2AC18171008AC77B /* Model */,
-				108EB40E2AC1816C008AC77B /* Mapper */,
 				F2FF1F5C2ABC49FC00681957 /* Services */,
 				108EB40C2AC18154008AC77B /* Repository */,
 			);
@@ -167,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				108EB4082AC180CF008AC77B /* Repository */,
-				108EB4072AC180B5008AC77B /* DomainModel */,
 				108EB4022AC18053008AC77B /* UseCase */,
 			);
 			path = Domain;
@@ -201,14 +193,6 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		108EB4072AC180B5008AC77B /* DomainModel */ = {
-			isa = PBXGroup;
-			children = (
-				108EB41C2AC18B08008AC77B /* LaunchViewDomainModel.swift */,
-			);
-			path = DomainModel;
-			sourceTree = "<group>";
-		};
 		108EB4082AC180CF008AC77B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,15 +207,6 @@
 				108EB4172AC18300008AC77B /* LaunchViewRepository.swift */,
 			);
 			path = Repository;
-			sourceTree = "<group>";
-		};
-		108EB40E2AC1816C008AC77B /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				108EB4132AC1827A008AC77B /* DataToDomainMapperProtocol.swift */,
-				108EB4152AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift */,
-			);
-			path = Mapper;
 			sourceTree = "<group>";
 		};
 		108EB40F2AC18171008AC77B /* Model */ = {
@@ -527,7 +502,6 @@
 				108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */,
 				CAEC1B002ABDC43F0091951C /* PSImageView.swift in Sources */,
 				108EB4122AC18194008AC77B /* DataConstants.swift in Sources */,
-				108EB41D2AC18B08008AC77B /* LaunchViewDomainModel.swift in Sources */,
 				109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */,
 				109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */,
 				F2FF1F622ABC4AB400681957 /* PSViewModel.swift in Sources */,
@@ -541,11 +515,9 @@
 				F2FF1F4E2ABC46FB00681957 /* StringExtension.swift in Sources */,
 				CAEC1B022ABDD40F0091951C /* PSImageViewBuilder.swift in Sources */,
 				108EB41F2AC18BF1008AC77B /* PSViewModelProtocol.swift in Sources */,
-				108EB4162AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift in Sources */,
 				F2FF1F582ABC48BF00681957 /* ScreenModel.swift in Sources */,
 				109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */,
 				F2FF1F652ABC4C4300681957 /* ScreenBuilder.swift in Sources */,
-				108EB4142AC1827A008AC77B /* DataToDomainMapperProtocol.swift in Sources */,
 				F2FF1F4D2ABC46FB00681957 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

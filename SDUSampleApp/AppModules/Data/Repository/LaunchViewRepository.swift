@@ -8,17 +8,15 @@
 import Foundation
 
 struct LaunchViewRepository: LaunchViewRepositoryProtocol {
-    var mapper: DataToDomainMapperProtocol
     var service: NetworkServiceProtocol
 
-    init(service: NetworkServiceProtocol,mapper: DataToDomainMapperProtocol) {
+    init(service: NetworkServiceProtocol) {
         self.service = service
-        self.mapper = mapper
     }
     
     func getScreenData() async -> ScreenDomainResponse? {
         do {
-            let screenModel = try await self.service.load("onboarding") as ScreenDomainResponse
+            let screenModel = try await self.service.load(DataConstants.ApiEndpoints.LaunchView) as ScreenDomainResponse
             return screenModel
         } catch {
             
