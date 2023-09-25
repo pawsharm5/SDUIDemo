@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		108EB4042AC18078008AC77B /* LaunchUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4032AC18078008AC77B /* LaunchUseCaseProtocol.swift */; };
+		108EB4062AC18091008AC77B /* LaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4052AC18091008AC77B /* LaunchUseCase.swift */; };
+		108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */; };
+		108EB4122AC18194008AC77B /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4112AC18194008AC77B /* DataConstants.swift */; };
+		108EB4142AC1827A008AC77B /* DataToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4132AC1827A008AC77B /* DataToDomainMapperProtocol.swift */; };
+		108EB4162AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4152AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift */; };
+		108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4172AC18300008AC77B /* LaunchViewRepository.swift */; };
+		108EB41B2AC184BB008AC77B /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 108EB41A2AC184BB008AC77B /* PromiseKit */; };
+		108EB41D2AC18B08008AC77B /* LaunchViewDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41C2AC18B08008AC77B /* LaunchViewDomainModel.swift */; };
+		108EB41F2AC18BF1008AC77B /* PSViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41E2AC18BF1008AC77B /* PSViewModelProtocol.swift */; };
 		109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */; };
 		109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8572ABD71D2005295F2 /* PSScrollView.swift */; };
 		109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8592ABD914D005295F2 /* PSTextFieldBuilder.swift */; };
@@ -59,6 +69,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		108EB4032AC18078008AC77B /* LaunchUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUseCaseProtocol.swift; sourceTree = "<group>"; };
+		108EB4052AC18091008AC77B /* LaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUseCase.swift; sourceTree = "<group>"; };
+		108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepositoryProtocol.swift; sourceTree = "<group>"; };
+		108EB4112AC18194008AC77B /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
+		108EB4132AC1827A008AC77B /* DataToDomainMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToDomainMapperProtocol.swift; sourceTree = "<group>"; };
+		108EB4152AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewDataToDomainMapper.swift; sourceTree = "<group>"; };
+		108EB4172AC18300008AC77B /* LaunchViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepository.swift; sourceTree = "<group>"; };
+		108EB41C2AC18B08008AC77B /* LaunchViewDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewDomainModel.swift; sourceTree = "<group>"; };
+		108EB41E2AC18BF1008AC77B /* PSViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSViewModelProtocol.swift; sourceTree = "<group>"; };
 		109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDropdownTextField.swift; sourceTree = "<group>"; };
 		109EC8572ABD71D2005295F2 /* PSScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollView.swift; sourceTree = "<group>"; };
 		109EC8592ABD914D005295F2 /* PSTextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSTextFieldBuilder.swift; sourceTree = "<group>"; };
@@ -101,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108EB41B2AC184BB008AC77B /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +141,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		108EB3FC2AC17FAC008AC77B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4102AC1817F008AC77B /* DataConstants */,
+				108EB40F2AC18171008AC77B /* Model */,
+				108EB40E2AC1816C008AC77B /* Mapper */,
+				F2FF1F5C2ABC49FC00681957 /* Services */,
+				108EB40C2AC18154008AC77B /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		108EB3FD2AC17FCF008AC77B /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				108EB3FF2AC17FED008AC77B /* Presentation */,
+				108EB3FE2AC17FE7008AC77B /* Domain */,
+				108EB3FC2AC17FAC008AC77B /* Data */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		108EB3FE2AC17FE7008AC77B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4082AC180CF008AC77B /* Repository */,
+				108EB4072AC180B5008AC77B /* DomainModel */,
+				108EB4022AC18053008AC77B /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		108EB3FF2AC17FED008AC77B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F2FF1F502ABC472A00681957 /* Components */,
+				F2FF1F4F2ABC470800681957 /* ComponentBuilder */,
+				F2FF1F532ABC48A700681957 /* ViewModel */,
+				108EB4002AC18018008AC77B /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		108EB4002AC18018008AC77B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B74399342ABDDC3600C77E2E /* LaunchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		108EB4022AC18053008AC77B /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4032AC18078008AC77B /* LaunchUseCaseProtocol.swift */,
+				108EB4052AC18091008AC77B /* LaunchUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		108EB4072AC180B5008AC77B /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				108EB41C2AC18B08008AC77B /* LaunchViewDomainModel.swift */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		108EB4082AC180CF008AC77B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		108EB40C2AC18154008AC77B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4172AC18300008AC77B /* LaunchViewRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		108EB40E2AC1816C008AC77B /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4132AC1827A008AC77B /* DataToDomainMapperProtocol.swift */,
+				108EB4152AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		108EB40F2AC18171008AC77B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2FF1F552ABC48BF00681957 /* ComponentIdentifier.swift */,
+				F2FF1F562ABC48BF00681957 /* ScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		108EB4102AC1817F008AC77B /* DataConstants */ = {
+			isa = PBXGroup;
+			children = (
+				108EB4112AC18194008AC77B /* DataConstants.swift */,
+			);
+			path = DataConstants;
+			sourceTree = "<group>";
+		};
 		F2FF1F122ABC465C00681957 = {
 			isa = PBXGroup;
 			children = (
@@ -144,15 +274,10 @@
 		F2FF1F1D2ABC465C00681957 /* SDUSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				F2FF1F5C2ABC49FC00681957 /* Services */,
+				108EB3FD2AC17FCF008AC77B /* AppModules */,
 				F2FF1F592ABC48C500681957 /* Resources */,
-				F2FF1F542ABC48B400681957 /* UIModel */,
-				F2FF1F532ABC48A700681957 /* ViewModel */,
-				F2FF1F502ABC472A00681957 /* Components */,
-				F2FF1F4F2ABC470800681957 /* ComponentBuilder */,
 				F2FF1F482ABC466900681957 /* Helper */,
 				F2FF1F1E2ABC465C00681957 /* SDUSampleAppApp.swift */,
-				B74399342ABDDC3600C77E2E /* LaunchView.swift */,
 				F2FF1F222ABC465D00681957 /* Assets.xcassets */,
 				F2FF1F242ABC465D00681957 /* Preview Content */,
 			);
@@ -227,17 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				F2FF1F612ABC4AB400681957 /* PSViewModel.swift */,
+				108EB41E2AC18BF1008AC77B /* PSViewModelProtocol.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F2FF1F542ABC48B400681957 /* UIModel */ = {
-			isa = PBXGroup;
-			children = (
-				F2FF1F552ABC48BF00681957 /* ComponentIdentifier.swift */,
-				F2FF1F562ABC48BF00681957 /* ScreenModel.swift */,
-			);
-			path = UIModel;
 			sourceTree = "<group>";
 		};
 		F2FF1F592ABC48C500681957 /* Resources */ = {
@@ -274,6 +391,9 @@
 			dependencies = (
 			);
 			name = SDUSampleApp;
+			packageProductDependencies = (
+				108EB41A2AC184BB008AC77B /* PromiseKit */,
+			);
 			productName = SDUSampleApp;
 			productReference = F2FF1F1B2ABC465C00681957 /* SDUSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +466,9 @@
 				Base,
 			);
 			mainGroup = F2FF1F122ABC465C00681957;
+			packageReferences = (
+				108EB4192AC184BA008AC77B /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = F2FF1F1C2ABC465C00681957 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -392,28 +515,37 @@
 			files = (
 				CAEC1AFE2ABDBCE00091951C /* PSViewBuilder.swift in Sources */,
 				F2FF1F672ABC51BC00681957 /* PSButton.swift in Sources */,
+				108EB4042AC18078008AC77B /* LaunchUseCaseProtocol.swift in Sources */,
 				CAEC1AFC2ABDBAC80091951C /* PSView.swift in Sources */,
 				B74399352ABDDC3600C77E2E /* LaunchView.swift in Sources */,
 				F2FF1F572ABC48BF00681957 /* ComponentIdentifier.swift in Sources */,
 				F2FF1F692ABC525E00681957 /* PSLabel.swift in Sources */,
 				109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */,
 				109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */,
+				108EB4062AC18091008AC77B /* LaunchUseCase.swift in Sources */,
 				109EC85C2ABD94AE005295F2 /* PSButtonBuilder.swift in Sources */,
+				108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */,
 				CAEC1B002ABDC43F0091951C /* PSImageView.swift in Sources */,
+				108EB4122AC18194008AC77B /* DataConstants.swift in Sources */,
+				108EB41D2AC18B08008AC77B /* LaunchViewDomainModel.swift in Sources */,
 				109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */,
 				109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */,
 				F2FF1F622ABC4AB400681957 /* PSViewModel.swift in Sources */,
 				109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */,
 				F2FF1F5F2ABC4A0300681957 /* LocalService.swift in Sources */,
+				108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */,
 				F2FF1F1F2ABC465C00681957 /* SDUSampleAppApp.swift in Sources */,
 				F2FF1F602ABC4A0300681957 /* NetworkServiceProtocol.swift in Sources */,
 				F2FF1F522ABC474900681957 /* PSTextField.swift in Sources */,
 				109EC8642ABDC5A3005295F2 /* PSSegmentControlBuilder.swift in Sources */,
 				F2FF1F4E2ABC46FB00681957 /* StringExtension.swift in Sources */,
 				CAEC1B022ABDD40F0091951C /* PSImageViewBuilder.swift in Sources */,
+				108EB41F2AC18BF1008AC77B /* PSViewModelProtocol.swift in Sources */,
+				108EB4162AC182A1008AC77B /* LaunchViewDataToDomainMapper.swift in Sources */,
 				F2FF1F582ABC48BF00681957 /* ScreenModel.swift in Sources */,
 				109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */,
 				F2FF1F652ABC4C4300681957 /* ScreenBuilder.swift in Sources */,
+				108EB4142AC1827A008AC77B /* DataToDomainMapperProtocol.swift in Sources */,
 				F2FF1F4D2ABC46FB00681957 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +867,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		108EB4192AC184BA008AC77B /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		108EB41A2AC184BB008AC77B /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 108EB4192AC184BA008AC77B /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2FF1F132ABC465C00681957 /* Project object */;
 }

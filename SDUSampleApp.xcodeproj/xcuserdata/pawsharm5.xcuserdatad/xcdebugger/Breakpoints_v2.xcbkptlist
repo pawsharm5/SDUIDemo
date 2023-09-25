@@ -3,4 +3,69 @@
    uuid = "EF48B633-E769-4928-8C86-45497D5B7DF5"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC076075-272E-4463-9221-DA6B6529CF9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDUSampleApp/AppModules/Domain/UseCase/LaunchUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getScreenData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC076075-272E-4463-9221-DA6B6529CF9F - a3964d51235ebc9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SDUSampleApp.LaunchUseCase.getScreenData() async -&gt; Swift.Optional&lt;SDUSampleApp.ScreenModel&gt;"
+                  moduleName = "SDUSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawsharm5/Documents/GitHub/SDUSampleApp/SDUSampleApp/AppModules/Domain/UseCase/LaunchUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  uuid = "AC076075-272E-4463-9221-DA6B6529CF9F - dc321dd6063b1098"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for SDUSampleApp.LaunchUseCase.getScreenData() async -&gt; Swift.Optional&lt;SDUSampleApp.ScreenModel&gt;"
+                  moduleName = "SDUSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawsharm5/Documents/GitHub/SDUSampleApp/SDUSampleApp/AppModules/Domain/UseCase/LaunchUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "AC076075-272E-4463-9221-DA6B6529CF9F - 10be83082c2838bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SDUSampleApp.LaunchUseCase.getScreenData() async -&gt; Swift.Optional&lt;SDUSampleApp.ScreenModel&gt;"
+                  moduleName = "SDUSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawsharm5/Documents/GitHub/SDUSampleApp/SDUSampleApp/AppModules/Domain/UseCase/LaunchUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

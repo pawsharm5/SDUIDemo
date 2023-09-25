@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct LaunchView: View {
-    @StateObject private var psViewModel: PSViewModel
     
-    init() {
-        _psViewModel = StateObject(wrappedValue: PSViewModel(service: LocalService()))
-    }
-    
+    @StateObject var psViewModel = PSViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService(), mapper: LaunchViewDataToDomainMapper())))
+
     var body: some View {
         if #available(iOS 15.0, *) {
             NavigationView {
@@ -21,7 +18,7 @@ struct LaunchView: View {
                     ScreenBuilder().buildView(for: bodyD)
                 }
             }.navigationTitle("").task {
-                await psViewModel.load()
+                await psViewModel.getScreenData()
             }
         } else {
             // Fallback on earlier versions
