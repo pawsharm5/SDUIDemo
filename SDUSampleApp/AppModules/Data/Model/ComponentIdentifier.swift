@@ -13,4 +13,7 @@ enum ComponentIdentifier: String, Decodable {
     case loginButton = "login_button"
     case forgotPasswordButton = "forgot_password_button"
     case none = ""
+    case continueButton = "continue_button"
+    case previousButton = "previous_button"
+
 }

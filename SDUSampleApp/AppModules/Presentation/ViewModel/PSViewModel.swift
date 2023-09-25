@@ -13,7 +13,7 @@ final class PSViewModel:ObservableObject, PSViewModelProtocol {
     
     @Published var currentScreenData: ScreenModel?
     @Published var errorMessage: String? = nil
-    private var buttonActions: [String: () -> Void] = [:]
+    private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
     private var textFieldValues: [String: String] = [:]
     
     init(useCase:LaunchUseCaseProtocol) {
@@ -35,22 +35,28 @@ final class PSViewModel:ObservableObject, PSViewModelProtocol {
     }
     
     private func setupButtonActions() {
-        buttonActions["continue_button"] = { [weak self] in
+        buttonActions[.continueButton] = { [weak self] in
             self?.onboardingContniueAction()
         }
         
-        buttonActions["previous_button"] = { [weak self] in
+        buttonActions[.previousButton] = { [weak self] in
             self?.onboardingSkipAction()
         }
     }
     private func onboardingContniueAction() {
         print("continue tapped")
+        for value in textFieldValues {
+            print("values \(value.value) for identifier \(value.key)")
+        }
     }
     
     private func onboardingSkipAction() {
         print("previous tapped")
     }
-    func executeButtonAction(for identifier: String) {
+    func executeButtonAction(for identifier: ComponentIdentifier?) {
+        guard let identifier = identifier else{
+            return
+        }
         buttonActions[identifier]?()
     }
     func getTextFieldValue(for identifier: String) -> String {
