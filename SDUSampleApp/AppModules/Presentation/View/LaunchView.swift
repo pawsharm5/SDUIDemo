@@ -23,7 +23,7 @@ struct LaunchView: View {
                 }
                 
                 NavigationLink(
-                    "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: psViewModel.screenIdentifier ?? ""))
+                    "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
                 )
                 
             }.onAppear {
@@ -39,6 +39,6 @@ struct LaunchView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: ""))
+        LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
     }
 }
