@@ -10,174 +10,238 @@
         "identifier": "onboarding_body",
         "subviews": [
             {
-                "type": "scrollView",
-                "identifier": "content_scroll_view",
+                "type": "VStack",
+                "identifier": "main_view",
+                "properties": {
+                    "backgroundColor": "#FFFFFF"
+                },
                 "subviews": [
                     {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label",
+                        "type": "HStack",
+                        "identifier": "header_view",
                         "properties": {
-                            "label": "Business Current Account Application",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
+                            "backgroundColor": "#17321F"
+                        },
+                        "subviews": [
+                            {
+                                "type": "image",
+                                "identifier": "bank_icon",
+                                "properties": {
+                                    "title": "bank_icon",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "left": 10.0,
+                                    },
+                                    "size": {
+                                        "height":50.0,
+                                        "width":50.0
+                                    }
+                                }
                             },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "name_label",
-                        "properties": {
-                            "label": "What's your home address?",
-                            "color": "#17321F",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
+                            {
+                                "type": "label",
+                                "identifier": "title_label",
+                                "properties": {
+                                    "label": "Lloyads Banking",
+                                    "color": "#FFFFFF",
+                                    "padding": {
+                                        "top": 8,
+                                        "left" : 8,
+                                        "right": 8,
+                                        "bottom": 8
+                                    },
+                                    "textAlignment":"right"
+                                }
                             },
-                            "fontSize":40
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label_1",
-                        "properties": {
-                            "label": "We need to know where you have lived for the last 3 years",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label_2",
-                        "properties": {
-                            "label": "Property Name or Number",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "textField",
-                        "identifier": "title_text_field",
-                        "properties": {
-                            "placeHolder": "Property Name or Number",
-                            "mandatory": true,
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 50.0
-                            },
-                            "size": {
-                                "height":40
+                            {
+                                "type": "image",
+                                "identifier": "lock_image",
+                                "properties": {
+                                    "title": "lock_icon",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "left": 10.0,
+                                    },
+                                    "size": {
+                                        "height":20.0,
+                                        "width":20.0
+                                    }
+                                }
                             }
-                        }
+                        ]
                     },
                     {
-                        "type": "label",
-                        "identifier": "first_name_label",
-                        "properties": {
-                            "label": "UK Passcode",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 20.0,
-                                "bottom": 5.0
+                        "type": "scrollView",
+                        "identifier": "content_scroll_view",
+                        "subviews": [
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label",
+                                "properties": {
+                                    "label": "Business Current Account Application",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
                             },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "textField",
-                        "identifier": "first_name_text_field",
-                        "properties": {
-                            "placeHolder": "UK Passcode",
-                            "mandatory": true,
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 10.0
+                            {
+                                "type": "label",
+                                "identifier": "name_label",
+                                "properties": {
+                                    "label": "What's your home address?",
+                                    "color": "#17321F",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":40
+                                }
                             },
-                            "size": {
-                                "height":40
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label_1",
+                                "properties": {
+                                    "label": "We need to know where you have lived for the last 3 years",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label_2",
+                                "properties": {
+                                    "label": "Property Name or Number",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
+                            },
+                            {
+                                "type": "textField",
+                                "identifier": "title_text_field",
+                                "properties": {
+                                    "placeHolder": "Property Name or Number",
+                                    "mandatory": true,
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 50.0
+                                    },
+                                    "size": {
+                                        "height":40
+                                    }
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "identifier": "first_name_label",
+                                "properties": {
+                                    "label": "UK Passcode",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 20.0,
+                                        "bottom": 5.0
+                                    },
+                                    "fontSize":16
+                                }
+                            },
+                            {
+                                "type": "textField",
+                                "identifier": "first_name_text_field",
+                                "properties": {
+                                    "placeHolder": "UK Passcode",
+                                    "mandatory": true,
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":40
+                                    }
+                                }
+                            },
+                            {
+                                "identifier": "find_address_button",
+                                "type": "button",
+                                "properties": {
+                                    "title": "Find Address",
+                                    "backgroundColor": "#FFFFFF",
+                                    "color": "#17321F",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":50,
+                                        "width":200
+                                    },
+                                }
+                            },
+                            {
+                                "identifier": "find_address_manually_button",
+                                "type": "button",
+                                "properties": {
+                                    "title": "Enter Address Manually",
+                                    "backgroundColor": "#FFFFFF",
+                                    "color": "#17321F",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":50,
+                                        "width":200
+                                    },
+                                }
+                            },
+                            {
+                                "identifier": "continue_button",
+                                "type": "button",
+                                "properties": {
+                                    "title": "Continue",
+                                    "backgroundColor": "#17321F",
+                                    "color": "#ffffff",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":50,
+                                    },
+                                }
+                            },
+                            {
+                                "identifier": "previous_button",
+                                "type": "button",
+                                "properties": {
+                                    "title": "Previous",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 5.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":40,
+                                    },
+                                }
                             }
-                        }
-                    },
-                    {
-                        "identifier": "find_address_button",
-                        "type": "button",
-                        "properties": {
-                            "title": "Find Address",
-                            "backgroundColor": "#FFFFFF",
-                            "color": "#17321F",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 10.0
-                            },
-                            "size": {
-                                "height":50,
-                                "width":200
-                            },
-                        }
-                    },
-                    {
-                        "identifier": "find_address_manually_button",
-                        "type": "button",
-                        "properties": {
-                            "title": "Enter Address Manually",
-                            "backgroundColor": "#FFFFFF",
-                            "color": "#17321F",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 10.0
-                            },
-                            "size": {
-                                "height":50,
-                                "width":200
-                            },
-                        }
-                    },
-                    {
-                        "identifier": "continue_button",
-                        "type": "button",
-                        "properties": {
-                            "title": "Continue",
-                            "backgroundColor": "#17321F",
-                            "color": "#ffffff",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 10.0
-                            },
-                            "size": {
-                                "height":50,
-                            },
-                        }
-                    },
-                    {
-                        "identifier": "previous_button",
-                        "type": "button",
-                        "properties": {
-                            "title": "Previous",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 5.0,
-                                "bottom": 10.0
-                            },
-                            "size": {
-                                "height":40,
-                            },
-                        }
+                            
+                        ]
                     }
-                    
                 ]
             }
+            
             
         ]
     }

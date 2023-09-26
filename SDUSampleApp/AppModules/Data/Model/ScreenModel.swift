@@ -43,6 +43,8 @@ enum ComponentsType: String, Codable {
     case view
     case image
     case Segment
+    case HStack
+    case VStack
 }
 // MARK: - Properties
 struct Properties: Codable {
@@ -57,6 +59,7 @@ struct Properties: Codable {
     var backgroundColor: String?
     var cornorRadius:Int?
     var fontSize:Int?
+    var textAlignment:String?
 }
 
 // MARK: - Accessibility
