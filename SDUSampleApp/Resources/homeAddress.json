@@ -186,6 +186,9 @@
                                         "height":50,
                                         "width":200
                                     },
+                                    "borderWidth":1,
+                                    "borderColor": "#17321F",
+                                    "cornorRadius":8
                                 }
                             },
                             {
@@ -196,13 +199,13 @@
                                     "backgroundColor": "#FFFFFF",
                                     "color": "#17321F",
                                     "padding": {
-                                        "top": 10.0,
-                                        "bottom": 10.0
+                                        "top": 2.0,
+                                        "bottom": 2.0
                                     },
                                     "size": {
-                                        "height":50,
+                                        "height":30,
                                         "width":200
-                                    },
+                                    }
                                 }
                             },
                             {

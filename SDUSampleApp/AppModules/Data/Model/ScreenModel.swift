@@ -60,6 +60,8 @@ struct Properties: Codable {
     var cornorRadius:Int?
     var fontSize:Int?
     var textAlignment:String?
+    var borderWidth:Int?
+    var borderColor:String?
 }
 
 // MARK: - Accessibility
