@@ -11,9 +11,9 @@ import SwiftUI
 struct PSSegmentControlBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSSegmentedControl
-    let viewModel: BaseViewModel
+    let viewModel: LaunchViewModel
     
-    init(viewModel: BaseViewModel) {
+    init(viewModel: LaunchViewModel) {
         self.viewModel = viewModel
     }
     @MainActor

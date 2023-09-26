@@ -10,9 +10,9 @@ import SwiftUI
 struct PSVStackViewBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSVStackView
-    let viewModel: BaseViewModel
+    let viewModel: LaunchViewModel
     
-    init(viewModel: BaseViewModel) {
+    init(viewModel: LaunchViewModel) {
         self.viewModel = viewModel
     }
     @MainActor

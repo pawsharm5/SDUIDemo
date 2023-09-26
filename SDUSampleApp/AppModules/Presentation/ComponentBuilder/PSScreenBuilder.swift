@@ -15,9 +15,9 @@ protocol UIComponentBuilder {
 
 @MainActor
 class PSScreenBuilder {
-    let viewModel: BaseViewModel
+    let viewModel: LaunchViewModel
     
-    init(viewModel: BaseViewModel) {
+    init(viewModel: LaunchViewModel) {
         self.viewModel = viewModel
     }
     

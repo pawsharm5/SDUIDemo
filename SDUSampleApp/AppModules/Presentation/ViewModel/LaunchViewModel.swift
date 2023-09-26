@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 
-final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
+final class LaunchViewModel:ObservableObject, LaunchViewModelProtocol {
     private var useCase: LaunchUseCaseProtocol
     private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?

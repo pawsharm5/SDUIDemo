@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @ObservedObject private var psViewModel: BaseViewModel
+    @ObservedObject private var psViewModel: LaunchViewModel
 
-    init(viewModel: BaseViewModel) {
+    init(viewModel: LaunchViewModel) {
         self.psViewModel = viewModel
     }
     
@@ -23,7 +23,7 @@ struct LaunchView: View {
                 }
                 
                 NavigationLink(
-                    "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
+                    "", destination: LaunchView(viewModel: LaunchViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
                 )
                 
             }.onAppear {
@@ -39,6 +39,6 @@ struct LaunchView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
+        LaunchView(viewModel: LaunchViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
     }
 }

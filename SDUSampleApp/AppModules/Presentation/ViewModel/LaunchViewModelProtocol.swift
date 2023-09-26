@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol BaseViewModelProtocol {
+protocol LaunchViewModelProtocol {
     var currentScreenData: ScreenModel? { get set }
     func getScreenData() async
 }

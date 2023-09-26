@@ -16,7 +16,7 @@
 		108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */; };
 		108EB4122AC18194008AC77B /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4112AC18194008AC77B /* DataConstants.swift */; };
 		108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4172AC18300008AC77B /* LaunchViewRepository.swift */; };
-		108EB41F2AC18BF1008AC77B /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41E2AC18BF1008AC77B /* BaseViewModelProtocol.swift */; };
+		108EB41F2AC18BF1008AC77B /* LaunchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB41E2AC18BF1008AC77B /* LaunchViewModelProtocol.swift */; };
 		108EB4212AC1B3EF008AC77B /* nationality.json in Resources */ = {isa = PBXBuildFile; fileRef = 108EB4202AC1B3EE008AC77B /* nationality.json */; };
 		109EC84E2ABD5F1C005295F2 /* PSDropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */; };
 		109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8572ABD71D2005295F2 /* PSScrollView.swift */; };
@@ -46,7 +46,7 @@
 		F2FF1F5B2ABC49F400681957 /* homeAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F2FF1F5A2ABC49F400681957 /* homeAddress.json */; };
 		F2FF1F5F2ABC4A0300681957 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F5D2ABC4A0300681957 /* LocalService.swift */; };
 		F2FF1F602ABC4A0300681957 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F5E2ABC4A0300681957 /* NetworkServiceProtocol.swift */; };
-		F2FF1F622ABC4AB400681957 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F612ABC4AB400681957 /* BaseViewModel.swift */; };
+		F2FF1F622ABC4AB400681957 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F612ABC4AB400681957 /* LaunchViewModel.swift */; };
 		F2FF1F652ABC4C4300681957 /* PSScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F642ABC4C4300681957 /* PSScreenBuilder.swift */; };
 		F2FF1F672ABC51BC00681957 /* PSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F662ABC51BC00681957 /* PSButton.swift */; };
 		F2FF1F692ABC525E00681957 /* PSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FF1F682ABC525E00681957 /* PSLabel.swift */; };
@@ -79,7 +79,7 @@
 		108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepositoryProtocol.swift; sourceTree = "<group>"; };
 		108EB4112AC18194008AC77B /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
 		108EB4172AC18300008AC77B /* LaunchViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepository.swift; sourceTree = "<group>"; };
-		108EB41E2AC18BF1008AC77B /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		108EB41E2AC18BF1008AC77B /* LaunchViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModelProtocol.swift; sourceTree = "<group>"; };
 		108EB4202AC1B3EE008AC77B /* nationality.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nationality.json; sourceTree = "<group>"; };
 		109EC84D2ABD5F1C005295F2 /* PSDropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDropdownTextField.swift; sourceTree = "<group>"; };
 		109EC8572ABD71D2005295F2 /* PSScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollView.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		F2FF1F5A2ABC49F400681957 /* homeAddress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homeAddress.json; sourceTree = "<group>"; };
 		F2FF1F5D2ABC4A0300681957 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		F2FF1F5E2ABC4A0300681957 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
-		F2FF1F612ABC4AB400681957 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F2FF1F612ABC4AB400681957 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		F2FF1F642ABC4C4300681957 /* PSScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSScreenBuilder.swift; sourceTree = "<group>"; };
 		F2FF1F662ABC51BC00681957 /* PSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSButton.swift; sourceTree = "<group>"; };
 		F2FF1F682ABC525E00681957 /* PSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLabel.swift; sourceTree = "<group>"; };
@@ -338,8 +338,8 @@
 		F2FF1F532ABC48A700681957 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F2FF1F612ABC4AB400681957 /* BaseViewModel.swift */,
-				108EB41E2AC18BF1008AC77B /* BaseViewModelProtocol.swift */,
+				F2FF1F612ABC4AB400681957 /* LaunchViewModel.swift */,
+				108EB41E2AC18BF1008AC77B /* LaunchViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -519,7 +519,7 @@
 				108EB4122AC18194008AC77B /* DataConstants.swift in Sources */,
 				109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */,
 				109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */,
-				F2FF1F622ABC4AB400681957 /* BaseViewModel.swift in Sources */,
+				F2FF1F622ABC4AB400681957 /* LaunchViewModel.swift in Sources */,
 				109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */,
 				F2FF1F5F2ABC4A0300681957 /* LocalService.swift in Sources */,
 				108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */,
@@ -530,7 +530,7 @@
 				109EC8642ABDC5A3005295F2 /* PSSegmentControlBuilder.swift in Sources */,
 				F2FF1F4E2ABC46FB00681957 /* StringExtension.swift in Sources */,
 				CAEC1B022ABDD40F0091951C /* PSImageViewBuilder.swift in Sources */,
-				108EB41F2AC18BF1008AC77B /* BaseViewModelProtocol.swift in Sources */,
+				108EB41F2AC18BF1008AC77B /* LaunchViewModelProtocol.swift in Sources */,
 				F2FF1F582ABC48BF00681957 /* ScreenModel.swift in Sources */,
 				109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */,
 				F2FF1F652ABC4C4300681957 /* PSScreenBuilder.swift in Sources */,

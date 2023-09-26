@@ -11,9 +11,9 @@ import SwiftUI
 struct PSScrollViewViewBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSScrollView
-    let viewModel: BaseViewModel
+    let viewModel: LaunchViewModel
     
-    init(viewModel: BaseViewModel) {
+    init(viewModel: LaunchViewModel) {
         self.viewModel = viewModel
     }
     @MainActor
