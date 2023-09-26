@@ -18,7 +18,6 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
     private var textFieldValues: [String: String] = [:]
     @Published var screenIdentifier: String? 
-    @Published var isActive = false
 
     init(useCase:LaunchUseCaseProtocol, screenIdentifier: String) {
         self.useCase = useCase
@@ -47,7 +46,6 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     }
     private func onboardingContniueAction() {
         print("continue tapped")
-        isActive = true
         for value in textFieldValues {
             print("values \(value.value) for identifier \(value.key)")
         }
@@ -55,7 +53,6 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     
     private func onboardingSkipAction() {
         print("previous tapped")
-        isActive = true
     }
     func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?) {
         guard let identifier = identifier else {

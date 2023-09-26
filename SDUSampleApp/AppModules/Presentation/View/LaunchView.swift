@@ -23,8 +23,7 @@ struct LaunchView: View {
                 }
                 
                 NavigationLink(
-                    "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: psViewModel.screenIdentifier ?? "")),
-                    isActive: $psViewModel.isActive
+                    "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: psViewModel.screenIdentifier ?? ""))
                 )
                 
             }.onAppear {
