@@ -15,7 +15,7 @@ struct LaunchUseCase: LaunchUseCaseProtocol {
         self.repository = repository
     }
 
-    func getScreenData() async -> ScreenDomainResponse? {
-        return await repository.getScreenData()
+    func getScreenData(screenIdentifier: String) async -> ScreenDomainResponse? {
+        return await repository.getScreenData(screenIdentifier: screenIdentifier)
     }
 }

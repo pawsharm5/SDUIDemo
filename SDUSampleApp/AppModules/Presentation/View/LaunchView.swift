@@ -10,7 +10,7 @@ import SwiftUI
 struct LaunchView: View {
     
     @ObservedObject private var psViewModel: BaseViewModel
-    
+
     init(viewModel: BaseViewModel) {
         self.psViewModel = viewModel
     }
@@ -21,6 +21,10 @@ struct LaunchView: View {
                 if let bodyD = psViewModel.currentScreenData?.body.subviews?.first {
                     PSScreenBuilder(viewModel: psViewModel).createComponentView(bodyD)
                 }
+                NavigationLink(
+                    "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: psViewModel.screenIdentifier ?? "")),
+                    isActive: $psViewModel.isActive
+                )
             }.navigationTitle("").task {
                 await psViewModel.getScreenData()
             }
@@ -32,6 +36,6 @@ struct LaunchView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService()))))
+        LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: ""))
     }
 }

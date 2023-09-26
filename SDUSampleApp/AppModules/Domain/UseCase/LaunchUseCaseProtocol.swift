@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LaunchUseCaseProtocol {
-    func getScreenData() async -> ScreenDomainResponse?
+    func getScreenData(screenIdentifier: String) async -> ScreenDomainResponse?
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct SDUSampleAppApp: App {
-    private var psViewModel = BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())))
+    private var psViewModel = BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: "onboarding")
 
     var body: some Scene {
         WindowGroup {

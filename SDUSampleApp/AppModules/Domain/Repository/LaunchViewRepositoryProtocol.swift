@@ -11,5 +11,5 @@ typealias ScreenDomainResponse = ScreenModel
 
 protocol LaunchViewRepositoryProtocol {
     var service: NetworkServiceProtocol {get}
-    func getScreenData() async -> ScreenDomainResponse?
+    func getScreenData(screenIdentifier: String) async -> ScreenDomainResponse?
 }

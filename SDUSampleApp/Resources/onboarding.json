@@ -270,6 +270,11 @@
                             "size": {
                                 "height":50,
                             },
+                            "action": {
+                                "type": "submit",
+                                "destination": "homeAddress",
+                                "navigationType": "PUSH"
+                            }
                         }
                     },
                     {
@@ -285,6 +290,7 @@
                             "size": {
                                 "height":40,
                             },
+                            
                         }
                     }
                     

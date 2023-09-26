@@ -34,7 +34,7 @@ struct PSButton: View {
     
     var body: some View {
         Button(action: {
-        buttonAction?()
+            buttonAction?()
         }) {
             Text(configuration.buttonTitle)
                 .frame(maxWidth: .infinity)

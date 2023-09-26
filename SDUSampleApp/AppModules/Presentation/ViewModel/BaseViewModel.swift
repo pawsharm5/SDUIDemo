@@ -16,21 +16,22 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     @Published var errorMessage: String? = nil
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
     private var textFieldValues: [String: String] = [:]
-    
-    init(useCase:LaunchUseCaseProtocol) {
+    @Published var screenIdentifier: String? 
+    @Published var isActive = false
+
+    init(useCase:LaunchUseCaseProtocol, screenIdentifier: String) {
         self.useCase = useCase
+        self.screenIdentifier = screenIdentifier
         setupButtonActions()
     }
     
     func getScreenData() async {
         Task {
-            cancellable =  await self.useCase.getScreenData().publisher
+            cancellable =  await self.useCase.getScreenData(screenIdentifier: screenIdentifier ?? "").publisher
                 .receive(on: DispatchQueue.main)
                 .sink(receiveValue: { value in
                     self.currentScreenData = value
                     })
-                
-            
         }
     }
     
@@ -45,6 +46,7 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     }
     private func onboardingContniueAction() {
         print("continue tapped")
+        isActive = true
         for value in textFieldValues {
             print("values \(value.value) for identifier \(value.key)")
         }
@@ -52,12 +54,16 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     
     private func onboardingSkipAction() {
         print("previous tapped")
+        isActive = true
     }
-    func executeButtonAction(for identifier: ComponentIdentifier?) {
-        guard let identifier = identifier else{
+    func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?) {
+        guard let identifier = identifier else {
             return
         }
         buttonActions[identifier]?()
+        if let screenIdentifier = action?.destination {
+            self.screenIdentifier = screenIdentifier
+        }
     }
     func getTextFieldValue(for identifier: String) -> String {
         return textFieldValues[identifier] ?? ""
