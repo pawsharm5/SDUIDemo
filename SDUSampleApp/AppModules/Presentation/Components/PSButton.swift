@@ -15,6 +15,9 @@ protocol PSButtonConfiguration {
     var padding: Padding? { get }
     var height: Int { get }
     var cornorRadius: Int { get }
+    var borderWidth: Int { get }
+    var borderColor: String { get }
+    var width: Int { get }
 }
 
 struct PSButtonConfig: PSButtonConfiguration {
@@ -24,6 +27,9 @@ struct PSButtonConfig: PSButtonConfiguration {
     var padding: Padding?
     var height:Int
     var cornorRadius:Int
+    var borderWidth: Int
+    var borderColor: String
+    var width: Int
 }
 
 struct PSButton: View {
@@ -39,11 +45,17 @@ struct PSButton: View {
             Text(configuration.buttonTitle)
                 .frame(maxWidth: .infinity)
                 .frame(height: CGFloat(configuration.height))
-                .background(Color(hex: configuration.buttonColor))
                 .foregroundColor(Color(hex: configuration.buttonTitleColor))
-                .cornerRadius(CGFloat(configuration.cornorRadius))
-                .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
+                .overlay(
+                    RoundedRectangle(cornerRadius: CGFloat(configuration.cornorRadius))
+                        .stroke(Color(hex: configuration.borderColor), lineWidth: CGFloat(configuration.borderWidth) + 1)
+                            )
         }
+        .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))
+        .background(Color(hex: configuration.buttonColor))
+        .border(Color(hex: configuration.borderColor), width: CGFloat(configuration.borderWidth))
+        .cornerRadius(CGFloat(configuration.cornorRadius))
+        .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
     }
     
 }

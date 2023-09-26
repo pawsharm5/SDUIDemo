@@ -16,7 +16,7 @@ struct LaunchViewRepository: LaunchViewRepositoryProtocol {
     
     func getScreenData() async -> ScreenDomainResponse? {
         do {
-            let screenModel = try await self.service.load(DataConstants.ApiEndpoints.nationality) as ScreenDomainResponse
+            let screenModel = try await self.service.load(DataConstants.ApiEndpoints.homeAddress) as ScreenDomainResponse
             return screenModel
         } catch {
             
