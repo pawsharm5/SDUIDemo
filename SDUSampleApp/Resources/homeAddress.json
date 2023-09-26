@@ -128,7 +128,7 @@
                             },
                             {
                                 "type": "textField",
-                                "identifier": "title_text_field",
+                                "identifier": "property_name_text_field",
                                 "properties": {
                                     "placeHolder": "Property Name or Number",
                                     "mandatory": true,
@@ -157,7 +157,7 @@
                             },
                             {
                                 "type": "textField",
-                                "identifier": "first_name_text_field",
+                                "identifier": "uk_passcode_textfield",
                                 "properties": {
                                     "placeHolder": "UK Passcode",
                                     "mandatory": true,

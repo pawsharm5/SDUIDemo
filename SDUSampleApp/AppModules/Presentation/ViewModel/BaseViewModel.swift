@@ -17,7 +17,7 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     @Published var errorMessage: String? = nil
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
     private var textFieldValues: [String: String] = [:]
-    @Published var screenIdentifier: String? = "onboarding"
+    var screenIdentifier: String? = "onboarding"
 
     init(useCase:LaunchUseCaseProtocol) {
         self.useCase = useCase
