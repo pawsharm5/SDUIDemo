@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
+
 final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
     private var useCase: LaunchUseCaseProtocol
     private var cancellable: AnyCancellable?
@@ -34,7 +35,7 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
                     })
         }
     }
-    
+
     private func setupButtonActions() {
         buttonActions[.continueButton] = { [weak self] in
             self?.onboardingContniueAction()
@@ -63,7 +64,11 @@ final class BaseViewModel:ObservableObject, BaseViewModelProtocol {
         buttonActions[identifier]?()
         if let screenIdentifier = action?.destination {
             self.screenIdentifier = screenIdentifier
+            Task {
+                await self.getScreenData()
+            }
         }
+        
     }
     func getTextFieldValue(for identifier: String) -> String {
         return textFieldValues[identifier] ?? ""

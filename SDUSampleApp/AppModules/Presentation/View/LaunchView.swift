@@ -21,12 +21,16 @@ struct LaunchView: View {
                 ForEach(psViewModel.currentScreenData?.body.subviews ?? [], id: \.identifier) { element in
                     PSScreenBuilder(viewModel: psViewModel).createComponentView(element)
                 }
+                
                 NavigationLink(
                     "", destination: LaunchView(viewModel: BaseViewModel(useCase: LaunchUseCase(repository: LaunchViewRepository(service: LocalService())), screenIdentifier: psViewModel.screenIdentifier ?? "")),
                     isActive: $psViewModel.isActive
                 )
-            }.navigationTitle("").task {
-                await psViewModel.getScreenData()
+                
+            }.onAppear {
+                Task {
+                    await psViewModel.getScreenData()
+                }
             }
         } else {
             // Fallback on earlier versions

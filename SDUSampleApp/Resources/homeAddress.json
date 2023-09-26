@@ -7,11 +7,11 @@
         "bottom": 20.0
     },
     "body": {
-        "identifier": "onboarding_body",
+        "identifier": "home_Address",
         "subviews": [
             {
                 "type": "VStack",
-                "identifier": "main_view",
+                "identifier": "main_view1",
                 "properties": {
                     "backgroundColor": "#FFFFFF"
                 },
@@ -222,6 +222,11 @@
                                     "size": {
                                         "height":50,
                                     },
+                                    "action": {
+                                        "type": "submit",
+                                        "destination": "nationality",
+                                        "navigationType": "PUSH"
+                                    }
                                 }
                             },
                             {
@@ -237,6 +242,11 @@
                                     "size": {
                                         "height":40,
                                     },
+                                    "action": {
+                                        "type": "submit",
+                                        "destination": "onboarding",
+                                        "navigationType": "POP"
+                                    }
                                 }
                             }
                             

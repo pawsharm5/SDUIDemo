@@ -7,7 +7,7 @@
         "bottom": 20.0
     },
     "body": {
-        "identifier": "onboarding_body",
+        "identifier": "nationality",
         "subviews": [
             {
                 "type": "VStack",
@@ -212,6 +212,11 @@
                                     "size": {
                                         "height":40,
                                     },
+                                    "action": {
+                                        "type": "submit",
+                                        "destination": "homeAddress",
+                                        "navigationType": "POP"
+                                    }
                                 }
                             }
                             
