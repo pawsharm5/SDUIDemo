@@ -10,152 +10,216 @@
         "identifier": "onboarding_body",
         "subviews": [
             {
-                "type": "scrollView",
-                "identifier": "content_scroll_view",
+                "type": "VStack",
+                "identifier": "main_view",
+                "properties": {
+                    "backgroundColor": "#FFFFFF"
+                },
                 "subviews": [
                     {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label",
+                        "type": "HStack",
+                        "identifier": "header_view",
                         "properties": {
-                            "label": "Business Current Account Application",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "name_label",
-                        "properties": {
-                            "label": "Your nationality?",
-                            "color": "#17321F",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":40
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label_1",
-                        "properties": {
-                            "label": "Nationality",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label_2",
-                        "properties": {
-                            "label": "United Kingdom",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "label",
-                        "identifier": "cuurrent_account_label_3",
-                        "properties": {
-                            "label": "Are you living outside?",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 20.0
-                            },
-                            "fontSize":16
-                        }
-                    },
-                    {
-                        "type": "Segment",
-                        "identifier": "segment_control",
-                        "properties": {
-                            "color": "#000000",
+                            "backgroundColor": "#17321F"
                         },
                         "subviews": [
                             {
-                                "type": "button",
-                                "identifier": "button_first",
+                                "type": "image",
+                                "identifier": "bank_icon",
                                 "properties": {
-                                    "title": "YES",
-                                    "color": "#17321F",
-                                    "backgroundColor": "#FFFFFF",
-                                },
-                                "padding": {
-                                    "top": 10.0,
-                                    "bottom": 10.0
-                                },
-                                "size": {
-                                    "height":40
-                                },
-                                "cornorRadius":10
-                                
+                                    "title": "bank_icon",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "left": 10.0,
+                                    },
+                                    "size": {
+                                        "height":50.0,
+                                        "width":50.0
+                                    }
+                                }
                             },
                             {
-                                "type": "button",
-                                "identifier": "button_second",
+                                "type": "label",
+                                "identifier": "title_label",
                                 "properties": {
-                                    "title": "NO",
-                                    "color": "#17321F",
-                                    "backgroundColor": "#FFFFFF",
-                                },
-                                "padding": {
-                                    "top": 0.0,
-                                    "bottom": 0.0,
-                                },
-                                "size": {
-                                    "height":40
-                                },
-                                "cornorRadius":0
+                                    "label": "Lloyads Banking",
+                                    "color": "#FFFFFF",
+                                    "padding": {
+                                        "top": 8,
+                                        "left" : 8,
+                                        "right": 8,
+                                        "bottom": 8
+                                    },
+                                    "textAlignment":"right"
+                                }
+                            },
+                            {
+                                "type": "image",
+                                "identifier": "lock_image",
+                                "properties": {
+                                    "title": "lock_icon",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "left": 10.0,
+                                    },
+                                    "size": {
+                                        "height":20.0,
+                                        "width":20.0
+                                    }
+                                }
                             }
                         ]
                     },
                     {
-                        "identifier": "continue_button",
-                        "type": "button",
-                        "properties": {
-                            "title": "Continue",
-                            "backgroundColor": "#17321F",
-                            "color": "#ffffff",
-                            "padding": {
-                                "top": 10.0,
-                                "bottom": 10.0
+                        "type": "scrollView",
+                        "identifier": "content_scroll_view",
+                        "subviews": [
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label",
+                                "properties": {
+                                    "label": "Business Current Account Application",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
                             },
-                            "size": {
-                                "height":50,
+                            {
+                                "type": "label",
+                                "identifier": "name_label",
+                                "properties": {
+                                    "label": "Your nationality?",
+                                    "color": "#17321F",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":40
+                                }
                             },
-                        }
-                    },
-                    {
-                        "identifier": "previous_button",
-                        "type": "button",
-                        "properties": {
-                            "title": "Previous",
-                            "color": "#000000",
-                            "padding": {
-                                "top": 5.0,
-                                "bottom": 10.0
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label_1",
+                                "properties": {
+                                    "label": "Nationality",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
                             },
-                            "size": {
-                                "height":40,
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label_2",
+                                "properties": {
+                                    "label": "United Kingdom",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
                             },
-                        }
+                            {
+                                "type": "label",
+                                "identifier": "cuurrent_account_label_3",
+                                "properties": {
+                                    "label": "Are you living outside?",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 20.0
+                                    },
+                                    "fontSize":16
+                                }
+                            },
+                            {
+                                "type": "Segment",
+                                "identifier": "segment_control",
+                                "properties": {
+                                    "color": "#000000",
+                                },
+                                "subviews": [
+                                    {
+                                        "type": "button",
+                                        "identifier": "button_first",
+                                        "properties": {
+                                            "title": "YES",
+                                            "color": "#17321F",
+                                            "backgroundColor": "#FFFFFF",
+                                        },
+                                        "padding": {
+                                            "top": 10.0,
+                                            "bottom": 10.0
+                                        },
+                                        "size": {
+                                            "height":40
+                                        },
+                                        "cornorRadius":10
+                                        
+                                    },
+                                    {
+                                        "type": "button",
+                                        "identifier": "button_second",
+                                        "properties": {
+                                            "title": "NO",
+                                            "color": "#17321F",
+                                            "backgroundColor": "#FFFFFF",
+                                        },
+                                        "padding": {
+                                            "top": 0.0,
+                                            "bottom": 0.0,
+                                        },
+                                        "size": {
+                                            "height":40
+                                        },
+                                        "cornorRadius":0
+                                    }
+                                ]
+                            },
+                            {
+                                "identifier": "continue_button",
+                                "type": "button",
+                                "properties": {
+                                    "title": "Continue",
+                                    "backgroundColor": "#17321F",
+                                    "color": "#ffffff",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":50,
+                                    },
+                                }
+                            },
+                            {
+                                "identifier": "previous_button",
+                                "type": "button",
+                                "properties": {
+                                    "title": "Previous",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 5.0,
+                                        "bottom": 10.0
+                                    },
+                                    "size": {
+                                        "height":40,
+                                    },
+                                }
+                            }
+                            
+                        ]
                     }
-                    
                 ]
             }
+            
             
         ]
     }

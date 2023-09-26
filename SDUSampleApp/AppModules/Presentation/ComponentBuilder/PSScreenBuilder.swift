@@ -38,6 +38,10 @@ class PSScreenBuilder {
             PSViewBuilder(viewModel: viewModel).build(element: component)
         case .image:
             PSImageViewBuilder().build(element: component)
+        case .HStack:
+            PSHStackViewBuilder(viewModel: viewModel).build(element: component)
+        case .VStack:
+            PSVStackViewBuilder(viewModel: viewModel).build(element: component)
         }
     }
 }

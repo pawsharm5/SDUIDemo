@@ -14,13 +14,14 @@ struct LaunchView: View {
     init(viewModel: BaseViewModel) {
         self.psViewModel = viewModel
     }
-
+    
     var body: some View {
         if #available(iOS 15.0, *) {
             NavigationView {
-                if let bodyD = psViewModel.currentScreenData?.body.subviews?.first {
-                    PSScreenBuilder(viewModel: psViewModel).createComponentView(bodyD)
+                ForEach(psViewModel.currentScreenData?.body.subviews ?? [], id: \.identifier) { element in
+                    PSScreenBuilder(viewModel: psViewModel).createComponentView(element)
                 }
+                
             }.navigationTitle("").task {
                 await psViewModel.getScreenData()
             }
