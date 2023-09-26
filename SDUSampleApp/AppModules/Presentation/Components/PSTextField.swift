@@ -14,9 +14,7 @@ protocol PSTextFieldConfiguration {
     var height: Int { get }
     var backgroundColor: String { get }
     var padding: Padding? { get }
-    
-    var validationRegex: String { get }
-    var validationFailureMessage: String { get }
+    var validation: ValidationRules? { get }
     
     func isValid(text: String) -> Bool
 }
@@ -27,13 +25,13 @@ struct PSTextFieldConfig: PSTextFieldConfiguration {
     var height: Int
     var backgroundColor: String
     var padding: Padding?
-    var validationRegex: String
-    var validationFailureMessage: String
+    var validation: ValidationRules?
+    
     func isValid(text: String) -> Bool {
         if text.isEmpty {
             return false
         }
-        if let regex = try? NSRegularExpression(pattern: validationRegex, options: .caseInsensitive) {
+        if let regexString = validation?.regex, let regex = try? NSRegularExpression(pattern: regexString, options: .caseInsensitive) {
             let range = NSRange(location: 0, length: text.utf16.count)
             return regex.firstMatch(in: text, options: [], range: range) != nil
         }

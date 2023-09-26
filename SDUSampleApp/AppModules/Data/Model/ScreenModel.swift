@@ -62,7 +62,21 @@ struct Properties: Codable {
     var textAlignment:String?
     var borderWidth:Int?
     var borderColor:String?
+    var validation: ValidationRules?
+
 }
+
+struct ValidationRules: Codable {
+    let max: ValidationRule?
+    let min: ValidationRule?
+    let regex: String?
+}
+
+struct ValidationRule: Codable {
+    let value: Int
+    let message: String
+}
+
 
 // MARK: - Accessibility
 struct Accessibility: Codable {
