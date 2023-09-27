@@ -15,7 +15,7 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
-    private var textFieldValues: [String: String] = [:]
+    private var textFieldValues: [String: [String : Any]] = [:]
     @Published var textFieldErrorMessage: [String: String] = [:]
 
     var screenIdentifier: String? = "onboarding"
@@ -49,7 +49,7 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
         var errorVlaues: [String : String] = [:]
         for value in textFieldValues {
             print("values \(value.value) for identifier \(value.key)")
-            errorVlaues[value.key] = "Error on\(value.key)"
+            errorVlaues[value.key] = "\((value.value["validation"] as? ValidationRules)?.min?.message ?? "")"
         }
         textFieldErrorMessage = errorVlaues
     }
@@ -65,18 +65,20 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
         buttonActions[identifier]?()
         if let screenIdentifier = action?.destination {
             self.screenIdentifier = screenIdentifier
-            Task {
-                await self.getScreenData()
-            }
+//            Task {
+//                await self.getScreenData()
+//            }
         }
         
     }
     func getTextFieldValue(for identifier: String) -> String {
-        return textFieldValues[identifier] ?? ""
+        return textFieldValues[identifier]?["text"] as? String ?? ""
     }
 
-    func setTextFieldValue(for identifier: String, value: String) {
-        textFieldValues[identifier] = value
+    func setTextFieldValue(for identifier: String, value: String, validation: ValidationRules?) {
+        let dict: [String : Any] = ["text" : value, "validation" : validation]
+        textFieldValues[identifier] = dict
+
     }
     
     func setErrorTextFieldValue(for identifier: String, value: String) {
