@@ -8,8 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
 struct PSTextFieldBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSTextField
@@ -24,8 +22,15 @@ struct PSTextFieldBuilder: UIComponentBuilder {
                             get: { viewModel.getTextFieldValue(for: element.identifier) },
                             set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue) }
                         )
+         let errorBinding = Binding(
+            get: {  viewModel.textFieldErrorMessage[element.identifier] ?? "" }, set: { newValue in
+                viewModel.textFieldErrorMessage[element.identifier] = newValue
+            }
+                           
+                        )
     
-         let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "", validation: element.properties?.validation)
+         let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "", validation: element.properties?.validation, error: errorBinding)
+         viewModel.setTextFieldValue(for: element.identifier, value: "")
          let customTextField = PSTextField(configuration: configuration)
         return customTextField
     }

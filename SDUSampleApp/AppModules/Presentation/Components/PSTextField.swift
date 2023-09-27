@@ -15,6 +15,8 @@ protocol PSTextFieldConfiguration {
     var backgroundColor: String { get }
     var padding: Padding? { get }
     var validation: ValidationRules? { get }
+    var error: Binding<String>? { get set }
+
 }
 struct PSTextFieldConfig: PSTextFieldConfiguration {
     var text: Binding<String>
@@ -24,18 +26,20 @@ struct PSTextFieldConfig: PSTextFieldConfiguration {
     var backgroundColor: String
     var padding: Padding?
     var validation: ValidationRules?
+    var error: Binding<String>?
+    
+
 }
 struct PSTextField : View {
     var configuration: PSTextFieldConfiguration
     @State var textFieldText: String
-    @State private var isTextValid: Bool = true
     @State private var errorMessage: String = ""
-    
+    @State var isValid: Bool = false
+
     init(configuration: PSTextFieldConfiguration) {
         self.configuration = configuration
         _textFieldText = State(initialValue: configuration.text.wrappedValue)
     }
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) { // Wrap in VStack to display error message
             TextField(configuration.placeHolder, text: $textFieldText)
@@ -48,16 +52,17 @@ struct PSTextField : View {
                 .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
                 .onChange(of: textFieldText, perform: { newValue in
                     configuration.text.wrappedValue = newValue
-                    isTextValid = isValid(text: newValue)
+                    isValid = isValid(text: newValue)
                     print("\(textFieldText)")
                 })
             
-            if !isTextValid {
-                Text(errorMessage)
+            //if !isTextValid {
+            Text(errorMessage.count > 0 ? errorMessage : (isValid ? "" : (configuration.error?.wrappedValue ?? "")))
                     .foregroundColor(.red)
                     .font(.caption)
                     .padding(.top, 8)
-            }
+            //}
+
         }
     }
     func isValid(text: String) -> Bool {
@@ -90,7 +95,8 @@ struct PSTextField : View {
                 errorMessage = configuration.validation?.max?.message ?? ""
                 return false // Input is too long
             }
-            
+            errorMessage = ""
+        configuration.error?.wrappedValue = ""
             return true // Input is valid
     }
 }

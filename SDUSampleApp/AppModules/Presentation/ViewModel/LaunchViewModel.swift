@@ -14,9 +14,9 @@ final class LaunchViewModel:ObservableObject, LaunchViewModelProtocol {
     private var useCase: LaunchUseCaseProtocol
     private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?
-    @Published var errorMessage: String? = nil
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
     private var textFieldValues: [String: String] = [:]
+    @Published var textFieldErrorMessage: [String: String] = [:]
 
     var screenIdentifier: String? = "onboarding"
 
@@ -46,15 +46,19 @@ final class LaunchViewModel:ObservableObject, LaunchViewModelProtocol {
     }
     private func onboardingContniueAction() {
         print("continue tapped")
+        var errorVlaues: [String : String] = [:]
         for value in textFieldValues {
             print("values \(value.value) for identifier \(value.key)")
+            errorVlaues[value.key] = "Error on\(value.key)"
         }
+        textFieldErrorMessage = errorVlaues
     }
     
     private func onboardingSkipAction() {
         print("previous tapped")
     }
     func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?) {
+        cancellable = nil
         guard let identifier = identifier else {
             return
         }
