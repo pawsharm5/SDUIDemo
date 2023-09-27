@@ -73,30 +73,28 @@ struct PSTextField : View {
         let minLength = configuration.validation?.min?.value
         let maxLength = configuration.validation?.max?.value
         // Validate against the regex pattern
-            if let regex = try? NSRegularExpression(pattern: regex, options: .caseInsensitive) {
+            if let regex = try? NSRegularExpression(pattern: regex) {
                 let range = NSRange(location: 0, length: text.utf16.count)
                 guard regex.firstMatch(in: text, options: [], range: range) != nil else {
-                    errorMessage = configuration.validation?.min?.message ?? ""
+                    // Check the length constraints
+                    if let minLength = minLength, text.count < minLength {
+                        errorMessage = configuration.validation?.min?.message ?? ""
+                        return false // Input is too short
+                    }
+                    if let maxLength = maxLength, text.count > maxLength {
+                        errorMessage = configuration.validation?.max?.message ?? ""
+                        return false // Input is too long
+                    }
+                    errorMessage = "Error"
                     return false
                 }
             } else {
-                errorMessage = configuration.validation?.min?.message ?? ""
-                
+                errorMessage = "Invalid regex"
                 return false // Invalid regex pattern
             }
             
-            // Check the length constraints
-            if let minLength = minLength, text.count < minLength {
-                errorMessage = configuration.validation?.min?.message ?? ""
-                return false // Input is too short
-            }
-            
-            if let maxLength = maxLength, text.count > maxLength {
-                errorMessage = configuration.validation?.max?.message ?? ""
-                return false // Input is too long
-            }
             errorMessage = ""
-        configuration.error?.wrappedValue = ""
+            configuration.error?.wrappedValue = ""
             return true // Input is valid
     }
 }

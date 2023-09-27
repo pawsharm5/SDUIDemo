@@ -170,7 +170,7 @@
                                             "value": 3,
                                             "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                         },
-                                        "regex": "^[a-zA-Z]{3,18}$"
+                                        "regex": "^[a-zA-Z ]{3,18}$"
                                     }
                                 }
                             },
@@ -210,7 +210,7 @@
                                             "value": 3,
                                             "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                         },
-                                        "regex": "^[a-zA-Z]{3,18}$"
+                                        "regex": "^[a-zA-Z df ]{3,18}$"
                                     }
                                 }
                             },
@@ -250,7 +250,7 @@
                                             "value": 3,
                                             "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                         },
-                                        "regex": "^[a-zA-Z]{3,18}$"
+                                        "regex": "^[a-zA-Z ]{3,18}$"
                                     }
                                 }
                             },
@@ -290,7 +290,7 @@
                                             "value": 3,
                                             "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                         },
-                                        "regex": "^[a-zA-Z]{3,18}$"
+                                        "regex": "^[a-zA-Z ]{3,18}$"
                                     }
                                 }
                             },
