@@ -20,12 +20,13 @@ struct PSTextFieldBuilder: UIComponentBuilder {
     }
     @MainActor
      func build(element: SubView) -> PSTextField {
-        let binding = Binding(
-                   get: { viewModel.getTextFieldValue(for: element.identifier) },
-                   set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue) }
-               )
+         let binding = Binding(
+                            get: { viewModel.getTextFieldValue(for: element.identifier) },
+                            set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue) }
+                        )
+    
          let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "", validation: element.properties?.validation)
-        let customTextField = PSTextField(configuration: configuration)
+         let customTextField = PSTextField(configuration: configuration)
         return customTextField
     }
 }

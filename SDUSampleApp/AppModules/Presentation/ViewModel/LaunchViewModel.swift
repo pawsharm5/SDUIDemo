@@ -17,11 +17,11 @@ final class LaunchViewModel:ObservableObject, LaunchViewModelProtocol {
     @Published var errorMessage: String? = nil
     private var buttonActions: [ComponentIdentifier: () -> Void] = [:]
     private var textFieldValues: [String: String] = [:]
+
     var screenIdentifier: String? = "onboarding"
 
     init(useCase:LaunchUseCaseProtocol) {
         self.useCase = useCase
-        //self.screenIdentifier = screenIdentifier
         setupButtonActions()
     }
     
