@@ -10,9 +10,9 @@ import SwiftUI
 struct PSViewBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSView
-    let viewModel: LaunchViewModel
+    let viewModel: LaunchViewModelProtocol
     
-    init(viewModel: LaunchViewModel) {
+    init(viewModel: LaunchViewModelProtocol) {
         self.viewModel = viewModel
     }
     @MainActor

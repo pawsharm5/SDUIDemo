@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 
-final class LaunchViewModel:ObservableObject, LaunchViewModelProtocol {
+final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     private var useCase: LaunchUseCaseProtocol
     private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?
@@ -77,5 +77,9 @@ final class LaunchViewModel:ObservableObject, LaunchViewModelProtocol {
 
     func setTextFieldValue(for identifier: String, value: String) {
         textFieldValues[identifier] = value
+    }
+    
+    func setErrorTextFieldValue(for identifier: String, value: String) {
+        textFieldErrorMessage[identifier] = value
     }
 }

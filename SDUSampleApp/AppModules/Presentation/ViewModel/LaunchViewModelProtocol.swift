@@ -11,4 +11,9 @@ import SwiftUI
 protocol LaunchViewModelProtocol {
     var currentScreenData: ScreenModel? { get set }
     func getScreenData() async
+    func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?)
+    func getTextFieldValue(for identifier: String) -> String
+    func setTextFieldValue(for identifier: String, value: String)
+    var textFieldErrorMessage: [String: String] { get set }
+    func setErrorTextFieldValue(for identifier: String, value: String)
 }

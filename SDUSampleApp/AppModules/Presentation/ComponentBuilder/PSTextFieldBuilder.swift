@@ -11,27 +11,28 @@ import SwiftUI
 struct PSTextFieldBuilder: UIComponentBuilder {
     
     typealias ComponentType = PSTextField
-    let viewModel: LaunchViewModel
+    let viewModel: LaunchViewModelProtocol
     
-    init(viewModel: LaunchViewModel) {
+    init(viewModel: LaunchViewModelProtocol) {
         self.viewModel = viewModel
     }
     @MainActor
-     func build(element: SubView) -> PSTextField {
-         let binding = Binding(
-                            get: { viewModel.getTextFieldValue(for: element.identifier) },
-                            set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue) }
-                        )
-         let errorBinding = Binding(
-            get: {  viewModel.textFieldErrorMessage[element.identifier] ?? "" }, set: { newValue in
-                viewModel.textFieldErrorMessage[element.identifier] = newValue
+    func build(element: SubView) -> PSTextField {
+        let binding = Binding(
+            get: { viewModel.getTextFieldValue(for: element.identifier) },
+            set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue) }
+        )
+        let errorBinding = Binding(
+            get: {  viewModel.textFieldErrorMessage[element.identifier] ?? "" }, 
+            set: { newValue in
+                viewModel.setErrorTextFieldValue(for: element.identifier, value: newValue)
             }
-                           
-                        )
-    
-         let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "", validation: element.properties?.validation, error: errorBinding)
-         viewModel.setTextFieldValue(for: element.identifier, value: "")
-         let customTextField = PSTextField(configuration: configuration)
+            
+        )
+        
+        let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "", validation: element.properties?.validation, error: errorBinding)
+        viewModel.setTextFieldValue(for: element.identifier, value: "")
+        let customTextField = PSTextField(configuration: configuration)
         return customTextField
     }
 }
