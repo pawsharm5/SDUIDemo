@@ -31,7 +31,7 @@ struct PSTextFieldBuilder: UIComponentBuilder {
         )
         
         let configuration = PSTextFieldConfig(text: binding, keyboardType: .asciiCapable, placeHolder: element.properties?.placeHolder ?? "", height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "", validation: element.properties?.validation, error: errorBinding)
-        viewModel.setTextFieldValue(for: element.identifier, value: "", validation: element.properties?.validation)
+        //viewModel.setTextFieldValue(for: element.identifier, value: "", validation: element.properties?.validation)
         let customTextField = PSTextField(configuration: configuration)
         return customTextField
     }

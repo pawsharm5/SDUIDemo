@@ -45,17 +45,35 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
         }
     }
     private func onboardingContniueAction() {
-        print("continue tapped")
+       // print("continue tapped")
+        var tempValue = true
         var errorVlaues: [String : String] = [:]
-        for value in textFieldValues {
-            print("values \(value.value) for identifier \(value.key)")
-            errorVlaues[value.key] = "\((value.value["validation"] as? ValidationRules)?.min?.message ?? "")"
+        for textValue in textFieldValues {
+            print("values \(textValue.value) for identifier \(textValue.key)")
+            let textV = textFieldValues[textValue.key]?["text"] as? String ?? ""
+            print("textV--->",textV)
+             let (isValid, message) =  textV.isValid(validations: textValue.value["validation"] as? ValidationRules)
+             errorVlaues[textValue.key] = message
+            if !isValid {
+                tempValue = isValid
+                //break
+            }
         }
+        
         textFieldErrorMessage = errorVlaues
+        
+        if tempValue && textFieldValues.count > 0 {
+            Task {
+                await self.getScreenData()
+            }
+        }
     }
     
     private func onboardingSkipAction() {
         print("previous tapped")
+        Task {
+            await self.getScreenData()
+        }
     }
     func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?) {
         cancellable = nil
@@ -65,9 +83,6 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
         buttonActions[identifier]?()
         if let screenIdentifier = action?.destination {
             self.screenIdentifier = screenIdentifier
-//            Task {
-//                await self.getScreenData()
-//            }
         }
         
     }
