@@ -19,8 +19,8 @@ struct PSDropDownTextFieldBuilder: UIComponentBuilder {
     @MainActor
     func build(element: SubView) -> PSDropdownTextField {
         let binding = Binding(
-            get: { viewModel.getTextFieldValue(for: element.identifier) },
-            set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue, validation: element.properties?.validation) }
+            get: { viewModel.selectedDropDownValue },
+            set: { newValue in viewModel.setSelectedDropDownValue(value: newValue)}
         )
         
         let configuration = PSDropdownTextFieldConfig(title: "Select", options: ["Mr.","Miss"], selection: binding, height: element.properties?.size?.height ?? 0, backgroundColor: element.properties?.backgroundColor ?? "")

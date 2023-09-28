@@ -30,9 +30,6 @@ struct PSDropdownTextField: View {
     @State var textFieldText: String
     init(configuration: PSDropdownTextFieldConfig) {
         self.configuration = configuration
-        if configuration.selection.wrappedValue.count == 0 {
-            configuration.selection.wrappedValue = "Mr."
-        }
         _textFieldText = State(initialValue: configuration.selection.wrappedValue)
     }
     
@@ -50,7 +47,7 @@ struct PSDropdownTextField: View {
             } label: {
                 Text(textFieldText)
                     .background(Color.clear)
-                    .foregroundColor(.black)
+                    .foregroundColor(textFieldText == "Select" ? .gray : .black)
                     .cornerRadius(8)
                     .frame(maxWidth: .infinity, alignment:.leading)
                     .frame(height: CGFloat(configuration.height))

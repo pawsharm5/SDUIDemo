@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol LaunchViewModelProtocol {
     var selectedSegmentIndex: Int { get set }
+    var selectedDropDownValue: String { get set }
     var currentScreenData: ScreenModel? { get set }
     func getScreenData() async
     func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?)
@@ -18,4 +19,5 @@ protocol LaunchViewModelProtocol {
     var textFieldErrorMessage: [String: String] { get set }
     func setErrorTextFieldValue(for identifier: String, value: String)
     func setSelectedSegmentIndex(index: Int)
+    func setSelectedDropDownValue(value: String)
 }

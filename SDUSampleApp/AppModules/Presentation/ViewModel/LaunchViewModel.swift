@@ -18,7 +18,8 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     private var textFieldValues: [String: [String : Any]] = [:]
     @Published var textFieldErrorMessage: [String: String] = [:]
     @Published var selectedSegmentIndex: Int = 0
-    
+    @Published var selectedDropDownValue: String = "Select"
+
     var screenIdentifier: String? = "onboarding"
 
     init(useCase:LaunchUseCaseProtocol) {
@@ -49,6 +50,11 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
        // print("continue tapped")
         var tempValue = true
         var errorVlaues: [String : String] = [:]
+        
+        if self.selectedDropDownValue == "Select" {
+            print("Select value")
+            return
+        }
         for textValue in textFieldValues {
             print("values \(textValue.value) for identifier \(textValue.key)")
             if textFieldValues[textValue.key]?["screenIdentifier"] as? String ?? "" == self.screenIdentifier {
@@ -108,7 +114,12 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     func setErrorTextFieldValue(for identifier: String, value: String) {
         textFieldErrorMessage[identifier] = value
     }
+    
     func setSelectedSegmentIndex(index: Int) {
         self.selectedSegmentIndex = index
+    }
+    
+    func setSelectedDropDownValue(value: String) {
+        self.selectedDropDownValue = value
     }
 }
