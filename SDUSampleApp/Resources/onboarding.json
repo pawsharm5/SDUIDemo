@@ -161,17 +161,8 @@
                                     "size": {
                                         "height":40
                                     },
-                                    "validation": {
-                                        "max": {
-                                            "value": 18,
-                                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
-                                        },
-                                        "min": {
-                                            "value": 2,
-                                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
-                                        },
-                                        "regex": "^[a-zA-Z ]{2,18}$"
-                                    }
+                                    "options" : ["Mr.", "Miss."]
+
                                 }
                             },
                             {
@@ -321,7 +312,7 @@
                                 "identifier": "segment_control",
                                 "properties": {
                                     "backgroundColor": "#FFFFFF",
-                                    "segmentOptions" : ["YES", "NO"]
+                                    "options" : ["YES", "NO"]
                                 }
                             },
                             {

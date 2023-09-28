@@ -64,8 +64,7 @@ struct Properties: Codable {
     var borderWidth:Int?
     var borderColor:String?
     var validation: ValidationRules?
-    var segmentOptions: [String]?
-
+    var options: [String]?
 }
 
 struct ValidationRules: Codable {
