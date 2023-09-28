@@ -48,9 +48,18 @@ struct PSTextField : View {
                 .frame(height: CGFloat(configuration.height))
                 .padding([.horizontal], 8)
                 .cornerRadius(3)
-                .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color(hex: configuration.backgroundColor)))
-                .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
-                .onChange(of: textFieldText, perform: { newValue in
+                .overlay(
+                    RoundedRectangle(cornerRadius: 3)
+                    .stroke(Color(hex: configuration.backgroundColor))
+                )
+                .padding(
+                    EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0),
+                               leading: CGFloat(configuration.padding?.paddingLeft ?? 0),
+                               bottom: CGFloat(configuration.padding?.bottom ?? 0),
+                               trailing: CGFloat(configuration.padding?.paddingRight ?? 0))
+                )
+                .onChange(of: textFieldText, 
+                          perform: { newValue in
                     configuration.text.wrappedValue = newValue
                     (isValid, errorMessage) = newValue.isValid(validations: configuration.validation)
                     if isValid {

@@ -50,8 +50,10 @@ struct PSButton: View {
                 .frame(height: CGFloat(configuration.height))
                 .foregroundColor(Color(hex: configuration.buttonTitleColor))
                 .overlay(
-                    RoundedRectangle(cornerRadius: CGFloat(configuration.cornorRadius))
-                        .stroke(Color(hex: configuration.borderColor), lineWidth: CGFloat(configuration.borderWidth) + 1)
+                    RoundedRectangle(
+                        cornerRadius: CGFloat(configuration.cornorRadius))
+                        .stroke(Color(hex: configuration.borderColor),
+                                lineWidth: CGFloat(configuration.borderWidth) + 1)
                             )
         }
         .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))

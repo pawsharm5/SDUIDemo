@@ -57,7 +57,10 @@ struct PSDropdownTextField: View {
             .frame(idealWidth: .infinity, maxWidth: .infinity)
             .foregroundColor(.black)
             .background(Color.white)
-            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color(hex: configuration.backgroundColor)))
+            .overlay(
+                RoundedRectangle(cornerRadius: 3)
+                    .stroke(Color(hex: configuration.backgroundColor))
+            )
             .onChange(of: textFieldText, perform: { newValue in
                     self.configuration.selection.wrappedValue = newValue
             })

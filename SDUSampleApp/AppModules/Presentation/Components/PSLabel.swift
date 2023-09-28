@@ -38,6 +38,11 @@ struct PSLabel: View {
             .font(.system(size: CGFloat(configuration.fontSize)))
             .multilineTextAlignment(configuration.textAlignment.getAligment())
             .frame(maxWidth: .infinity, alignment: configuration.textAlignment.getViewAligment())
-            .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
+            .padding(
+                EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0),
+                           leading: CGFloat(configuration.padding?.paddingLeft ?? 0),
+                           bottom: CGFloat(configuration.padding?.bottom ?? 0),
+                           trailing: CGFloat(configuration.padding?.paddingRight ?? 0))
+            )
     }
 }
