@@ -58,7 +58,9 @@ struct PSTextField : View {
                     }
                     print("\(textFieldText)")
                 }).onAppear {
-                    configuration.text.wrappedValue = ""
+                    if self.textFieldText.count == 0 {
+                        configuration.text.wrappedValue = ""
+                    }
                 }
             
             Text(errorMessage.count > 0 ? errorMessage : (isValid ? "" : (configuration.error?.wrappedValue ?? "")))
