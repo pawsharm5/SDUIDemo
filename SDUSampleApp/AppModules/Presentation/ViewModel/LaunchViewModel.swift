@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  LaunchViewModel.swift
 //  SDUSampleApp
 //
 //  Created by Pawan Sharma on 21/09/23.
@@ -39,14 +39,14 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
 
     private func setupButtonActions() {
         buttonActions[.continueButton] = { [weak self] screen in
-            self?.onboardingContniueAction(screen: screen)
+            self?.contniueAction(screen: screen)
         }
         
         buttonActions[.previousButton] = { [weak self] screen in
-            self?.onboardingSkipAction(screen: screen)
+            self?.skipAction(screen: screen)
         }
     }
-    private func onboardingContniueAction(screen:String) {
+    private func contniueAction(screen:String) {
        // print("continue tapped")
         var tempValue = true
         var errorVlaues: [String : String] = [:]
@@ -80,7 +80,7 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
         }
     }
     
-    private func onboardingSkipAction(screen:String) {
+    private func skipAction(screen:String) {
         print("previous tapped")
         for textValue in textFieldValues {
             print("values \(textValue.value) for identifier \(textValue.key)")

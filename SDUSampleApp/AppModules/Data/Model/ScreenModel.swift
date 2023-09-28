@@ -1,5 +1,5 @@
 //
-//  OnBoardingModel.swift
+//  ScreenModel.swift
 //  SDUSampleApp
 //
 //  Created by Pawan Sharma on 20/09/23.

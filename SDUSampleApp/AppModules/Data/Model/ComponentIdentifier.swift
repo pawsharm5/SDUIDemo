@@ -10,7 +10,6 @@ import Foundation
 enum ComponentIdentifier: String, Decodable {
     case usernameTextField = "username_text_field"
     case passwordTextField = "password_text_field"
-    case loginButton = "login_button"
     case forgotPasswordButton = "forgot_password_button"
     case none = ""
     case continueButton = "continue_button"
