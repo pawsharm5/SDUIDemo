@@ -10,18 +10,18 @@ import SwiftUI
 
 struct PSSegmentControlBuilder: UIComponentBuilder {
     
-    typealias ComponentType = PSSegmentedControl
+    typealias ComponentType = PSSegmentControl
     let viewModel: LaunchViewModelProtocol
     
     init(viewModel: LaunchViewModelProtocol) {
         self.viewModel = viewModel
     }
     @MainActor
-    func build(element: SubView) -> PSSegmentedControl {
-        PSSegmentedControl(configuration: PSSegmentConfig(content: {
-            ForEach(element.subviews ?? [], id: \.identifier) { field in
-                PSScreenBuilder(viewModel: viewModel).createComponentView(field)
-            }
-        }))
+    func build(element: SubView) -> PSSegmentControl {
+        let binding = Binding(
+            get: { viewModel.selectedSegmentIndex },
+            set: { newValue in viewModel.setSelectedSegmentIndex(index: newValue)}
+        )
+        return PSSegmentControl(configuration: SegmentControlConfig(segments: ["YES", "NO"], selectedSegmentIndex: binding, backgroundColor: element.properties?.backgroundColor ?? "FFFFFF"))
     }
 }

@@ -24,9 +24,9 @@
 		109EC85C2ABD94AE005295F2 /* PSButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */; };
 		109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */; };
 		109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */; };
-		109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8612ABDC098005295F2 /* PSSegmentControl.swift */; };
 		109EC8642ABDC5A3005295F2 /* PSSegmentControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EC8632ABDC5A3005295F2 /* PSSegmentControlBuilder.swift */; };
 		B74399352ABDDC3600C77E2E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74399342ABDDC3600C77E2E /* LaunchView.swift */; };
+		CA01B6402AC5584A001B2965 /* PSSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01B63F2AC5584A001B2965 /* PSSegmentControl.swift */; };
 		CA06C0692ABD7EDB00C63E59 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = CA06C0682ABD7EDB00C63E59 /* onboarding.json */; };
 		CAEC1AFC2ABDBAC80091951C /* PSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFB2ABDBAC80091951C /* PSView.swift */; };
 		CAEC1AFE2ABDBCE00091951C /* PSViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */; };
@@ -87,9 +87,9 @@
 		109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSButtonBuilder.swift; sourceTree = "<group>"; };
 		109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSLabelBuilder.swift; sourceTree = "<group>"; };
 		109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSScrollViewBuilder.swift; sourceTree = "<group>"; };
-		109EC8612ABDC098005295F2 /* PSSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSegmentControl.swift; sourceTree = "<group>"; };
 		109EC8632ABDC5A3005295F2 /* PSSegmentControlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSegmentControlBuilder.swift; sourceTree = "<group>"; };
 		B74399342ABDDC3600C77E2E /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		CA01B63F2AC5584A001B2965 /* PSSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSSegmentControl.swift; sourceTree = "<group>"; };
 		CA06C0682ABD7EDB00C63E59 /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
 		CAEC1AFB2ABDBAC80091951C /* PSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSView.swift; sourceTree = "<group>"; };
 		CAEC1AFD2ABDBCE00091951C /* PSViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSViewBuilder.swift; sourceTree = "<group>"; };
@@ -330,7 +330,7 @@
 				1022F7EF2AC2A4140059AAA6 /* PSHStackView.swift */,
 				1022F7F32AC2ABEB0059AAA6 /* PSVStackView.swift */,
 				CAEC1AFF2ABDC43F0091951C /* PSImageView.swift */,
-				109EC8612ABDC098005295F2 /* PSSegmentControl.swift */,
+				CA01B63F2AC5584A001B2965 /* PSSegmentControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -513,12 +513,12 @@
 				109EC8582ABD71D2005295F2 /* PSScrollView.swift in Sources */,
 				1022F7F02AC2A4140059AAA6 /* PSHStackView.swift in Sources */,
 				108EB4062AC18091008AC77B /* LaunchUseCase.swift in Sources */,
+				CA01B6402AC5584A001B2965 /* PSSegmentControl.swift in Sources */,
 				109EC85C2ABD94AE005295F2 /* PSButtonBuilder.swift in Sources */,
 				108EB4182AC18300008AC77B /* LaunchViewRepository.swift in Sources */,
 				CAEC1B002ABDC43F0091951C /* PSImageView.swift in Sources */,
 				108EB4122AC18194008AC77B /* DataConstants.swift in Sources */,
 				109EC85A2ABD914D005295F2 /* PSTextFieldBuilder.swift in Sources */,
-				109EC8622ABDC098005295F2 /* PSSegmentControl.swift in Sources */,
 				F2FF1F622ABC4AB400681957 /* LaunchViewModel.swift in Sources */,
 				109EC85E2ABD95C3005295F2 /* PSLabelBuilder.swift in Sources */,
 				F2FF1F5F2ABC4A0300681957 /* LocalService.swift in Sources */,

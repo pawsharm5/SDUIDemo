@@ -17,7 +17,8 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     private var buttonActions: [ComponentIdentifier: (String) -> Void] = [:]
     private var textFieldValues: [String: [String : Any]] = [:]
     @Published var textFieldErrorMessage: [String: String] = [:]
-
+    @Published var selectedSegmentIndex: Int = 0
+    
     var screenIdentifier: String? = "onboarding"
 
     init(useCase:LaunchUseCaseProtocol) {
@@ -99,12 +100,15 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     }
 
     func setTextFieldValue(for identifier: String, value: String, validation: ValidationRules?) {
-        let dict: [String : Any] = ["text" : value, "validation" : validation,"screenIdentifier":self.screenIdentifier ?? ""]
+        let dict: [String : Any] = ["text" : value, "validation" : validation, "screenIdentifier":self.screenIdentifier ?? ""]
         textFieldValues[identifier] = dict
 
     }
     
     func setErrorTextFieldValue(for identifier: String, value: String) {
         textFieldErrorMessage[identifier] = value
+    }
+    func setSelectedSegmentIndex(index: Int) {
+        self.selectedSegmentIndex = index
     }
 }

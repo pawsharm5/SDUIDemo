@@ -2,73 +2,40 @@
 //  PSSegmentControl.swift
 //  SDUSampleApp
 //
-//  Created by Pawan Sharma on 22/09/23.
+//  Created by Pratibha Gupta on 28/09/23.
 //
 
-import Foundation
 import SwiftUI
 
-//// Define a protocol for configuring segments
-//protocol PSSegmentConfigurable {
-//    var title: String { get }
-//    var isSelected: Bool { get set }
-//}
-//
-//// Create a struct that conforms to the protocol
-//struct PSSegmentConfig: Identifiable, PSSegmentConfigurable {
-//    var id = UUID()
-//    var title: String
-//    var isSelected: Bool = false
-//}
-//
-//// Create a custom segment control view
-//struct PSSegmentedControl: View {
-//    @Binding var selectedSegment: PSSegmentConfig
-//    var segments: [PSSegmentConfig]
-//
-//    var body: some View {
-//        HStack(spacing: 0) {
-//            ForEach(segments) { segment in
-//                Button(action: {
-//                    selectedSegment = segment
-//                }) {
-//                    Text(segment.title)
-//                        .frame(maxWidth: .infinity)
-//                        .padding()
-//                        .background(segment.isSelected ? Color.blue : Color.gray)
-//                        .foregroundColor(segment.isSelected ? Color.white : Color.black)
-//                        .cornerRadius(8)
-//                }
-//                .border(Color.black, width: 1)
-//            }
-//        }
-//    }
-//}
-
-protocol PSSegmentConfigurable {
-    var content: AnyView { get }
-    var backgroundColor: Color { get }
-    // Add any other configuration properties you need
+protocol SegmentControlConfigurable {
+    var segments: [String] { get set }
+    var selectedSegmentIndex: Binding<Int> { get set }
+    var backgroundColor: String { get }
+}
+struct SegmentControlConfig: SegmentControlConfigurable {
+    var segments: [String]
+    var selectedSegmentIndex: Binding<Int>
+    var backgroundColor: String
 }
 
-struct PSSegmentConfig: PSSegmentConfigurable {
-    
-    let content: AnyView
-    let backgroundColor: Color
-
-    init<Content: View>(@ViewBuilder content: () -> Content, backgroundColor: Color = .gray) {
-        self.content = AnyView(content())
-        self.backgroundColor = backgroundColor
-    }
-}
-struct PSSegmentedControl : View {
-    let configuration: PSSegmentConfig
+struct PSSegmentControl: View {
+    var configuration: SegmentControlConfig
     
     var body: some View {
-        HStack(spacing: 1) {
-            configuration.content
-        }.background(configuration.backgroundColor)
-            .frame(width: 240)
-                .border(Color(.black))
+        HStack(spacing: 0) {
+            ForEach(0..<configuration.segments.count, id: \.self) { index in
+                Button(action: {
+                    configuration.selectedSegmentIndex.wrappedValue = index
+                }) {
+                    Text(configuration.segments[index])
+                        .padding(8)
+                        .frame(width: 100)
+                        .foregroundColor(index == configuration.selectedSegmentIndex.wrappedValue ? .white : .black)
+                }
+                .background(index == configuration.selectedSegmentIndex.wrappedValue ? Color.black : Color.clear)
+                
+            }
+        }.background(Color(hex: configuration.backgroundColor))
+         .border(Color(.black))
     }
 }
