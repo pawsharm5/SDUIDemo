@@ -22,6 +22,6 @@ struct PSSegmentControlBuilder: UIComponentBuilder {
             get: { viewModel.selectedSegmentIndex },
             set: { newValue in viewModel.setSelectedSegmentIndex(index: newValue)}
         )
-        return PSSegmentControl(configuration: SegmentControlConfig(segments: ["YES", "NO"], selectedSegmentIndex: binding, backgroundColor: element.properties?.backgroundColor ?? "FFFFFF"))
+        return PSSegmentControl(configuration: SegmentControlConfig(segments: element.properties?.segmentOptions ?? [], selectedSegmentIndex: binding, backgroundColor: element.properties?.backgroundColor ?? "FFFFFF"))
     }
 }
