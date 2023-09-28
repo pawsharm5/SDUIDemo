@@ -28,7 +28,7 @@ struct PSScrollView : View {
     let configuration: PSScrollViewConfig
     
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading) {
                 configuration.content
             }
