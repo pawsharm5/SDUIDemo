@@ -45,38 +45,47 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
         buttonActions[.previousButton] = { [weak self] screen in
             self?.skipAction(screen: screen)
         }
+        
+        buttonActions[.findAddressButton] = { [weak self] screen in
+            self?.findAddress(screen: screen)
+        }
     }
     private func contniueAction(screen:String) {
        // print("continue tapped")
         var tempValue = true
         var errorVlaues: [String : String] = [:]
         
-        if self.selectedDropDownValue == "Select" {
-            print("Select value")
-            return
-        }
-        for textValue in textFieldValues {
-            print("values \(textValue.value) for identifier \(textValue.key)")
-            if textFieldValues[textValue.key]?["screenIdentifier"] as? String ?? "" == self.screenIdentifier {
-                let textV = textFieldValues[textValue.key]?["text"] as? String ?? ""
-                print("textV--->",textV)
-                 let (isValid, message) =  textV.isValid(validations: textValue.value["validation"] as? ValidationRules)
-                 errorVlaues[textValue.key] = message
-                if !isValid {
-                    tempValue = isValid
-                    //break
-                }
-            }
-            
-        }
+//        if self.selectedDropDownValue == "Select" {
+//            print("Select value")
+//            return
+//        }
+//        for textValue in textFieldValues {
+//            print("values \(textValue.value) for identifier \(textValue.key)")
+//            if textFieldValues[textValue.key]?["screenIdentifier"] as? String ?? "" == self.screenIdentifier {
+//                let textV = textFieldValues[textValue.key]?["text"] as? String ?? ""
+//                print("textV--->",textV)
+//                 let (isValid, message) =  textV.isValid(validations: textValue.value["validation"] as? ValidationRules)
+//                 errorVlaues[textValue.key] = message
+//                if !isValid {
+//                    tempValue = isValid
+//                    //break
+//                }
+//            }
+//            
+//        }
+//        
+//        textFieldErrorMessage = errorVlaues
+//        
+//        if tempValue && textFieldValues.count > 0 {
+//            self.screenIdentifier = screen
+//            Task {
+//                await self.getScreenData()
+//            }
+//        }
         
-        textFieldErrorMessage = errorVlaues
-        
-        if tempValue && textFieldValues.count > 0 {
-            self.screenIdentifier = screen
-            Task {
-                await self.getScreenData()
-            }
+        self.screenIdentifier = screen
+        Task {
+            await self.getScreenData()
         }
     }
     
@@ -93,6 +102,15 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
             await self.getScreenData()
         }
     }
+    
+    private func findAddress(screen:String) {
+        print("findAddress tapped")
+        self.screenIdentifier = screen
+        Task {
+            await self.getScreenData()
+        }
+    }
+    
     func executeButtonAction(for identifier: ComponentIdentifier?, action: Action?) {
         cancellable = nil
         guard let identifier = identifier else {

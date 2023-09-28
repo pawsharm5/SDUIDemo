@@ -1,5 +1,5 @@
 {
-    "screen_identifier": "home_address_1",
+    "screen_identifier": "find_address_1",
     "padding": {
         "top": 100.0,
         "left": 20.0,
@@ -7,7 +7,7 @@
         "bottom": 20.0
     },
     "body": {
-        "identifier": "home_Address",
+        "identifier": "find_Address",
         "subviews": [
             {
                 "type": "VStack",
@@ -116,7 +116,7 @@
                                 "type": "label",
                                 "identifier": "cuurrent_account_label_2",
                                 "properties": {
-                                    "label": "Property Name or Number",
+                                    "label": "101 old Road\nEast grinslead West Sensex\n30201 3HT",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -126,114 +126,161 @@
                                 }
                             },
                             {
-                                "type": "textField",
-                                "identifier": "property_name_text_field",
-                                "properties": {
-                                    "placeHolder": "Property Name or Number",
-                                    "mandatory": true,
-                                    "color": "#000000",
-                                    "padding": {
-                                        "top": 10.0,
-                                        "bottom": 50.0
-                                    },
-                                    "size": {
-                                        "height":40
-                                    },
-                                    "validation": {
-                                        "max": {
-                                            "value": 18,
-                                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
-                                        },
-                                        "min": {
-                                            "value": 3,
-                                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
-                                        },
-                                        "regex": "^[a-zA-Z]{3,18}$"
-                                    }
-                                }
-                            },
-                            {
-                                "type": "label",
-                                "identifier": "first_name_label",
-                                "properties": {
-                                    "label": "UK Passcode",
-                                    "color": "#000000",
-                                    "padding": {
-                                        "top": 20.0,
-                                        "bottom": 5.0
-                                    },
-                                    "fontSize":16
-                                }
-                            },
-                            {
-                                "type": "textField",
-                                "identifier": "uk_passcode_textfield",
-                                "properties": {
-                                    "placeHolder": "UK Passcode",
-                                    "mandatory": true,
-                                    "color": "#000000",
-                                    "padding": {
-                                        "top": 10.0,
-                                        "bottom": 10.0
-                                    },
-                                    "size": {
-                                        "height":40
-                                    },
-                                    "validation": {
-                                        "max": {
-                                            "value": 18,
-                                            "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
-                                        },
-                                        "min": {
-                                            "value": 3,
-                                            "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
-                                        },
-                                        "regex": "^[a-zA-Z]{3,18}$"
-                                    }
-                                }
-                            },
-                            {
-                                "identifier": "find_address_button",
                                 "type": "button",
+                                "identifier": "edit_this_address",
                                 "properties": {
-                                    "title": "Find Address",
+                                    "title": "Edit this address",
                                     "backgroundColor": "#FFFFFF",
                                     "color": "#17321F",
                                     "padding": {
                                         "top": 10.0,
-                                        "bottom": 10.0
-                                    },
-                                    "size": {
-                                        "height":50,
-                                        "width":200
-                                    },
-                                    "borderWidth":1,
-                                    "borderColor": "#17321F",
-                                    "cornorRadius":8,
-                                    "action": {
-                                        "type": "submit",
-                                        "destination": "findAddress",
-                                        "navigationType": "PUSH"
-                                    }
-                                }
-                            },
-                            {
-                                "identifier": "find_address_manually_button",
-                                "type": "button",
-                                "properties": {
-                                    "title": "Enter Address Manually",
-                                    "backgroundColor": "#FFFFFF",
-                                    "color": "#17321F",
-                                    "padding": {
-                                        "top": 2.0,
-                                        "bottom": 2.0
+                                        "bottom": 10.0,
+                                        "left":0.0
                                     },
                                     "size": {
                                         "height":30,
                                         "width":200
-                                    }
-                                    
+                                    },
+                                    "fontSize":16,
+                                    "textAlignment":"left"
                                 }
+                            },
+                            {
+                                "type": "label",
+                                "identifier": "edit_again_this_address",
+                                "properties": {
+                                    "label": "Start again using our address finder",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 5.0
+                                    },
+                                    "fontSize":16
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "identifier": "when_did_you_move",
+                                "properties": {
+                                    "label": "When did you move to this address?",
+                                    "color": "#000000",
+                                    "padding": {
+                                        "top": 10.0,
+                                        "bottom": 5.0
+                                    },
+                                    "fontSize":16
+                                }
+                            },
+                            {
+                                "type": "HStack",
+                                "identifier": "header_view",
+                                "properties": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "padding": {
+                                        "top": 8,
+                                        "left" : 8,
+                                        "right": 8,
+                                        "bottom": 8
+                                    }
+                                },
+                                "subviews": [
+                                    {
+                                        "type": "VStack",
+                                        "identifier": "month_view",
+                                        "properties": {
+                                            "backgroundColor": "#FFFFFF"
+                                        },
+                                        "subviews": [
+                                        {
+                                            "type": "label",
+                                            "identifier": "title_month",
+                                            "properties": {
+                                                "label": "Month",
+                                                "color": "#000000",
+                                                "padding": {
+                                                    "top": 8,
+                                                    "left" : 8,
+                                                    "right": 8,
+                                                    "bottom": 8
+                                                },
+                                                "textAlignment":"center"
+                                            }
+                                        },
+                                        {
+                                            "type": "dropdown",
+                                            "identifier": "month_dropdown",
+                                            "properties": {
+                                                "placeHolder": "Select",
+                                                "mandatory": true,
+                                                "color": "#000000",
+                                                "size": {
+                                                    "height":40
+                                                },
+                                                "options" : ["January",
+                                                    "February",
+                                                    "March",
+                                                    "April",
+                                                    "May",
+                                                    "June",
+                                                    "July",
+                                                    "August",
+                                                    "September",
+                                                    "October",
+                                                    "November",
+                                                    "December"]
+
+                                            }
+                                        }
+                                        ]
+                                    },
+                                    {
+                                        "type": "VStack",
+                                        "identifier": "year_view",
+                                        "properties": {
+                                            "backgroundColor": "#FFFFFF"
+                                        },
+                                        "subviews": [
+                                        {
+                                            "type": "label",
+                                            "identifier": "title_year",
+                                            "properties": {
+                                                "label": "Year",
+                                                "color": "#000000",
+                                                "padding": {
+                                                    "top": 8,
+                                                    "left" : 8,
+                                                    "right": 8,
+                                                    "bottom": 8
+                                                },
+                                                "textAlignment":"right"
+                                            }
+                                        },
+                                        {
+                                            "type": "textField",
+                                            "identifier": "year_textfield",
+                                            "properties": {
+                                                "placeHolder": "year",
+                                                "mandatory": true,
+                                                "color": "#000000",
+                                                "size": {
+                                                    "height":40
+                                                },
+                                                "validation": {
+                                                    "max": {
+                                                        "value": 18,
+                                                        "message": "Maximum character limit exceeded. Please shorten your input to 18 characters or less."
+                                                    },
+                                                    "min": {
+                                                        "value": 3,
+                                                        "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
+                                                    },
+                                                    "regex": "^[a-zA-Z df ]{3,18}$"
+                                                }
+                                            }
+                                        }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "identifier": "continue_button",

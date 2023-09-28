@@ -23,6 +23,8 @@ extension String {
         switch self {
         case "right":
             return .trailing
+        case "center":
+            return .center
         default:
             return .leading
         }

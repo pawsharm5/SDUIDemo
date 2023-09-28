@@ -7,16 +7,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5FE24A11-AD81-4C41-9B73-C6D5C20B5A2A"
+            uuid = "0D3F0478-797A-4236-A3B6-A130B811CDF8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDUSampleApp/AppModules/Presentation/ViewModel/LaunchViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "setTextFieldValue(for:value:validation:)"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "findAddress(screen:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D3F0478-797A-4236-A3B6-A130B811CDF8 - e6960170bb977ba8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDUSampleApp.LaunchViewModel.findAddressManually(screen: Swift.String) -&gt; ()"
+                  moduleName = "SDUSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawsharm5/Documents/GitHub/SDUSampleApp/SDUSampleApp/AppModules/Presentation/ViewModel/LaunchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "0D3F0478-797A-4236-A3B6-A130B811CDF8 - e27a1374753d09bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDUSampleApp.LaunchViewModel.findAddress(screen: Swift.String) -&gt; ()"
+                  moduleName = "SDUSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawsharm5/Documents/GitHub/SDUSampleApp/SDUSampleApp/AppModules/Presentation/ViewModel/LaunchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED860403-54C8-4059-8406-063F2C9E031F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDUSampleApp/AppModules/Presentation/ViewModel/LaunchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setupButtonActions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD73E372-5768-4E72-823A-E78A9AC084C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDUSampleApp/AppModules/Presentation/ViewModel/LaunchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setupButtonActions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2146B664-CEBB-41A6-97CC-977E15E7A0B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDUSampleApp/AppModules/Presentation/ViewModel/LaunchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "executeButtonAction(for:action:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
