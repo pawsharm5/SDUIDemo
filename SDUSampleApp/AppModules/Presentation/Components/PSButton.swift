@@ -18,6 +18,7 @@ protocol PSButtonConfiguration {
     var borderWidth: Int { get }
     var borderColor: String { get }
     var width: Int { get }
+    var textAlignment: String { get }
 }
 
 struct PSButtonConfig: PSButtonConfiguration {
@@ -30,6 +31,7 @@ struct PSButtonConfig: PSButtonConfiguration {
     var borderWidth: Int
     var borderColor: String
     var width: Int
+    var textAlignment:String
 }
 
 struct PSButton: View {
@@ -44,6 +46,7 @@ struct PSButton: View {
         }) {
             Text(configuration.buttonTitle)
                 .frame(maxWidth: .infinity)
+                .multilineTextAlignment(configuration.textAlignment.getAligment())
                 .frame(height: CGFloat(configuration.height))
                 .foregroundColor(Color(hex: configuration.buttonTitleColor))
                 .overlay(
