@@ -45,6 +45,7 @@ enum ComponentsType: String, Codable {
     case Segment
     case HStack
     case VStack
+    case dropdown
 }
 // MARK: - Properties
 struct Properties: Codable {

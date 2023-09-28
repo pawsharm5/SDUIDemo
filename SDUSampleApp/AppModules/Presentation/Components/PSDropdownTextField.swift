@@ -7,56 +7,64 @@
 
 import SwiftUI
 
-protocol PSDropdownTextFieldConfigurable {
-    var placeholder: String { get }
+protocol PSDropdownPickerConfigurable {
+    var title: String { get }
     var options: [String] { get }
-    var dropdownHeight: CGFloat { get }
-    // Add any other configurable properties you need
+    var selection: Binding<String> { get set }
+    var height: Int { get }
+    var backgroundColor: String { get }
+    var padding: Padding? { get }
 }
 
-struct PSDropdownTextFieldConfiguration: PSDropdownTextFieldConfigurable {
-    let placeholder: String
-    let options: [String]
-    let dropdownHeight: CGFloat
-    
-    // Add any other configurable properties here
+struct PSDropdownTextFieldConfig: PSDropdownPickerConfigurable {
+    var title: String
+    var options: [String]
+    var selection: Binding<String>
+    var height: Int
+    var backgroundColor: String
+    var padding: Padding?
 }
 
-struct PSDropdownTextField<Configuration: PSDropdownTextFieldConfigurable>: View {
-    @Binding var selectedOption: String?
-    var configuration: Configuration
-    
-    @State private var isDropdownVisible = false
+struct PSDropdownTextField: View {
+    let configuration: PSDropdownTextFieldConfig
+    @State var textFieldText: String
+    init(configuration: PSDropdownTextFieldConfig) {
+        self.configuration = configuration
+        if configuration.selection.wrappedValue.count == 0 {
+            configuration.selection.wrappedValue = "Mr."
+        }
+        _textFieldText = State(initialValue: configuration.selection.wrappedValue)
+    }
     
     var body: some View {
-        VStack {
-            TextField(configuration.placeholder, text: Binding(
-                get: { selectedOption ?? "" },
-                set: { newValue in
-                    // Update the selected option when the text field changes
-                    selectedOption = newValue
-                }
-            ))
-            .onTapGesture {
-                // Show the dropdown when the text field is tapped
-                isDropdownVisible.toggle()
-            }
-            
-            if isDropdownVisible {
-                List {
-                    ForEach(configuration.options, id: \.self) { option in
-                        Text(option)
-                            .onTapGesture {
-                                // Select an option from the dropdown
-                                selectedOption = option
-                                isDropdownVisible.toggle()
-                            }
+        VStack(alignment: .leading) {
+            Menu {
+                ForEach(configuration.options, id: \.self) { valueD in
+                    Button(action: {
+                        textFieldText = valueD
+                    }) {
+                        Text(valueD)
                     }
                 }
-                .frame(height: configuration.dropdownHeight)
-                .border(Color.gray)
-                .cornerRadius(5)
+                
+            } label: {
+                Text(textFieldText)
+                    .background(Color.clear)
+                    .foregroundColor(.black)
+                    .cornerRadius(8)
+                    .frame(maxWidth: .infinity, alignment:.leading)
+                    .frame(height: CGFloat(configuration.height))
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 8)
             }
+            .frame(idealWidth: .infinity, maxWidth: .infinity)
+            .foregroundColor(.black)
+            .background(Color.white)
+            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color(hex: configuration.backgroundColor)))
+            .onChange(of: textFieldText, perform: { newValue in
+                    self.configuration.selection.wrappedValue = newValue
+            })
         }
     }
 }
+
