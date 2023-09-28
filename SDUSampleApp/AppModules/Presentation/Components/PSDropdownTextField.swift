@@ -12,6 +12,7 @@ protocol PSDropdownPickerConfigurable {
     var options: [String] { get }
     var selection: Binding<String> { get set }
     var height: Int { get }
+    var width: Int { get }
     var backgroundColor: String { get }
     var padding: Padding? { get }
 }
@@ -21,6 +22,7 @@ struct PSDropdownTextFieldConfig: PSDropdownPickerConfigurable {
     var options: [String]
     var selection: Binding<String>
     var height: Int
+    var width: Int
     var backgroundColor: String
     var padding: Padding?
 }
@@ -54,7 +56,7 @@ struct PSDropdownTextField: View {
                     .multilineTextAlignment(.leading)
                     .padding(.leading, 8)
             }
-            .frame(idealWidth: .infinity, maxWidth: .infinity)
+            .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))
             .foregroundColor(.black)
             .background(Color.white)
             .overlay(

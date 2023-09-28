@@ -33,7 +33,8 @@ struct PSTextFieldBuilder: UIComponentBuilder {
         let configuration = PSTextFieldConfig(text: binding, 
                                               keyboardType: .asciiCapable,
                                               placeHolder: element.properties?.placeHolder ?? "",
-                                              height: element.properties?.size?.height ?? 0,
+                                              height: element.properties?.size?.height ?? 0, 
+                                              width: element.properties?.size?.width ?? 0,
                                               backgroundColor: element.properties?.backgroundColor ?? "",
                                               validation: element.properties?.validation,
                                               error: errorBinding)

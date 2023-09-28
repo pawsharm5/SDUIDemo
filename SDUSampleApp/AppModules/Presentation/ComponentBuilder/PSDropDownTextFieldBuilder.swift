@@ -27,6 +27,7 @@ struct PSDropDownTextFieldBuilder: UIComponentBuilder {
                                                       options: element.properties?.options ?? [],
                                                       selection: binding,
                                                       height: element.properties?.size?.height ?? 0,
+                                                      width: element.properties?.size?.width ?? 0,
                                                       backgroundColor: element.properties?.backgroundColor ?? "")
         let customTextField = PSDropdownTextField(configuration: configuration)
         return customTextField

@@ -12,6 +12,7 @@ protocol PSTextFieldConfiguration {
     var keyboardType: UIKeyboardType { get }
     var placeHolder: String { get }
     var height: Int { get }
+    var width: Int { get }
     var backgroundColor: String { get }
     var padding: Padding? { get }
     var validation: ValidationRules? { get }
@@ -23,6 +24,7 @@ struct PSTextFieldConfig: PSTextFieldConfiguration {
     var keyboardType: UIKeyboardType
     var placeHolder: String
     var height: Int
+    var width: Int
     var backgroundColor: String
     var padding: Padding?
     var validation: ValidationRules?
@@ -46,6 +48,7 @@ struct PSTextField : View {
                 .keyboardType(configuration.keyboardType)
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(height: CGFloat(configuration.height))
+                .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))
                 .padding([.horizontal], 8)
                 .cornerRadius(3)
                 .overlay(
