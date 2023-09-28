@@ -13,7 +13,6 @@ protocol PSImageViewConfigurable {
     var image: Image { get }
     var contentMode: ContentMode { get }
     var size: CGSize { get }
-    var cornerRadius: CGFloat { get }
     // Add more configuration options as needed
 }
 
@@ -34,5 +33,4 @@ struct PSImageViewConfig: PSImageViewConfigurable {
     var image: Image
     var contentMode: ContentMode
     var size: CGSize
-    var cornerRadius: CGFloat
 }

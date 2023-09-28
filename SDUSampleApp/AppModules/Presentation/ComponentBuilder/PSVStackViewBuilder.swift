@@ -15,12 +15,18 @@ struct PSVStackViewBuilder: UIComponentBuilder {
     init(viewModel: LaunchViewModelProtocol) {
         self.viewModel = viewModel
     }
+    
     @MainActor
     func build(element: SubView) -> PSVStackView {
-        PSVStackView(configuration: PSVStackViewConfiguration(content: {
-            ForEach(element.subviews ?? [], id: \.identifier) { field in
-                PSScreenBuilder(viewModel: viewModel).createComponentView(field)
-            }
-        }, backgroundColor: element.properties?.backgroundColor ?? "#FFFFFF"))
+        PSVStackView(
+            configuration: PSVStackViewConfiguration(
+                content: {
+                    ForEach(element.subviews ?? [], id: \.identifier) { field in
+                        PSScreenBuilder(viewModel: viewModel).createComponentView(field)
+                    }
+                },
+                backgroundColor: element.properties?.backgroundColor ?? "#FFFFFF"
+            )
+        )
     }
 }

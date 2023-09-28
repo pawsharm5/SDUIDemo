@@ -15,12 +15,18 @@ struct PSViewBuilder: UIComponentBuilder {
     init(viewModel: LaunchViewModelProtocol) {
         self.viewModel = viewModel
     }
+    
     @MainActor
     func build(element: SubView) -> PSView {
-        PSView(configuration: PSViewConfiguration(content: {
-            ForEach(element.subviews ?? [], id: \.identifier) { field in
-                PSScreenBuilder(viewModel: viewModel).createComponentView(field)
-            }
-        }, backgroundColor: element.properties?.backgroundColor ?? "#FFFFFF"))
+        PSView(
+            configuration: PSViewConfiguration(
+                content: {
+                    ForEach(element.subviews ?? [], id: \.identifier) { field in
+                        PSScreenBuilder(viewModel: viewModel).createComponentView(field)
+                    }
+                },
+                backgroundColor: element.properties?.backgroundColor ?? "#FFFFFF"
+            )
+        )
     }
 }
