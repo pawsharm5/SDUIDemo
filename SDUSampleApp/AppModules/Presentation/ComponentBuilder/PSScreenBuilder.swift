@@ -42,6 +42,8 @@ class PSScreenBuilder {
             PSHStackViewBuilder(viewModel: viewModel).build(element: component)
         case .VStack:
             PSVStackViewBuilder(viewModel: viewModel).build(element: component)
+        case .dropdown:
+            PSDropDownTextFieldBuilder(viewModel: viewModel).build(element: component)
         }
     }
 }

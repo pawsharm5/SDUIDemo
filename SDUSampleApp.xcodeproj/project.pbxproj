@@ -11,6 +11,7 @@
 		1022F7F22AC2A45B0059AAA6 /* PSHStackViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022F7F12AC2A45B0059AAA6 /* PSHStackViewBuilder.swift */; };
 		1022F7F42AC2ABEB0059AAA6 /* PSVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022F7F32AC2ABEB0059AAA6 /* PSVStackView.swift */; };
 		1022F7F62AC2AC2E0059AAA6 /* PSVStackViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022F7F52AC2AC2E0059AAA6 /* PSVStackViewBuilder.swift */; };
+		102FFD242AC5552700037FAC /* PSDropDownTextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102FFD232AC5552700037FAC /* PSDropDownTextFieldBuilder.swift */; };
 		108EB4042AC18078008AC77B /* LaunchUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4032AC18078008AC77B /* LaunchUseCaseProtocol.swift */; };
 		108EB4062AC18091008AC77B /* LaunchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4052AC18091008AC77B /* LaunchUseCase.swift */; };
 		108EB40A2AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */; };
@@ -74,6 +75,7 @@
 		1022F7F12AC2A45B0059AAA6 /* PSHStackViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSHStackViewBuilder.swift; sourceTree = "<group>"; };
 		1022F7F32AC2ABEB0059AAA6 /* PSVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSVStackView.swift; sourceTree = "<group>"; };
 		1022F7F52AC2AC2E0059AAA6 /* PSVStackViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSVStackViewBuilder.swift; sourceTree = "<group>"; };
+		102FFD232AC5552700037FAC /* PSDropDownTextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDropDownTextFieldBuilder.swift; sourceTree = "<group>"; };
 		108EB4032AC18078008AC77B /* LaunchUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUseCaseProtocol.swift; sourceTree = "<group>"; };
 		108EB4052AC18091008AC77B /* LaunchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUseCase.swift; sourceTree = "<group>"; };
 		108EB4092AC180F2008AC77B /* LaunchViewRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				F2FF1F642ABC4C4300681957 /* PSScreenBuilder.swift */,
 				109EC8592ABD914D005295F2 /* PSTextFieldBuilder.swift */,
+				102FFD232AC5552700037FAC /* PSDropDownTextFieldBuilder.swift */,
 				109EC85B2ABD94AE005295F2 /* PSButtonBuilder.swift */,
 				109EC85D2ABD95C3005295F2 /* PSLabelBuilder.swift */,
 				109EC85F2ABD9792005295F2 /* PSScrollViewBuilder.swift */,
@@ -534,6 +537,7 @@
 				F2FF1F582ABC48BF00681957 /* ScreenModel.swift in Sources */,
 				109EC8602ABD9792005295F2 /* PSScrollViewBuilder.swift in Sources */,
 				F2FF1F652ABC4C4300681957 /* PSScreenBuilder.swift in Sources */,
+				102FFD242AC5552700037FAC /* PSDropDownTextFieldBuilder.swift in Sources */,
 				F2FF1F4D2ABC46FB00681957 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
