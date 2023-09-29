@@ -106,7 +106,7 @@
                                 }
                             },
                             {
-                                "type": "view",
+                                "type": "VStack",
                                 "identifier": "info_view",
                                 "properties": {
                                     "title": "Your Name",
