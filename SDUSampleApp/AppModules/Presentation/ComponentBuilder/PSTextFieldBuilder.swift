@@ -36,7 +36,10 @@ struct PSTextFieldBuilder: UIComponentBuilder {
                                               height: CGFloat(element.properties.size.height),
                                               width: CGFloat(element.properties.size.width),
                                               backgroundColor: element.properties.backgroundColor, 
-                                              padding: element.properties.padding,
+                                              padding: EdgeInsets(top: CGFloat(element.properties.padding.top),
+                                                                  leading: CGFloat(element.properties.padding.paddingLeft),
+                                                                  bottom: CGFloat(element.properties.padding.bottom),
+                                                                  trailing: CGFloat(element.properties.padding.paddingRight)),
                                               validation: element.properties.validation,
                                               error: errorBinding, 
                                               isErrorMessage: element.properties.isErrorMessage)

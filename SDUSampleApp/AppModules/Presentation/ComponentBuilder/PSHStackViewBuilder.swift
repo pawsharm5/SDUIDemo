@@ -25,7 +25,8 @@ struct PSHStackViewBuilder: UIComponentBuilder {
                         PSScreenBuilder(viewModel: viewModel).createComponentView(field)
                     }
                 },
-                backgroundColor: element.properties.backgroundColor
+                backgroundColor: element.properties.backgroundColor, 
+                spacing: CGFloat(element.properties.spacing)
             )
         )
     }

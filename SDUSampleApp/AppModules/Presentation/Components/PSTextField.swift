@@ -14,7 +14,7 @@ protocol PSTextFieldConfiguration {
     var height: CGFloat { get }
     var width: CGFloat { get }
     var backgroundColor: String { get }
-    var padding: Padding { get }
+    var padding: EdgeInsets { get }
     var validation: ValidationRules? { get }
     var error: Binding<String>? { get set }
     var isErrorMessage: Bool { get }
@@ -27,7 +27,7 @@ struct PSTextFieldConfig: PSTextFieldConfiguration {
     var height: CGFloat
     var width: CGFloat
     var backgroundColor: String
-    var padding: Padding
+    var padding: EdgeInsets
     var validation: ValidationRules?
     var error: Binding<String>?
     var isErrorMessage: Bool
@@ -56,12 +56,7 @@ struct PSTextField : View {
                     RoundedRectangle(cornerRadius: 3)
                     .stroke(Color(hex: configuration.backgroundColor))
                 )
-                .padding(
-                    EdgeInsets(top: CGFloat(configuration.padding.top ?? 0),
-                               leading: CGFloat(configuration.padding.paddingLeft ?? 0),
-                               bottom: CGFloat(configuration.padding.bottom ?? 0),
-                               trailing: CGFloat(configuration.padding.paddingRight ?? 0))
-                )
+                .padding(configuration.padding)
                 .onChange(of: textFieldText, 
                           perform: { newValue in
                     configuration.text.wrappedValue = newValue

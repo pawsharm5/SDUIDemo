@@ -10,6 +10,7 @@ import SwiftUI
 protocol PSHStackViewConfigurable {
     var content: AnyView { get }
     var backgroundColor: String { get }
+    var spacing: CGFloat { get }
     // Add any other configuration properties you need
 }
 
@@ -17,17 +18,19 @@ struct PSHStackViewConfiguration: PSHStackViewConfigurable {
     
     let content: AnyView
     let backgroundColor: String
+    let spacing: CGFloat
 
-    init<Content: View>(@ViewBuilder content: () -> Content, backgroundColor: String) {
+    init<Content: View>(@ViewBuilder content: () -> Content, backgroundColor: String, spacing: CGFloat) {
         self.content = AnyView(content())
         self.backgroundColor = backgroundColor
+        self.spacing = spacing
     }
 }
 struct PSHStackView : View {
     let configuration: PSHStackViewConfiguration
     
     var body: some View {
-        HStack(spacing: 0) {
+        HStack(spacing: configuration.spacing) {
             configuration.content
         }.background(Color(hex: configuration.backgroundColor))
     }

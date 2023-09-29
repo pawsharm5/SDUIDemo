@@ -12,7 +12,7 @@ protocol PSButtonConfiguration {
     var buttonTitle: String { get }
     var buttonColor: String { get }
     var buttonTitleColor: String { get }
-    var padding: Padding? { get }
+    var padding: EdgeInsets { get }
     var height: CGFloat { get }
     var cornorRadius: CGFloat { get }
     var borderWidth: CGFloat { get }
@@ -26,7 +26,7 @@ struct PSButtonConfig: PSButtonConfiguration {
     var buttonTitle: String
     var buttonColor: String
     var buttonTitleColor: String
-    var padding: Padding?
+    var padding: EdgeInsets
     var height:CGFloat
     var cornorRadius:CGFloat
     var borderWidth: CGFloat
@@ -71,7 +71,7 @@ struct PSButton: View {
                 AttributedText(configuration.buttonTitle, attributes: [
                                 .underlineStyle: NSUnderlineStyle.single.rawValue, // Set underline style
                                 .underlineColor: UIColor(named: configuration.buttonTitleColor) as Any, // Set underline color
-                ]).padding(.leading,0)
+                ]).padding(.all,0)
             } else {
                 Text(configuration.buttonTitle)
                     .frame(maxWidth: .infinity)
@@ -91,7 +91,7 @@ struct PSButton: View {
         .background(Color(hex: configuration.buttonColor))
         .border(Color(hex: configuration.borderColor), width: CGFloat(configuration.borderWidth))
         .cornerRadius(configuration.cornorRadius)
-        .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
+        .padding(configuration.padding)
     }
     
 }

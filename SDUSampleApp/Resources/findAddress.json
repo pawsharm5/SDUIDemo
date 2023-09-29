@@ -162,7 +162,8 @@
                                         "left" : 0.0,
                                         "right": 0.0,
                                         "bottom": 8.0
-                                    }
+                                    },
+                                    "spacing":4.0
                                 },
                                 "subviews": [
                                 {
@@ -175,7 +176,10 @@
                                             "top": 10.0,
                                             "bottom": 5.0
                                         },
-                                        "fontSize":16
+                                        "fontSize":16,
+                                        "size": {
+                                            "width": 155.0
+                                        }
                                     }
                                 },
                                 {
@@ -217,7 +221,8 @@
                                         "left" : 8.0,
                                         "right": 8.0,
                                         "bottom": 8.0
-                                    }
+                                    },
+                                    "spacing":10.0
                                 },
                                 "subviews": [
                                     {
@@ -235,11 +240,14 @@
                                                 "color": "#000000",
                                                 "padding": {
                                                     "top": 8.0,
-                                                    "left" : 8.0,
+                                                    "left" : 0.0,
                                                     "right": 8.0,
                                                     "bottom": 8.0
                                                 },
-                                                "textAlignment":"center"
+                                                "textAlignment":"center",
+                                                "size": {
+                                                    "width": 120.0
+                                                }
                                             }
                                         },
                                         {
@@ -264,7 +272,8 @@
                                                     "September",
                                                     "October",
                                                     "November",
-                                                    "December"]
+                                                    "December"],
+                                                "backgroundColor": "#17321F"
 
                                             }
                                         }
@@ -285,11 +294,14 @@
                                                 "color": "#000000",
                                                 "padding": {
                                                     "top": 8.0,
-                                                    "left" : 8.0,
+                                                    "left" : 0.0,
                                                     "right": 8.0,
                                                     "bottom": 8.0
                                                 },
-                                                "textAlignment":"left"
+                                                "textAlignment":"left",
+                                                "size": {
+                                                    "width": 120.0
+                                                }
                                             }
                                         },
                                         {
@@ -313,7 +325,8 @@
                                                         "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                                     },
                                                     "regex": "^[a-zA-Z df ]{3,18}$"
-                                                }
+                                                },
+                                                "backgroundColor": "#17321F"
                                             }
                                         }
                                         ]

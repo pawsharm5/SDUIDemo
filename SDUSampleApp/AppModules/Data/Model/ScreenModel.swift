@@ -67,9 +67,10 @@ struct Properties: Decodable {
     var options: [String]?
     var isUnderline:Bool
     var isErrorMessage:Bool
+    var spacing:Double
     
     enum CodingKeys: String, CodingKey {
-            case placeHolder, mandatory, accessibility, textFieldType, color, padding, size, title, url, action, backgroundColor, cornorRadius, fontSize, textAlignment, borderWidth, borderColor, validation, options, isUnderline, isErrorMessage
+            case placeHolder, mandatory, accessibility, textFieldType, color, padding, size, title, url, action, backgroundColor, cornorRadius, fontSize, textAlignment, borderWidth, borderColor, validation, options, isUnderline, isErrorMessage, spacing
         }
 
         init(from decoder: Decoder) throws {
@@ -95,6 +96,8 @@ struct Properties: Decodable {
             options = try container.decodeIfPresent([String].self, forKey: .options)
             isUnderline = try container.decodeIfPresent(Bool.self, forKey: .isUnderline) ?? false
             isErrorMessage = try container.decodeIfPresent(Bool.self, forKey: .isErrorMessage) ?? false
+            spacing = try container.decodeIfPresent(Double.self, forKey: .spacing) ?? 0.0
+
         }
 }
 
@@ -122,7 +125,7 @@ struct Action: Decodable {
 
 // MARK: - Padding
 struct Padding: Decodable {
-    var top, paddingLeft, paddingRight, bottom: Double?
+    var top, paddingLeft, paddingRight, bottom: Double
 
     enum CodingKeys: String, CodingKey {
         case top
