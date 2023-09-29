@@ -15,11 +15,11 @@ struct PSImageViewBuilder: UIComponentBuilder {
     func build(element: SubView) -> PSImageView {
         let configuration = PSImageViewConfig(
             identifier: element.identifier,
-            image: Image(element.properties?.title ?? "info"),
+            image: Image(element.properties.title),
             contentMode: .fill,
             size: CGSize(
-                width: element.properties?.size?.width ?? 20,
-                height: element.properties?.size?.height ?? 20
+                width: element.properties.size.width,
+                height: element.properties.size.height
             )
         )
         let imageView = PSImageView(configuration: configuration)

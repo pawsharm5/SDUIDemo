@@ -24,11 +24,11 @@ struct PSDropDownTextFieldBuilder: UIComponentBuilder {
         )
         
         let configuration = PSDropdownTextFieldConfig(title: "Select", 
-                                                      options: element.properties?.options ?? [],
+                                                      options: element.properties.options ?? [],
                                                       selection: binding,
-                                                      height: element.properties?.size?.height ?? 0,
-                                                      width: element.properties?.size?.width ?? 0,
-                                                      backgroundColor: element.properties?.backgroundColor ?? "")
+                                                      height: CGFloat(element.properties.size.height),
+                                                      width: CGFloat(element.properties.size.width),
+                                                      backgroundColor: element.properties.backgroundColor)
         let customTextField = PSDropdownTextField(configuration: configuration)
         return customTextField
     }

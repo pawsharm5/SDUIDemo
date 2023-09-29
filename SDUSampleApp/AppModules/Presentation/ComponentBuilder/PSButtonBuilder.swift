@@ -18,18 +18,19 @@ struct PSButtonBuilder: UIComponentBuilder {
     }
     @MainActor
     func build(element: SubView) -> PSButton {
-        let configuration = PSButtonConfig(buttonTitle: element.properties?.title ?? "",
-                                           buttonColor: element.properties?.backgroundColor ?? "#FFFFFF",
-                                           buttonTitleColor: element.properties?.color ?? "#FFFFFF",
-                                           padding: element.properties?.padding,
-                                           height: element.properties?.size?.height ?? 30,
-                                           cornorRadius: element.properties?.cornorRadius ?? 0,
-                                           borderWidth: element.properties?.borderWidth ?? 0,
-                                           borderColor: element.properties?.borderColor ?? "#FFFFFF",
-                                           width: element.properties?.size?.width ?? 0,
-                                           textAlignment: element.properties?.textAlignment ?? "center", isUnderLine: element.properties?.isUnderline ?? false)
+        let configuration = PSButtonConfig(buttonTitle: element.properties.title,
+                                           buttonColor: element.properties.backgroundColor,
+                                           buttonTitleColor: element.properties.color,
+                                           padding: element.properties.padding,
+                                           height: CGFloat(element.properties.size.height),
+                                           cornorRadius: CGFloat(element.properties.cornorRadius),
+                                           borderWidth: CGFloat(element.properties.borderWidth),
+                                           borderColor: element.properties.borderColor,
+                                           width: CGFloat(element.properties.size.width),
+                                           textAlignment: element.properties.textAlignment,
+                                           isUnderLine: element.properties.isUnderline)
         let customButton = PSButton(configuration: configuration, buttonAction: {
-            self.viewModel.executeButtonAction(for: ComponentIdentifier(rawValue: element.identifier), action: element.properties?.action)
+            self.viewModel.executeButtonAction(for: ComponentIdentifier(rawValue: element.identifier), action: element.properties.action)
         })
         return customButton
     }

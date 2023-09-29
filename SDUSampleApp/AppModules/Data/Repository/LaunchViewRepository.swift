@@ -18,8 +18,8 @@ struct LaunchViewRepository: LaunchViewRepositoryProtocol {
         do {
             let screenModel = try await self.service.load(screenIdentifier) as ScreenDomainResponse
             return screenModel
-        } catch {
-            
+        } catch(let error) {
+            print(error.localizedDescription)
         }
         return nil
     }

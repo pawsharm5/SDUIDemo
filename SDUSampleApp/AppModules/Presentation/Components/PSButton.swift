@@ -13,11 +13,11 @@ protocol PSButtonConfiguration {
     var buttonColor: String { get }
     var buttonTitleColor: String { get }
     var padding: Padding? { get }
-    var height: Int { get }
-    var cornorRadius: Int { get }
-    var borderWidth: Int { get }
+    var height: CGFloat { get }
+    var cornorRadius: CGFloat { get }
+    var borderWidth: CGFloat { get }
     var borderColor: String { get }
-    var width: Int { get }
+    var width: CGFloat { get }
     var textAlignment: String { get }
     var isUnderLine: Bool { get }
 }
@@ -27,11 +27,11 @@ struct PSButtonConfig: PSButtonConfiguration {
     var buttonColor: String
     var buttonTitleColor: String
     var padding: Padding?
-    var height:Int
-    var cornorRadius:Int
-    var borderWidth: Int
+    var height:CGFloat
+    var cornorRadius:CGFloat
+    var borderWidth: CGFloat
     var borderColor: String
-    var width: Int
+    var width: CGFloat
     var textAlignment:String
     var isUnderLine: Bool
 }
@@ -76,13 +76,13 @@ struct PSButton: View {
                 Text(configuration.buttonTitle)
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(configuration.textAlignment.getAligment())
-                    .frame(height: CGFloat(configuration.height))
+                    .frame(height: configuration.height)
                     .foregroundColor(Color(hex: configuration.buttonTitleColor))
                     .overlay(
                         RoundedRectangle(
-                            cornerRadius: CGFloat(configuration.cornorRadius))
+                            cornerRadius: configuration.cornorRadius)
                             .stroke(Color(hex: configuration.borderColor),
-                                    lineWidth: CGFloat(configuration.borderWidth) + 1)
+                                    lineWidth: configuration.borderWidth + 1)
                                 )
             }
             
@@ -90,7 +90,7 @@ struct PSButton: View {
         .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))
         .background(Color(hex: configuration.buttonColor))
         .border(Color(hex: configuration.borderColor), width: CGFloat(configuration.borderWidth))
-        .cornerRadius(CGFloat(configuration.cornorRadius))
+        .cornerRadius(configuration.cornorRadius)
         .padding(EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0), leading: CGFloat(configuration.padding?.paddingLeft ?? 0), bottom: CGFloat(configuration.padding?.bottom ?? 0), trailing: CGFloat(configuration.padding?.paddingRight ?? 0)))
     }
     

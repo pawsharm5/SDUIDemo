@@ -42,13 +42,13 @@
                                 "type": "label",
                                 "identifier": "title_label",
                                 "properties": {
-                                    "label": "Lloyads Banking",
+                                    "title": "Lloyads Banking",
                                     "color": "#FFFFFF",
                                     "padding": {
-                                        "top": 8,
-                                        "left" : 8,
-                                        "right": 8,
-                                        "bottom": 8
+                                        "top": 8.0,
+                                        "left" : 8.0,
+                                        "right": 8.0,
+                                        "bottom": 8.0
                                     },
                                     "textAlignment":"right"
                                 }
@@ -73,12 +73,18 @@
                     {
                         "type": "scrollView",
                         "identifier": "content_scroll_view",
+                        "properties": {
+                            "padding": {
+                                "top": 10.0,
+                                "left": 10.0,
+                            }
+                        },
                         "subviews": [
                             {
                                 "type": "label",
                                 "identifier": "cuurrent_account_label",
                                 "properties": {
-                                    "label": "Business Current Account Application",
+                                    "title": "Business Current Account Application",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -90,7 +96,7 @@
                                 "type": "label",
                                 "identifier": "name_label",
                                 "properties": {
-                                    "label": "What's your home address?",
+                                    "title": "What's your home address?",
                                     "color": "#17321F",
                                     "padding": {
                                         "top": 5.0,
@@ -103,7 +109,7 @@
                                 "type": "label",
                                 "identifier": "cuurrent_account_label_1",
                                 "properties": {
-                                    "label": "We need to know where you have lived for the last 3 years",
+                                    "title": "We need to know where you have lived for the last 3 years",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -116,7 +122,7 @@
                                 "type": "label",
                                 "identifier": "cuurrent_account_label_2",
                                 "properties": {
-                                    "label": "Property Name or Number",
+                                    "title": "Property Name or Number",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -137,7 +143,7 @@
                                         "bottom": 50.0
                                     },
                                     "size": {
-                                        "height":40
+                                        "height":40.0
                                     },
                                     "validation": {
                                         "max": {
@@ -149,14 +155,16 @@
                                             "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                         },
                                         "regex": "^[a-zA-Z]{3,18}$"
-                                    }
+                                    },
+                                    "backgroundColor": "#17321F",
+                                    "isErrorMessage":true,
                                 }
                             },
                             {
                                 "type": "label",
                                 "identifier": "first_name_label",
                                 "properties": {
-                                    "label": "UK Passcode",
+                                    "title": "UK Passcode",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 20.0,
@@ -177,7 +185,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":40
+                                        "height":40.0
                                     },
                                     "validation": {
                                         "max": {
@@ -189,7 +197,9 @@
                                             "message": "Please enter a valid first name. This field should only contain letters and should be at least 3 characters long."
                                         },
                                         "regex": "^[a-zA-Z]{3,18}$"
-                                    }
+                                    },
+                                    "backgroundColor": "#17321F",
+                                    "isErrorMessage":true,
                                 }
                             },
                             {
@@ -204,12 +214,12 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":50,
-                                        "width":200
+                                        "height":50.0,
+                                        "width":200.0
                                     },
-                                    "borderWidth":1,
+                                    "borderWidth":1.0,
                                     "borderColor": "#17321F",
-                                    "cornorRadius":8,
+                                    "cornorRadius":8.0,
                                     "action": {
                                         "type": "submit",
                                         "destination": "findAddress",
@@ -229,8 +239,8 @@
                                         "bottom": 2.0
                                     },
                                     "size": {
-                                        "height":30,
-                                        "width":200
+                                        "height":30.0,
+                                        "width":200.0
                                     },
                                     "isUnderline":true
                                     
@@ -248,7 +258,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":50,
+                                        "height":50.0,
                                     },
                                     "action": {
                                         "type": "submit",
@@ -268,7 +278,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":40,
+                                        "height":40.0,
                                     },
                                     "action": {
                                         "type": "submit",

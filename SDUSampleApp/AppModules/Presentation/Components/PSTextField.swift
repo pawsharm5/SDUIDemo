@@ -11,10 +11,10 @@ protocol PSTextFieldConfiguration {
     var text: Binding<String> { get set }
     var keyboardType: UIKeyboardType { get }
     var placeHolder: String { get }
-    var height: Int { get }
-    var width: Int { get }
+    var height: CGFloat { get }
+    var width: CGFloat { get }
     var backgroundColor: String { get }
-    var padding: Padding? { get }
+    var padding: Padding { get }
     var validation: ValidationRules? { get }
     var error: Binding<String>? { get set }
     var isErrorMessage: Bool { get }
@@ -24,10 +24,10 @@ struct PSTextFieldConfig: PSTextFieldConfiguration {
     var text: Binding<String>
     var keyboardType: UIKeyboardType
     var placeHolder: String
-    var height: Int
-    var width: Int
+    var height: CGFloat
+    var width: CGFloat
     var backgroundColor: String
-    var padding: Padding?
+    var padding: Padding
     var validation: ValidationRules?
     var error: Binding<String>?
     var isErrorMessage: Bool
@@ -48,8 +48,8 @@ struct PSTextField : View {
             TextField(configuration.placeHolder, text: $textFieldText)
                 .keyboardType(configuration.keyboardType)
                 .textFieldStyle(PlainTextFieldStyle())
-                .frame(height: CGFloat(configuration.height))
-                .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))
+                .frame(height: configuration.height)
+                .frame(maxWidth: configuration.width == 0 ? .infinity : configuration.width)
                 .padding([.horizontal], 8)
                 .cornerRadius(3)
                 .overlay(
@@ -57,10 +57,10 @@ struct PSTextField : View {
                     .stroke(Color(hex: configuration.backgroundColor))
                 )
                 .padding(
-                    EdgeInsets(top: CGFloat(configuration.padding?.top ?? 0),
-                               leading: CGFloat(configuration.padding?.paddingLeft ?? 0),
-                               bottom: CGFloat(configuration.padding?.bottom ?? 0),
-                               trailing: CGFloat(configuration.padding?.paddingRight ?? 0))
+                    EdgeInsets(top: CGFloat(configuration.padding.top ?? 0),
+                               leading: CGFloat(configuration.padding.paddingLeft ?? 0),
+                               bottom: CGFloat(configuration.padding.bottom ?? 0),
+                               trailing: CGFloat(configuration.padding.paddingRight ?? 0))
                 )
                 .onChange(of: textFieldText, 
                           perform: { newValue in

@@ -42,7 +42,7 @@
                                 "type": "label",
                                 "identifier": "title_label",
                                 "properties": {
-                                    "label": "Lloyads Banking",
+                                    "title": "Lloyads Banking",
                                     "color": "#FFFFFF",
                                     "padding": {
                                         "top": 8,
@@ -73,12 +73,18 @@
                     {
                         "type": "scrollView",
                         "identifier": "content_scroll_view",
+                        "properties": {
+                            "padding": {
+                                "top": 10.0,
+                                "left": 10.0,
+                            }
+                        },
                         "subviews": [
                             {
                                 "type": "label",
                                 "identifier": "cuurrent_account_label",
                                 "properties": {
-                                    "label": "Business Current Account Application",
+                                    "title": "Business Current Account Application",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -90,7 +96,7 @@
                                 "type": "label",
                                 "identifier": "name_label",
                                 "properties": {
-                                    "label": "Your Name",
+                                    "title": "Your Name",
                                     "color": "#17321F",
                                     "padding": {
                                         "top": 5.0,
@@ -103,7 +109,7 @@
                                 "type": "view",
                                 "identifier": "info_view",
                                 "properties": {
-                                    "label": "Your Name",
+                                    "title": "Your Name",
                                     "backgroundColor": "#F5F5F5",
                                     "fontSize":16
                                 },
@@ -127,12 +133,12 @@
                                         "type": "label",
                                         "identifier": "title_label",
                                         "properties": {
-                                            "label": "Please enter your name exactly as it appears on your passport or driving license",
+                                            "title": "Please enter your name exactly as it appears on your passport or driving license",
                                             "color": "#000000",
                                             "padding": {
-                                                "left" : 16,
-                                                "right": 16,
-                                                "bottom": 16
+                                                "left" : 16.0,
+                                                "right": 16.0,
+                                                "bottom": 16.0
                                             },
                                         }
                                     }
@@ -142,7 +148,7 @@
                                 "type": "label",
                                 "identifier": "title_label",
                                 "properties": {
-                                    "label": "Title",
+                                    "title": "Title",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -163,9 +169,10 @@
                                         "bottom": 50.0
                                     },
                                     "size": {
-                                        "height":40
+                                        "height":40.0
                                     },
-                                    "options" : ["Mr.", "Miss."]
+                                    "options" : ["Mr.", "Miss."],
+                                    "backgroundColor": "#17321F"
 
                                 }
                             },
@@ -173,7 +180,7 @@
                                 "type": "label",
                                 "identifier": "first_name_label",
                                 "properties": {
-                                    "label": "First Name",
+                                    "title": "First Name",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 20.0,
@@ -207,14 +214,15 @@
                                         },
                                         "regex": "^[a-zA-Z df ]{3,18}$"
                                     },
-                                    "isErrorMessage":true
+                                    "isErrorMessage":true,
+                                    "backgroundColor": "#17321F"
                                 }
                             },
                             {
                                 "type": "label",
                                 "identifier": "middle_name_label",
                                 "properties": {
-                                    "label": "Middle names",
+                                    "title": "Middle names",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 20.0,
@@ -235,7 +243,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":40
+                                        "height":40.0
                                     },
                                     "validation": {
                                         "max": {
@@ -248,14 +256,15 @@
                                         },
                                         "regex": "^[a-zA-Z ]{3,18}$"
                                     },
-                                    "isErrorMessage":true
+                                    "isErrorMessage":true,
+                                    "backgroundColor": "#17321F"
                                 }
                             },
                             {
                                 "type": "label",
                                 "identifier": "last_name_label",
                                 "properties": {
-                                    "label": "Last Name",
+                                    "title": "Last Name",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 20.0,
@@ -276,7 +285,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":40
+                                        "height":40.0
                                     },
                                     "validation": {
                                         "max": {
@@ -289,14 +298,15 @@
                                         },
                                         "regex": "^[a-zA-Z ]{3,18}$"
                                     },
-                                    "isErrorMessage":true
+                                    "isErrorMessage":true,
+                                    "backgroundColor": "#17321F"
                                 }
                             },
                             {
                                 "type": "label",
                                 "identifier": "question_label_1",
                                 "properties": {
-                                    "label": "Have you been known by any other names",
+                                    "title": "Have you been known by any other names",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 20.0,
@@ -335,7 +345,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":50,
+                                        "height":50.0,
                                     },
                                     "action": {
                                         "type": "submit",

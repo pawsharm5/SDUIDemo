@@ -42,13 +42,13 @@
                                 "type": "label",
                                 "identifier": "title_label",
                                 "properties": {
-                                    "label": "Lloyads Banking",
+                                    "title": "Lloyads Banking",
                                     "color": "#FFFFFF",
                                     "padding": {
-                                        "top": 8,
-                                        "left" : 8,
-                                        "right": 8,
-                                        "bottom": 8
+                                        "top": 8.0,
+                                        "left" : 8.0,
+                                        "right": 8.0,
+                                        "bottom": 8.0
                                     },
                                     "textAlignment":"right"
                                 }
@@ -73,12 +73,18 @@
                     {
                         "type": "scrollView",
                         "identifier": "content_scroll_view",
+                        "properties": {
+                            "padding": {
+                                "top": 10.0,
+                                "left": 10.0,
+                            }
+                        },
                         "subviews": [
                             {
                                 "type": "label",
                                 "identifier": "cuurrent_account_label",
                                 "properties": {
-                                    "label": "Business Current Account Application",
+                                    "title": "Business Current Account Application",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -90,7 +96,7 @@
                                 "type": "label",
                                 "identifier": "name_label",
                                 "properties": {
-                                    "label": "What's your home address?",
+                                    "title": "What's your home address?",
                                     "color": "#17321F",
                                     "padding": {
                                         "top": 5.0,
@@ -103,7 +109,7 @@
                                 "type": "label",
                                 "identifier": "cuurrent_account_label_1",
                                 "properties": {
-                                    "label": "We need to know where you have lived for the last 3 years",
+                                    "title": "We need to know where you have lived for the last 3 years",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -116,7 +122,7 @@
                                 "type": "label",
                                 "identifier": "cuurrent_account_label_2",
                                 "properties": {
-                                    "label": "101 old Road\nEast grinslead West Sensex\n30201 3HT",
+                                    "title": "101 old Road\nEast grinslead West Sensex\n30201 3HT",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -138,8 +144,8 @@
                                         "left":0.0
                                     },
                                     "size": {
-                                        "height":30,
-                                        "width":200
+                                        "height":30.0,
+                                        "width":200.0
                                     },
                                     "fontSize":16,
                                     "textAlignment":"left",
@@ -152,10 +158,10 @@
                                 "properties": {
                                     "backgroundColor": "#FFFFFF",
                                     "padding": {
-                                        "top": 8,
-                                        "left" : 0,
-                                        "right": 0,
-                                        "bottom": 8
+                                        "top": 8.0,
+                                        "left" : 0.0,
+                                        "right": 0.0,
+                                        "bottom": 8.0
                                     }
                                 },
                                 "subviews": [
@@ -163,7 +169,7 @@
                                     "type": "label",
                                     "identifier": "edit_again_this_address",
                                     "properties": {
-                                        "label": "Start again using our ",
+                                        "title": "Start again using our ",
                                         "color": "#000000",
                                         "padding": {
                                             "top": 10.0,
@@ -192,7 +198,7 @@
                                 "type": "label",
                                 "identifier": "when_did_you_move",
                                 "properties": {
-                                    "label": "When did you move to this address?",
+                                    "title": "When did you move to this address?",
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
@@ -207,10 +213,10 @@
                                 "properties": {
                                     "backgroundColor": "#FFFFFF",
                                     "padding": {
-                                        "top": 8,
-                                        "left" : 8,
-                                        "right": 8,
-                                        "bottom": 8
+                                        "top": 8.0,
+                                        "left" : 8.0,
+                                        "right": 8.0,
+                                        "bottom": 8.0
                                     }
                                 },
                                 "subviews": [
@@ -225,13 +231,13 @@
                                             "type": "label",
                                             "identifier": "title_month",
                                             "properties": {
-                                                "label": "Month",
+                                                "title": "Month",
                                                 "color": "#000000",
                                                 "padding": {
-                                                    "top": 8,
-                                                    "left" : 8,
-                                                    "right": 8,
-                                                    "bottom": 8
+                                                    "top": 8.0,
+                                                    "left" : 8.0,
+                                                    "right": 8.0,
+                                                    "bottom": 8.0
                                                 },
                                                 "textAlignment":"center"
                                             }
@@ -244,8 +250,8 @@
                                                 "mandatory": true,
                                                 "color": "#000000",
                                                 "size": {
-                                                    "height":40,
-                                                    "width":120
+                                                    "height":40.0,
+                                                    "width":120.0
                                                 },
                                                 "options" : ["January",
                                                     "February",
@@ -275,13 +281,13 @@
                                             "type": "label",
                                             "identifier": "title_year",
                                             "properties": {
-                                                "label": "Year",
+                                                "title": "Year",
                                                 "color": "#000000",
                                                 "padding": {
-                                                    "top": 8,
-                                                    "left" : 8,
-                                                    "right": 8,
-                                                    "bottom": 8
+                                                    "top": 8.0,
+                                                    "left" : 8.0,
+                                                    "right": 8.0,
+                                                    "bottom": 8.0
                                                 },
                                                 "textAlignment":"left"
                                             }
@@ -294,8 +300,8 @@
                                                 "mandatory": true,
                                                 "color": "#000000",
                                                 "size": {
-                                                    "height":40,
-                                                    "width":80
+                                                    "height":40.0,
+                                                    "width":80.0
                                                 },
                                                 "validation": {
                                                     "max": {
@@ -326,7 +332,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":50,
+                                        "height":50.0,
                                     },
                                     "action": {
                                         "type": "submit",
@@ -346,7 +352,7 @@
                                         "bottom": 10.0
                                     },
                                     "size": {
-                                        "height":40,
+                                        "height":40.0,
                                     },
                                     "action": {
                                         "type": "submit",

@@ -25,7 +25,7 @@ struct PSVStackViewBuilder: UIComponentBuilder {
                         PSScreenBuilder(viewModel: viewModel).createComponentView(field)
                     }
                 },
-                backgroundColor: element.properties?.backgroundColor ?? "#FFFFFF"
+                backgroundColor: element.properties.backgroundColor
             )
         )
     }

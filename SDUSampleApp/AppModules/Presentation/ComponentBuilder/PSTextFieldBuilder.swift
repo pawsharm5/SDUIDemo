@@ -20,7 +20,7 @@ struct PSTextFieldBuilder: UIComponentBuilder {
     func build(element: SubView) -> PSTextField {
         let binding = Binding(
             get: { viewModel.getTextFieldValue(for: element.identifier) },
-            set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue, validation: element.properties?.validation) }
+            set: { newValue in viewModel.setTextFieldValue(for: element.identifier, value: newValue, validation: element.properties.validation) }
         )
         let errorBinding = Binding(
             get: {  viewModel.textFieldErrorMessage[element.identifier] ?? "" }, 
@@ -32,13 +32,14 @@ struct PSTextFieldBuilder: UIComponentBuilder {
         
         let configuration = PSTextFieldConfig(text: binding, 
                                               keyboardType: .asciiCapable,
-                                              placeHolder: element.properties?.placeHolder ?? "",
-                                              height: element.properties?.size?.height ?? 0, 
-                                              width: element.properties?.size?.width ?? 0,
-                                              backgroundColor: element.properties?.backgroundColor ?? "",
-                                              validation: element.properties?.validation,
+                                              placeHolder: element.properties.placeHolder,
+                                              height: CGFloat(element.properties.size.height),
+                                              width: CGFloat(element.properties.size.width),
+                                              backgroundColor: element.properties.backgroundColor, 
+                                              padding: element.properties.padding,
+                                              validation: element.properties.validation,
                                               error: errorBinding, 
-                                              isErrorMessage: element.properties?.isErrorMessage ?? false)
+                                              isErrorMessage: element.properties.isErrorMessage)
         let customTextField = PSTextField(configuration: configuration)
         return customTextField
     }
