@@ -27,7 +27,7 @@ struct PSHStackView : View {
     let configuration: PSHStackViewConfiguration
     
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             configuration.content
         }.background(Color(hex: configuration.backgroundColor))
     }

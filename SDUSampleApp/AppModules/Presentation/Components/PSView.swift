@@ -28,6 +28,7 @@ struct PSView : View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Color(hex: configuration.backgroundColor)
             configuration.content
         }.background(Color(hex: configuration.backgroundColor))
             .cornerRadius(10)

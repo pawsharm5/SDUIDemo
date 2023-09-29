@@ -66,6 +66,7 @@ struct Properties: Codable {
     var validation: ValidationRules?
     var options: [String]?
     var isUnderline:Bool?
+    var isErrorMessage:Bool?
 }
 
 struct ValidationRules: Codable {

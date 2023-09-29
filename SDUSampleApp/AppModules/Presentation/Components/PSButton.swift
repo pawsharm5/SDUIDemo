@@ -70,7 +70,7 @@ struct PSButton: View {
             if configuration.isUnderLine {
                 AttributedText(configuration.buttonTitle, attributes: [
                                 .underlineStyle: NSUnderlineStyle.single.rawValue, // Set underline style
-                                .underlineColor: UIColor(named: configuration.buttonTitleColor) as Any // Set underline color
+                                .underlineColor: UIColor(named: configuration.buttonTitleColor) as Any, // Set underline color
                 ]).padding(.leading,0)
             } else {
                 Text(configuration.buttonTitle)

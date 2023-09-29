@@ -17,6 +17,7 @@ protocol PSTextFieldConfiguration {
     var padding: Padding? { get }
     var validation: ValidationRules? { get }
     var error: Binding<String>? { get set }
+    var isErrorMessage: Bool { get }
     
 }
 struct PSTextFieldConfig: PSTextFieldConfiguration {
@@ -29,7 +30,7 @@ struct PSTextFieldConfig: PSTextFieldConfiguration {
     var padding: Padding?
     var validation: ValidationRules?
     var error: Binding<String>?
-    
+    var isErrorMessage: Bool
     
 }
 struct PSTextField : View {
@@ -74,11 +75,12 @@ struct PSTextField : View {
                         configuration.text.wrappedValue = ""
                     }
                 }
-            
-            Text(errorMessage.count > 0 ? errorMessage : (isValid ? "" : (configuration.error?.wrappedValue ?? "")))
-                .foregroundColor(.red)
-                .font(.caption)
-                .padding(.top, 8)            
+            if configuration.isErrorMessage {
+                Text(errorMessage.count > 0 ? errorMessage : (isValid ? "" : (configuration.error?.wrappedValue ?? "")))
+                    .foregroundColor(.red)
+                    .font(.caption)
+                    .padding(.top, 8)
+            }
         }
     }
 }
