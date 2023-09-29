@@ -231,7 +231,8 @@
                                     "size": {
                                         "height":30,
                                         "width":200
-                                    }
+                                    },
+                                    "isUnderline":true
                                     
                                 }
                             },

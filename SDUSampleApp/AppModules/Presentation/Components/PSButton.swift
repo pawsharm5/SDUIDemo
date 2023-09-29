@@ -19,6 +19,7 @@ protocol PSButtonConfiguration {
     var borderColor: String { get }
     var width: Int { get }
     var textAlignment: String { get }
+    var isUnderLine: Bool { get }
 }
 
 struct PSButtonConfig: PSButtonConfiguration {
@@ -32,7 +33,29 @@ struct PSButtonConfig: PSButtonConfiguration {
     var borderColor: String
     var width: Int
     var textAlignment:String
+    var isUnderLine: Bool
 }
+
+struct AttributedText: UIViewRepresentable {
+    let text: String
+    let attributes: [NSAttributedString.Key: Any]
+
+    init(_ text: String, attributes: [NSAttributedString.Key: Any]) {
+        self.text = text
+        self.attributes = attributes
+    }
+
+    func makeUIView(context: Context) -> UILabel {
+        let label = UILabel()
+        label.attributedText = NSAttributedString(string: text, attributes: attributes)
+        return label
+    }
+
+    func updateUIView(_ uiView: UILabel, context: Context) {
+        uiView.attributedText = NSAttributedString(string: text, attributes: attributes)
+    }
+}
+
 
 struct PSButton: View {
     let configuration: PSButtonConfiguration
@@ -44,17 +67,25 @@ struct PSButton: View {
         Button(action: {
             buttonAction?()
         }) {
-            Text(configuration.buttonTitle)
-                .frame(maxWidth: .infinity)
-                .multilineTextAlignment(configuration.textAlignment.getAligment())
-                .frame(height: CGFloat(configuration.height))
-                .foregroundColor(Color(hex: configuration.buttonTitleColor))
-                .overlay(
-                    RoundedRectangle(
-                        cornerRadius: CGFloat(configuration.cornorRadius))
-                        .stroke(Color(hex: configuration.borderColor),
-                                lineWidth: CGFloat(configuration.borderWidth) + 1)
-                            )
+            if configuration.isUnderLine {
+                AttributedText(configuration.buttonTitle, attributes: [
+                                .underlineStyle: NSUnderlineStyle.single.rawValue, // Set underline style
+                                .underlineColor: UIColor(named: configuration.buttonTitleColor) as Any // Set underline color
+                ]).padding(.leading,0)
+            } else {
+                Text(configuration.buttonTitle)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(configuration.textAlignment.getAligment())
+                    .frame(height: CGFloat(configuration.height))
+                    .foregroundColor(Color(hex: configuration.buttonTitleColor))
+                    .overlay(
+                        RoundedRectangle(
+                            cornerRadius: CGFloat(configuration.cornorRadius))
+                            .stroke(Color(hex: configuration.borderColor),
+                                    lineWidth: CGFloat(configuration.borderWidth) + 1)
+                                )
+            }
+            
         }
         .frame(maxWidth: configuration.width == 0 ? .infinity : CGFloat(configuration.width))
         .background(Color(hex: configuration.buttonColor))

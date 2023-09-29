@@ -27,7 +27,7 @@ struct PSButtonBuilder: UIComponentBuilder {
                                            borderWidth: element.properties?.borderWidth ?? 0,
                                            borderColor: element.properties?.borderColor ?? "#FFFFFF",
                                            width: element.properties?.size?.width ?? 0,
-                                           textAlignment: element.properties?.textAlignment ?? "center")
+                                           textAlignment: element.properties?.textAlignment ?? "center", isUnderLine: element.properties?.isUnderline ?? false)
         let customButton = PSButton(configuration: configuration, buttonAction: {
             self.viewModel.executeButtonAction(for: ComponentIdentifier(rawValue: element.identifier), action: element.properties?.action)
         })

@@ -82,11 +82,6 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
                 await self.getScreenData()
             }
         }
-        
-        self.screenIdentifier = screen
-        Task {
-            await self.getScreenData()
-        }
     }
     
     private func skipAction(screen:String) {

@@ -303,12 +303,13 @@
                                 }
                             },
                             {
-                                "type": "label",
+                                "type": "button",
                                 "identifier": "question_label_2",
                                 "properties": {
-                                    "label": "What does this mean?",
+                                    "title": "What does this mean?",
                                     "color": "#17321F",
-                                    "fontSize":16
+                                    "fontSize":16,
+                                    "isUnderline":true
                                 }
                             },
                             {

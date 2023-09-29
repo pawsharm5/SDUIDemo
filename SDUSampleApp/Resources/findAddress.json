@@ -142,21 +142,51 @@
                                         "width":200
                                     },
                                     "fontSize":16,
-                                    "textAlignment":"left"
+                                    "textAlignment":"left",
+                                    "isUnderline":true
                                 }
                             },
                             {
-                                "type": "label",
-                                "identifier": "edit_again_this_address",
+                                "type": "HStack",
+                                "identifier": "address_header_view",
                                 "properties": {
-                                    "label": "Start again using our address finder",
-                                    "color": "#000000",
+                                    "backgroundColor": "#FFFFFF",
                                     "padding": {
-                                        "top": 10.0,
-                                        "bottom": 5.0
-                                    },
-                                    "fontSize":16
+                                        "top": 8,
+                                        "left" : 8,
+                                        "right": 8,
+                                        "bottom": 8
+                                    }
+                                },
+                                "subviews": [
+                                {
+                                    "type": "label",
+                                    "identifier": "edit_again_this_address",
+                                    "properties": {
+                                        "label": "Start again using our ",
+                                        "color": "#000000",
+                                        "padding": {
+                                            "top": 10.0,
+                                            "bottom": 5.0
+                                        },
+                                        "fontSize":16
+                                    }
+                                },
+                                {
+                                    "identifier": "address_finder_button",
+                                    "type": "button",
+                                    "properties": {
+                                        "title": "address finder",
+                                        "backgroundColor": "#FFFFFF",
+                                        "color": "#17321F",
+                                        "padding": {
+                                            "top": 10.0,
+                                            "bottom": 5.0
+                                        },
+                                        "isUnderline":true
+                                    }
                                 }
+                                ]
                             },
                             {
                                 "type": "label",
@@ -173,7 +203,7 @@
                             },
                             {
                                 "type": "HStack",
-                                "identifier": "header_view",
+                                "identifier": "month_header_view",
                                 "properties": {
                                     "backgroundColor": "#FFFFFF",
                                     "padding": {
