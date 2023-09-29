@@ -369,7 +369,7 @@
                                     },
                                     "action": {
                                         "type": "submit",
-                                        "destination": "onboarding",
+                                        "destination": "homeAddress",
                                         "navigationType": "POP"
                                     }
                                 }

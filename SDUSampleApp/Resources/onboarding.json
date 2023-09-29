@@ -166,7 +166,7 @@
                                     "color": "#000000",
                                     "padding": {
                                         "top": 10.0,
-                                        "bottom": 50.0
+                                        "bottom": 10.0
                                     },
                                     "size": {
                                         "height":40.0
@@ -197,7 +197,7 @@
                                     "mandatory": true,
                                     "color": "#000000",
                                     "padding": {
-                                        "top": 10.0,
+                                        "top": 0.0,
                                         "bottom": 10.0
                                     },
                                     "size": {
@@ -225,7 +225,7 @@
                                     "title": "Middle names",
                                     "color": "#000000",
                                     "padding": {
-                                        "top": 20.0,
+                                        "top": 0.0,
                                         "bottom": 5.0
                                     },
                                     "fontSize":16
@@ -239,7 +239,7 @@
                                     "mandatory": true,
                                     "color": "#000000",
                                     "padding": {
-                                        "top": 10.0,
+                                        "top": 0.0,
                                         "bottom": 10.0
                                     },
                                     "size": {
@@ -267,8 +267,8 @@
                                     "title": "Last Name",
                                     "color": "#000000",
                                     "padding": {
-                                        "top": 20.0,
-                                        "bottom": 5.0
+                                        "top": 0.0,
+                                        "bottom": 10.0
                                     },
                                     "fontSize":16
                                 }
@@ -281,7 +281,7 @@
                                     "mandatory": true,
                                     "color": "#000000",
                                     "padding": {
-                                        "top": 10.0,
+                                        "top": 0.0,
                                         "bottom": 10.0
                                     },
                                     "size": {
