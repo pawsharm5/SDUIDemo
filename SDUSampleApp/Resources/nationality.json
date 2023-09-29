@@ -42,7 +42,7 @@
                                 "type": "label",
                                 "identifier": "title_label",
                                 "properties": {
-                                    "title": "Lloyads Banking",
+                                    "title": "Lloyds Banking",
                                     "color": "#FFFFFF",
                                     "padding": {
                                         "top": 8.0,
