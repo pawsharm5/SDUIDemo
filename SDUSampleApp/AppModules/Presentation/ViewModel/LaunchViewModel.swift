@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 
-final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
+public final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     private var useCase: LaunchUseCaseProtocol
     private var cancellable: AnyCancellable?
     @Published var currentScreenData: ScreenModel?
@@ -20,7 +20,7 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     @Published var selectedSegmentIndex: Int = 0
     @Published var selectedDropDownValue: String = "Select"
 
-    var screenIdentifier: String? = "onboarding"
+    var screenIdentifier: String = "onboarding"
 
     init(useCase:LaunchUseCaseProtocol) {
         self.useCase = useCase
@@ -29,7 +29,7 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     
     func getScreenData() async {
         Task {
-            cancellable =  await self.useCase.getScreenData(screenIdentifier: screenIdentifier ?? "").publisher
+            cancellable =  await self.useCase.getScreenData(screenIdentifier: screenIdentifier).publisher
                 .receive(on: DispatchQueue.main)
                 .sink(receiveValue: { value in
                     self.currentScreenData = value
@@ -119,7 +119,7 @@ final class LaunchViewModel: LaunchViewModelProtocol, ObservableObject {
     }
 
     func setTextFieldValue(for identifier: String, value: String, validation: ValidationRules?) {
-        let dict: [String : Any] = ["text" : value, "validation" : validation, "screenIdentifier":self.screenIdentifier ?? ""]
+        let dict: [String : Any] = ["text" : value, "validation" : validation, "screenIdentifier":self.screenIdentifier]
         textFieldValues[identifier] = dict
 
     }
