@@ -36,7 +36,15 @@ struct PSDropdownTextField: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
+        ZStack {
+            HStack {
+                Spacer()
+                Image("down")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 20,alignment: .trailing)
+                    .padding(.trailing, 8)
+            }
             Menu {
                 ForEach(configuration.options, id: \.self) { valueD in
                     Button(action: {
@@ -58,15 +66,17 @@ struct PSDropdownTextField: View {
             }
             .frame(maxWidth: configuration.width == 0 ? .infinity : configuration.width)
             .foregroundColor(.black)
-            .background(Color.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 3)
-                    .stroke(Color(hex: configuration.backgroundColor))
-            )
+            .background(Color.clear)
+            
             .onChange(of: textFieldText, perform: { newValue in
                     self.configuration.selection.wrappedValue = newValue
             })
-        }
+            
+            
+        }.overlay(
+            RoundedRectangle(cornerRadius: 3)
+                .stroke(Color(hex: configuration.backgroundColor))
+        )
     }
 }
 
